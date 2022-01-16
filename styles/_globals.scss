@@ -1911,3 +1911,19 @@ canvas {
     transform: translateY(-2000px);
   }
 }
+
+.conMission {
+  .pHeader {
+    font-family: Vollkorn;
+    color: #fd6b3b;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  .pHeaderSub {
+    font-family: Inter;
+    color: #212121;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+}

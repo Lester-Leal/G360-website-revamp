@@ -59,6 +59,8 @@ class Dot {
     ctx.beginPath();
     ctx.arc(this.xProject, this.yProject, DOT_RADIUS * this.sizeProjection, 0, Math.PI * 2);
     ctx.fillStyle = "white";
+    ctx.shadowColor= "white";
+    ctx.shadowBlur=3;
     ctx.closePath();
     ctx.fill();
   }

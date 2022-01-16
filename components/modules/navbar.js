@@ -44,7 +44,7 @@ export default function navbar() {
         <Nav className="m-auto" style={{ paddingLeft: "150px" }}>
           <Nav.Link
             href="#home"
-            className={scrollNav ? "navDark" : "navDark"}
+            className={scrollNav ? "navLight" : "navLight"}
             id={urlPath === "/" ? "activeNav" : ""}
           >
             Home
