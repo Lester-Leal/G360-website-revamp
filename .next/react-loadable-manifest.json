@@ -1,14 +1,17 @@
 {
   "..\\components\\layouts\\layout.js -> ../modules/footer": {
-    "id": "./components/modules/footer.js",
+    "id": 1534,
     "files": [
-      "static/chunks/components_modules_footer_js.js"
+      "static/chunks/d7eeaac4-6ad682cbc2c4840d.js",
+      "static/chunks/0c428ae2.f26a671f83686ef5.js",
+      "static/chunks/823.e304ff749457829a.js"
     ]
   },
   "..\\components\\layouts\\layout.js -> ../modules/navbar": {
-    "id": "./components/modules/navbar.js",
+    "id": 8617,
     "files": [
-      "static/chunks/components_modules_navbar_js.js"
+      "static/chunks/825.ab17d2c38e9d9d23.js",
+      "static/chunks/636.41157186b9b6b574.js"
     ]
   }
 }
