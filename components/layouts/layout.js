@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
   return (
     <>
     
-      <Script src="/Script/3dGlobe.js" />
+      <Script src="/script/3dGlobe.js" />
       <div
         style={{
           height: "100%",
