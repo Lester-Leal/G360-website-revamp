@@ -1965,21 +1965,50 @@ $fs: 200px;
 
 .conWorks {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  position: relative;
   padding: 100px 15px;
+  margin-top: 40px;
+  .pCount {
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fd6b3b;
+    margin-bottom: 2px;
+    letter-spacing: -0.36px;
+    margin-left: 2px;
+  }
   .pClient {
     font-family: Vollkorn;
     color: white;
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
     margin-bottom: 0px;
-    text-shadow: 0 0 2px $light, 0 0 5px $light, 0 0 5px $glow, 0 0 5px $glow,
-      0 0 40px $glow, 0 0 50px $glow;
+    letter-spacing: -0.36px;
+   //text-shadow: 0 0 2px whitesmoke, 0 0 2px $light, 0 0 5px $glow, 0 0 5px $glow,
+     // 0 0 5px $glow, 0 0 10px $glow;
   }
   .pDate {
     font-family: Inter;
     color: white;
     font-size: 16px;
-    font-family: 800;
+    font-weight: 800;
+    margin-top: -15px;
+    margin-left: 2px;
+  }
+  .pDescName {
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1.5px;
+    margin-top: 30px;
+    margin-left: 2px;
+  }
+  .pDesc {
+    font-family: Inter;
+    color: white;
+    letter-spacing: -0.36px;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top:25px;
   }
 }

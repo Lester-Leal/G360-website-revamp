@@ -5,6 +5,7 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import Slider from "react-slick";
 
 export default function about() {
+  const [count, setCount] = useState(1);
   return (
     <>
       <Container fluid className="conAbout">
@@ -98,16 +99,23 @@ export default function about() {
           </Col>
         </Row>
       </Container>
-      <Container fluid className = "conWorks"> 
+      <Container fluid className="conWorks">
         <Container>
-            <Row>
-              <Col lg = {6}>
-                  <div>
-                    <p className = "pClient">Washwell</p>
-                    <p className = "pDate">APRIL.2021</p>
-                  </div>
-              </Col>
-            </Row>
+          <Row>
+            <Col lg={6}>
+              <div>
+                <p className="pCount">0{count}</p>
+                <p className="pClient">Washwell</p>
+                <p className="pDate">APRIL.2021</p>
+                <p className="pDescName">Clean clothes at your doorstep</p>
+                <p className="pDesc">
+                  At Washwell, we work to provide a simple high-quality solution
+                  to take care of everything in your closet so you have the time
+                  for what really matters.
+                </p>
+              </div>
+            </Col>
+          </Row>
         </Container>
       </Container>
     </>
