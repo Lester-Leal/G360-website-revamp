@@ -101,19 +101,27 @@ export default function about() {
       </Container>
       <Container fluid className="conWorks">
         <Container>
-          <Row>
+          <Row className="align-items-center">
             <Col lg={6}>
-              <div>
-                <p className="pCount">0{count}</p>
-                <p className="pClient">Washwell</p>
-                <p className="pDate">APRIL.2021</p>
-                <p className="pDescName">Clean clothes at your doorstep</p>
-                <p className="pDesc">
-                  At Washwell, we work to provide a simple high-quality solution
-                  to take care of everything in your closet so you have the time
-                  for what really matters.
-                </p>
+              <div style={{ position: "relative", padding: "30px 0px" }}>
+                <div className="divScroll"></div>
+                <p>Next</p>
+                <div style={{ marginLeft: "30px", padding: "30px 0px" }}>
+                  <p className="pCount">0{count}</p>
+                  <p className="pClient">Washwell</p>
+                  <p className="pDate">APRIL.2021</p>
+                  <p className="pDescName">Clean clothes at your doorstep</p>
+                  <p className="pDesc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
               </div>
+            </Col>
+            <Col lg={6}>
+              <img src="Image/washwell.png" className="img-fluid d-flex"></img>
             </Col>
           </Row>
         </Container>
