@@ -1,5 +1,5 @@
 try {
-    console.clear();
+  
 
 // Get the canvas element from the DOM
 const canvas = document.querySelector('#scene');

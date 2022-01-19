@@ -1519,6 +1519,7 @@ canvas {
   position: absolute;
   top: 2000px;
   width: 1px;
+  border-radius: 10px;
   height: 1px;
   background: transparent;
   box-shadow: 444px 316px #fff, 1859px 527px #fff, 1375px 1975px #fff,
@@ -1702,6 +1703,7 @@ canvas {
 #stars2 {
   width: 2px;
   height: 2px;
+  border-radius: 10px;
   background: transparent;
   box-shadow: 790px 80px #fff, 572px 658px #fff, 1932px 1333px #fff,
     1481px 950px #fff, 1753px 331px #fff, 88px 1357px #fff, 1718px 454px #fff,
@@ -1760,6 +1762,7 @@ canvas {
   content: " ";
   position: absolute;
   top: 2000px;
+  border-radius: 10px;
   width: 2px;
   height: 2px;
   background: transparent;
@@ -1818,6 +1821,7 @@ canvas {
 
 #stars3 {
   width: 3px;
+  border-radius: 10px;
   height: 3px;
   background: transparent;
   box-shadow: 1119px 1780px #fff, 1510px 639px #fff, 758px 338px #fff,
@@ -1853,6 +1857,7 @@ canvas {
   position: absolute;
   top: 2000px;
   width: 3px;
+  border-radius: 10px;
   height: 3px;
   background: transparent;
   box-shadow: 1119px 1780px #fff, 1510px 639px #fff, 758px 338px #fff,
@@ -1999,6 +2004,7 @@ $fs: 200px;
     font-size: 1.3rem;
     font-weight: 700;
     color: white;
+    margin-bottom: 5px;
     letter-spacing: 1.5px;
     margin-top: 30px;
     margin-left: 2px;
@@ -2010,13 +2016,36 @@ $fs: 200px;
     font-weight: 500;
     font-size: 15px;
     margin: auto 0;
-    width: 480px;
+    width: 420px;
   }
   .divScroll {
     position: absolute;
     background-color: white;
     height: 100%;
-    width: 3px;
+    width: 2px;
     border-radius: 5px;
   }
+  .pNext, .pPrev {
+    font-family: Inter;
+    font-weight: 500;
+    color: White;
+    margin-bottom: 0px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .pPrevName, .pNextName {
+    font-family: Inter;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0px;
+    font-size: 14px;
+    cursor: pointer;
+  } 
+  .pNext {
+    margin-top: 40px;
+  }
+  .pPrevName {
+    margin-bottom: -15px;
+  }
 }
+
