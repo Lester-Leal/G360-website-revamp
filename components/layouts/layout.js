@@ -21,6 +21,7 @@ const Layout = ({ children }) => {
     loadScript(
       "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"
     );
+    loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js");
   }, []);
   return (
     <>
@@ -36,7 +37,9 @@ const Layout = ({ children }) => {
           rel="stylesheet"
         ></link>
       </Head>
+      <Script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></Script>
       <Script src="/script/3dGlobe.js" />
+      <Script src="/script/atom.js" />
       <div
         style={{
           height: "100%",

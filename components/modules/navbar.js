@@ -10,10 +10,10 @@ export default function navbar() {
   const urlPath = router.pathname;
   const changeBackground = () => {
     if (window.scrollY >= 70) {
-      document.getElementById("navbarBg").style.backgroundColor = "transparent";
+      document.getElementById("navbarBg").style.backgroundColor = "#1a1a1a";
       setScrollnav(true);
     } else {
-      document.getElementById("navbarBg").style.backgroundColor = "transparent";
+      document.getElementById("navbarBg").style.backgroundColor = "#1a1a1a";
       setScrollnav(false);
     }
   };
@@ -33,7 +33,7 @@ export default function navbar() {
       id="navbarBg"
       fixed="top"
     >
-      <Container id = {!scrollNav ? "conNav" : "conNavNoPad"}>
+      <Container id={!scrollNav ? "conNav" : "conNavNoPad"}>
         <Navbar.Brand href="/">
           <img
             src={!scrollNav ? "Image/logo_white.png" : "Image/logo_white.png"}
@@ -49,24 +49,22 @@ export default function navbar() {
           >
             Home
           </Nav.Link>
-          <Nav.Link href="about" className={scrollNav ? "navLight" : "navLight"}>
+          <Nav.Link
+            href="about"
+            className={scrollNav ? "navLight" : "navLight"}
+          >
             About
           </Nav.Link>
           <Nav.Link
             href="#pricing"
-            className={scrollNav ?  "navLight" : "navLight"}
+            className={scrollNav ? "navLight" : "navLight"}
           >
             Services
           </Nav.Link>
+
           <Nav.Link
             href="#pricing"
-            className={scrollNav ?  "navLight" : "navLight"}
-          >
-            Portfolio
-          </Nav.Link>
-          <Nav.Link
-            href="#pricing"
-            className={scrollNav ?  "navLight" : "navLight"}
+            className={scrollNav ? "navLight" : "navLight"}
             style={{ marginRight: "15px" }}
           >
             Careers
@@ -76,7 +74,7 @@ export default function navbar() {
           <Nav.Link
             href="#pricing"
             id="navContact"
-            className={scrollNav ?  "navLight" : "navLight"}
+            className={scrollNav ? "navLight" : "navLight"}
           >
             Contact Us
           </Nav.Link>
