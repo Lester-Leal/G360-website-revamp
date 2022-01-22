@@ -28,6 +28,16 @@ img {
   height: 100%;
 }
 
+.mouse {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  z-index: 222;
+  right: 0;
+}
 #geo-globe {
   padding-left: 50px;
 }

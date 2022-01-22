@@ -10,6 +10,7 @@ import { SiPaloaltosoftware } from "react-icons/si";
 import { BiPhoneCall } from "react-icons/bi";
 import { AiFillStar } from "react-icons/ai";
 import { CgIfDesign } from "react-icons/cg";
+import GlobeCanvas from "../components/elements/globe";
 
 import Slider from "react-slick";
 
@@ -106,9 +107,7 @@ export default function index() {
               </div>
             </Col>
             <Col lg={6}>
-              <div id="geo-globe" className="mx-auto d-flex">
-                <canvas id="scene"></canvas>
-              </div>
+              <GlobeCanvas/>
             </Col>
           </Row>
         </Container>
@@ -137,84 +136,10 @@ export default function index() {
                 </p>
               </div>
             </Col>
-            <Col lg={6}>
-              <div className="atom">
-                <div className="electron-shell shellAnimationOne">
-                  <div className="electron" />
-                  <div className="electron" />
-                </div>
-                <div className="electron-shell shellAnimationTwo">
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                </div>
-                <div className="electron-shell shellAnimationThree">
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                </div>
-                <div className="electron-shell shellAnimationOne">
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                  <div className="electron" />
-                </div>
-                <div className="nucleus nucleusAnimate" />
-              </div>
-            </Col>
+            <Col lg={6}></Col>
           </Row>
           <Row>
-            <Col lg={6}>
-              
-            </Col>
+            <Col lg={6}></Col>
             <Col lg={6}>
               <p className="pHeaderCount text-end">02</p>
               <div className="divMethod">
