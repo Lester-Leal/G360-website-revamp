@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect, useRef } from "react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+import Marquee from "react-fast-marquee";
 import {
   HiArrowNarrowRight,
   HiChevronLeft,
@@ -107,7 +108,7 @@ export default function index() {
               </div>
             </Col>
             <Col lg={6}>
-              <GlobeCanvas/>
+              <GlobeCanvas />
             </Col>
           </Row>
         </Container>
@@ -127,7 +128,9 @@ export default function index() {
             <Col lg={6}>
               <p className="pHeaderCount">01</p>
               <div className="divMethod">
-                <p className="pMethodName">Define.</p>
+                <div className="bubbles text-end">
+                  <p className="pMethodName">Define</p>
+                </div>
                 <p className="pMethodDesc">
                   We define your project needs by working closely with you and
                   conducting business assessments. We will understand the entire
@@ -143,7 +146,11 @@ export default function index() {
             <Col lg={6}>
               <p className="pHeaderCount text-end">02</p>
               <div className="divMethod">
-                <p className="pMethodName text-end">Arrange.</p>
+                <div style={{ marginLeft: "auto", width: "max-content" }}>
+                  <div className="bubbles">
+                    <p className="pMethodName ">Arrange.</p>
+                  </div>
+                </div>
                 <p className="pMethodDesc text-end">
                   Once we have a clear understanding of your project scope, we
                   will create a digital plan that will be used as our basis and
@@ -158,8 +165,10 @@ export default function index() {
           <Row>
             <Col lg={6}>
               <p className="pHeaderCount">03</p>
-              <div className="divMethod">
-                <p className="pMethodName">Execution</p>
+              <div className="divMethod float-end">
+                <div className="bubbles text-end">
+                  <p className="pMethodName">Execution</p>
+                </div>
                 <p className="pMethodDesc">
                   Our team of business analysts and software developers will
                   begin the software development life cycle and create a feature
@@ -173,6 +182,40 @@ export default function index() {
             <Col lg={6}></Col>
           </Row>
         </Container>
+      </Container>
+      <Container fluid className="conDesc">
+        <Row>
+          <Col lg={12}>
+            <Marquee
+              gradientColor={[26, 26, 26]}
+              pauseOnHover={true}
+              speed={80}
+            >
+              <p className="pText">
+                Design Website Mobile Business Outsource Solutions{" "}
+              </p>
+            </Marquee>
+            <Marquee
+              gradientColor={[26, 26, 26]}
+              pauseOnHover={true}
+              direction="right"
+              speed={80}
+            >
+              <p className="pText">
+                UI/UX Staffing Branding Firmware Business Android{" "}
+              </p>
+            </Marquee>
+            <Marquee
+              gradientColor={[26, 26, 26]}
+              pauseOnHover={true}
+              speed={80}
+            >
+              <p className="pText">
+                Programs Development BPO Animation Application{" "}
+              </p>
+            </Marquee>
+          </Col>
+        </Row>
       </Container>
       <Container fluid className="d-none" style={{ padding: "70px 15px" }}>
         <Container className="conServices" style={{ position: "relative" }}>
@@ -285,74 +328,6 @@ export default function index() {
             </Col>
           </Row>
         </Container>
-      </Container>
-      <Container className="con3" style={{ marginTop: "70px" }}>
-        <Row>
-          <Col lg={6}>
-            <div style={{ maxWidth: "600px" }}>
-              <Row>
-                <Col lg={2}>
-                  <img
-                    src="Image/new-moon.png"
-                    className="img-fluid mx-auto"
-                    style={{ width: "50px" }}
-                  ></img>
-                </Col>
-                <Col lg={10}>
-                  <p className="pHeader">Define</p>
-                  <p className="pHeaderSub">
-                    We define your project needs by working closely with you and
-                    conducting business assessments. We will understand the
-                    entire process of your project and provide you with
-                    comprehensive analysis on the best ways to execute it.
-                  </p>
-                </Col>
-              </Row>
-              <Row>
-                <Col lg={2}>
-                  <img
-                    src="Image/new-moon.png"
-                    className="img-fluid mx-auto"
-                    style={{ width: "50px" }}
-                  ></img>
-                </Col>
-                <Col lg={10}>
-                  <p className="pHeader">Plan</p>
-                  <p className="pHeaderSub">
-                    We define your project needs by working closely with you and
-                    conducting business assessments. We will understand the
-                    entire process of your project and provide you with
-                    comprehensive analysis on the best ways to execute it.
-                  </p>
-                </Col>
-              </Row>
-              <Row>
-                <Col lg={2}>
-                  <img
-                    src="Image/new-moon.png"
-                    className="img-fluid mx-auto"
-                    style={{ width: "50px" }}
-                  ></img>
-                </Col>
-                <Col lg={10}>
-                  <p className="pHeader">Development & Execution</p>
-                  <p className="pHeaderSub">
-                    We define your project needs by working closely with you and
-                    conducting business assessments. We will understand the
-                    entire process of your project and provide you with
-                    comprehensive analysis on the best ways to execute it.
-                  </p>
-                </Col>
-              </Row>
-            </div>
-          </Col>
-          <Col lg={6}>
-            <img
-              src="Image/con3.png"
-              className="img-fluid mx-auto d-flex"
-            ></img>
-          </Col>
-        </Row>
       </Container>
 
       <Container fluid className="conTestimonials d-none">

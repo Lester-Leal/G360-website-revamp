@@ -9,6 +9,8 @@ body {
   scroll-behavior: smooth;
   padding: 0px;
   font-size: 1rem;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 * {
@@ -23,6 +25,11 @@ body {
 }
 img {
   image-rendering: crisp-edges;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 #__next {
   height: 100%;
@@ -45,10 +52,28 @@ canvas {
   width: 98vmin;
   height: 98vmin;
 }
+.bubbles {
+  display: inline-block;
+  font-family: arial;
+  position: relative;
+}
+
+.bubbles p {
+  position: relative;
+  z-index: 2;
+}
+.individual-bubble {
+  position: absolute;
+  border-radius: 100%;
+  bottom: 10px;
+  background-color: #fff;
+  z-index: 1;
+}
 
 .bgCon {
   background: #1a1a1a;
   position: relative;
+
   .pCenter {
     font-family: Vollkorn;
     font-weight: 800;
@@ -142,6 +167,7 @@ canvas {
 
 .conHow {
   background: #1a1a1a;
+  position: relative;
   .pHeader {
     font-family: Vollkorn;
     color: white;
@@ -167,11 +193,12 @@ canvas {
     font-size: 10.5rem;
     margin-bottom: 0px;
     margin-left: 50px;
+    position: relative;
   }
   .divMethod {
-    background: rgba(26, 26, 26, 0.7);
     padding: 20px 0px 0px 0px;
-    margin-top: -125px;
+    margin-top: -150px;
+    z-index: 22222 !important;
     .pMethodName {
       font-family: Vollkorn;
       color: white;
@@ -315,6 +342,26 @@ button {
     .button-text {
       color: $white;
     }
+  }
+}
+
+.conDesc {
+  background: #1a1a1a;
+  position: relative;
+  padding: 75px 0px;
+  .pText {
+    font-family: Inter;
+    font-size: 5rem;
+    font-weight: 700;
+    color: transparent;
+    min-width: fit-content;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    -ms-text-stroke-width: 2px;
+    -ms-text-stroke-color: white;
+    -moz-text-stroke-width: 2px;
+    -moz-text-stroke-color: white;
+    text-rendering: geometricPrecision;
   }
 }
 
@@ -650,21 +697,6 @@ button {
     opacity 0s 0.2s;
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
     opacity 0s 0.2s;
-}
-
-.con3 {
-  display: none;
-  .pHeader {
-    font-family: Inter;
-    font-weight: 700;
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-  }
-  .pHeaderSub {
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 14px;
-  }
 }
 
 .slick-slide > div {
