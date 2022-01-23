@@ -68,7 +68,7 @@ export default function index() {
     {
       Position: "Co-Founder",
       Name: "Naruto Uzumaki",
-      Image: `Image/sasuke.jpg`,
+      Image: `Image/naruto.jpg`,
       Message:
         "Don't underestimate me! I don't quit and I don't run! You can act tough all you want! You're not gonna scare me off! No way! I don't care if I do get stuck as a genin for the rest of my life! I'll still be Hokage someday!",
     },
@@ -772,14 +772,22 @@ export default function index() {
                     <div className="float-end">
                       <i
                         onClick={(e) => {
-                          setCount(count - 1);
+                          if (count === 0) {
+                            setCount(2);
+                          } else {
+                            setCount(count - 1);
+                          }
                         }}
                       >
                         <CgArrowLeft />
                       </i>
                       <i
                         onClick={(e) => {
-                          setCount(count + 1);
+                          if (count === 2) {
+                            setCount(0);
+                          } else {
+                            setCount(count + 1);
+                          }
                         }}
                       >
                         <CgArrowRight />
