@@ -41,6 +41,7 @@ const Layout = ({ children }) => {
           rel="stylesheet"
         ></link>
       </Head>
+
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></Script>
       <Script src="/script/3dGlobe.js" />
       <div

@@ -7,35 +7,20 @@ import {
   HiChevronLeft,
   HiChevronRight,
 } from "react-icons/hi";
+import { FaHeart } from "react-icons/fa";
+import TextTransition, { presets } from "react-text-transition";
 import { SiPaloaltosoftware } from "react-icons/si";
 import { BiPhoneCall } from "react-icons/bi";
 import { AiFillStar } from "react-icons/ai";
-import { CgIfDesign } from "react-icons/cg";
+import { CgArrowLeft, CgArrowRight } from "react-icons/cg";
 import GlobeCanvas from "../components/elements/globe";
-
 import Slider from "react-slick";
 
 export default function index() {
   const ref = useRef(null);
+  const [count, setCount] = useState(0);
   const refClient = useRef(null);
   const [next, setNext] = useState(1);
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SampleNextArrow />,
-  };
-  const settings_client = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    arrow: false,
-  };
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -71,6 +56,30 @@ export default function index() {
     refClient.current.slickPrev();
     setNext(1);
   };
+
+  var testimonials = [
+    {
+      Position: "Chief Executive Officer",
+      Name: "Sasuke Uchiha",
+      Image: `Image/sasuke.jpg`,
+      Message:
+        "I know the four of us have worked together. And for a while, I thought I could choose that path instead… but in the end… I've decided on revenge. That's always been my purpose of living",
+    },
+    {
+      Position: "Co-Founder",
+      Name: "Naruto Uzumaki",
+      Image: `Image/sasuke.jpg`,
+      Message:
+        "Don't underestimate me! I don't quit and I don't run! You can act tough all you want! You're not gonna scare me off! No way! I don't care if I do get stuck as a genin for the rest of my life! I'll still be Hokage someday!",
+    },
+    {
+      Position: "Project Manager",
+      Name: "Sakura Uchiha",
+      Image: `Image/sakura.jpg`,
+      Message:
+        "Always acting like a fool who only knows one thing… Hokage, Hokage. I'm sorry Naruto… that impossible dream of yours… I don't want to see it crushed!",
+    },
+  ];
 
   return (
     <>
@@ -461,14 +470,16 @@ export default function index() {
       </Container>
       <Container fluid className="conClients">
         <Container>
-          <Row className="align-items-center">
+          <Row>
             <Col lg={8}>
               <p className="pHeader">
                 <span style={{ color: "white" }}>Our</span> Clients.
               </p>
             </Col>
             <Col lg={4}>
-              <div style={{ width: "200px", float: "right" }}>
+              <div
+                style={{ width: "200px", float: "right", marginTop: "15px" }}
+              >
                 <span className="pCount">{next === 1 ? 1 : 2} / 2</span>
                 <hr></hr>
                 <div style={{ marginTop: "-15px" }}>
@@ -709,21 +720,78 @@ export default function index() {
                 </Slider>
               </div>
             </Col>
+            <Col lg={1} style={{ position: "relative" }}>
+              <div className="rotate">
+                We are passionate with our clients{" "}
+                <span>
+                  <FaHeart />
+                </span>
+              </div>
+            </Col>
           </Row>
         </Container>
       </Container>
-      <Container className="con8">
-        <Row className="align-items-center justifiy-content-center d-flex">
-          <Col lg={12}>
-            <p className="pHeader">Discuss your next project with us</p>
-            <p className="pHeaderSub">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation
-            </p>
-            <button className="btnCase mx-auto d-block">Contact Us!</button>
-          </Col>
-        </Row>
+      <Container fluid className="conTest">
+        <Container style={{ position: "relative" }}>
+          <p className="pQuote">"</p>
+          <Row>
+            <Col lg={12}>
+              <div className="divMess">
+                <span className="pHeader">CLIENT SUCCESS STORIES</span>
+                <TextTransition
+                  text={'"' + testimonials[count].Message + '"'}
+                  springConfig={presets.stiff}
+                  noOverflow={true}
+                  className="pMessage"
+                />
+                <Row className="align-items-center">
+                  <Col lg={6}>
+                    <div className="form-inline" style={{ marginTop: "15px" }}>
+                      <img
+                        src={testimonials[count].Image}
+                        className="img-fluid"
+                      ></img>
+                      <div style={{ marginTop: "10px" }}>
+                        <TextTransition
+                          text={testimonials[count].Name}
+                          springConfig={presets.stiff}
+                          noOverflow={true}
+                          className="pName"
+                        />
+
+                        <TextTransition
+                          text={testimonials[count].Position}
+                          springConfig={presets.stiff}
+                          noOverflow={true}
+                          className="pPosition"
+                        />
+                      </div>
+                    </div>
+                  </Col>
+                  <Col lg={6}>
+                    <div className="float-end">
+                      <i
+                        onClick={(e) => {
+                          setCount(count - 1);
+                        }}
+                      >
+                        <CgArrowLeft />
+                      </i>
+                      <i
+                        onClick={(e) => {
+                          setCount(count + 1);
+                        }}
+                      >
+                        <CgArrowRight />
+                      </i>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+          </Row>
+          <Row></Row>
+        </Container>
       </Container>
     </>
   );
