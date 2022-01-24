@@ -10,17 +10,16 @@ export default function navbar() {
   const urlPath = router.pathname;
   const changeBackground = () => {
     if (window.scrollY >= 70) {
-      document.getElementById("navbarBg").style.backgroundColor = "#1a1a1a";
       setScrollnav(true);
+      console.log(window.scrollY);
     } else {
-      document.getElementById("navbarBg").style.backgroundColor = "#1a1a1a";
       setScrollnav(false);
+      console.log(window.scrollY);
     }
   };
 
   useEffect(() => {
     changeBackground();
-    // adding the event when scroll change background
     window.addEventListener("scroll", changeBackground, true);
   });
   useEffect(() => {
@@ -29,7 +28,7 @@ export default function navbar() {
 
   return (
     <Navbar
-      className={!scrollNav ? "navbarBg" : "navbarBg navbarShadow"}
+      className={!scrollNav ? "navbarBg navbarTransparent" : "navbarBg navbarTransparent"}
       id="navbarBg"
       fixed="top"
     >

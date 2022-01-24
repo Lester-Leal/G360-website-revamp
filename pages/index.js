@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect, useRef } from "react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+import Footer from "../components/modules/footer";
 import Marquee from "react-fast-marquee";
 import {
   HiArrowNarrowRight,
@@ -13,6 +14,7 @@ import { SiPaloaltosoftware } from "react-icons/si";
 import { BiPhoneCall } from "react-icons/bi";
 import { AiFillStar } from "react-icons/ai";
 import { CgArrowLeft, CgArrowRight } from "react-icons/cg";
+import Banner from "../components/modules/banner";
 import GlobeCanvas from "../components/elements/globe";
 import Slider from "react-slick";
 
@@ -801,6 +803,7 @@ export default function index() {
           <Row></Row>
         </Container>
       </Container>
+      <Banner />
     </>
   );
 }

@@ -9,7 +9,6 @@ body {
   scroll-behavior: smooth;
   padding: 0px;
   font-size: 1rem;
-  overflow: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
 }
@@ -603,20 +602,28 @@ button {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+.navbarTransparent {
+  background: transparent !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
 #activeNav {
   color: #fd6b3b !important;
 }
 
 .navbarBg {
-  background-color: white;
   transition: all 0.2s;
   padding: 50px 15px !important;
+  border-radius: 0px !important;
   #conNav {
     padding: 20px 15px;
     transition: all 0.2s;
+    border-radius: 0px !important;
   }
   #conNavNoPad {
     transition: all 0.2s;
+    border-radius: 0px !important;
     padding: 5px 15px;
   }
   .nav-link {
@@ -719,10 +726,8 @@ canvas {
 }
 
 .conFooter {
-  display: none;
-  background-color: #0b173c;
-  margin-top: 100px;
-  padding: 35px 25px;
+  background-color: #1a1a1a;
+  padding: 50px 15px 30px 15px;
   .imgLogoFooter {
     width: 150px;
   }
@@ -778,7 +783,6 @@ canvas {
   }
 
   70% {
-  
     text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
       0 0 0.125em hsla(320, 100%, 60%, 0.5),
       0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
@@ -786,7 +790,6 @@ canvas {
   }
 
   100% {
-  
     text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
       0 0 0.125em hsla(320, 100%, 60%, 0.3),
       1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
@@ -2079,5 +2082,62 @@ $shellSpeed: 2s;
   }
   to {
     transform: rotate3d(-0.5, 0.5, 0.5, 360deg);
+  }
+}
+
+.conBanner {
+  background: #1a1a1a;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 20px; 
+  .container {
+    padding: 50px 15px;
+    background: #D3CDBD;
+    border-radius: 5px;
+  }
+  .divHeader {
+    width: 900px;
+    margin: 0 auto;
+    .pTitle {
+      font-family: Inter;
+      font-size: 5rem;
+      font-weight: 700;
+      color: transparent;
+      min-width: fit-content;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: #1a1a1a;
+      -ms-text-stroke-width: 2px;
+      -ms-text-stroke-color:#1a1a1a;
+      -moz-text-stroke-width: 2px;
+      -moz-text-stroke-color: #1a1a1a;
+      text-rendering: geometricPrecision;
+      margin-bottom: -15px;
+    }
+    .pTitleSub {
+      font-family: Inter;
+      color: #1a1a1a;
+      font-size: 4rem;
+      font-weight: 700;
+    }
+    .divDesc {
+      padding-left: 45px;
+      border-left: 2px solid #fd6b3b;
+      float: right;
+      .pHeader {
+        font-family: Inter;
+        color: #1a1a1a;
+        font-size: 1.5rem;
+        max-width: 400px;
+        line-height: 32px;
+        font-weight: 600;
+      }
+      .pHeaderSub {
+        font-family: Inter;
+        color: #212121;
+        max-width: 550px;
+        font-weight: 500;
+        line-height: 28px;
+      }
+    }
   }
 }
