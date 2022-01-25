@@ -794,6 +794,7 @@ export default function index() {
                       >
                         <CgArrowRight />
                       </i>
+                      <button className = "btnTest">test</button>
                     </div>
                   </Col>
                 </Row>

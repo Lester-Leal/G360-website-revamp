@@ -28,19 +28,25 @@ export default function navbar() {
 
   return (
     <Navbar
-      className={!scrollNav ? "navbarBg navbarTransparent" : "navbarBg navbarTransparent"}
+      className={
+        !scrollNav
+          ? "navbarBg navbarTransparent justify-content-between"
+          : "navbarBg navbarTransparent justify-content-between"
+      }
       id="navbarBg"
       fixed="top"
     >
-      <Container id={!scrollNav ? "conNav" : "conNavNoPad"}>
-        <Navbar.Brand href="/">
-          <img
-            src={!scrollNav ? "Image/logo_white.png" : "Image/logo_white.png"}
-            className="img-fluid"
-            style={{ width: "140px" }}
-          />
-        </Navbar.Brand>
-        <Nav className="m-auto" style={{ paddingLeft: "150px" }}>
+      <Container fluid id={!scrollNav ? "conNav" : "conNavNoPad"}>
+        <Nav className="ml-auto">
+          <Navbar.Brand href="/">
+            <img
+              src={!scrollNav ? "Image/logo_white.png" : "Image/logo_white.png"}
+              className="img-fluid"
+              style={{ width: "140px" }}
+            />
+          </Navbar.Brand>
+        </Nav>
+        <Nav className="mx-auto text-center" style = {{position:"absolute", left: "50%", transform: "translate(-50%)"}}>
           <Nav.Link
             href="#home"
             className={scrollNav ? "navLight" : "navLight"}
@@ -70,13 +76,15 @@ export default function navbar() {
           </Nav.Link>
         </Nav>
         <Nav className="ms-auto">
-          <Nav.Link
-            href="#pricing"
-            id="navContact"
-            className={scrollNav ? "navLight" : "navLight"}
-          >
-            Contact Us
-          </Nav.Link>
+          <Navbar.Brand href="/">
+            <Nav.Link
+              href="#pricing"
+              id="navContact"
+              className={scrollNav ? "navLight" : "navLight"}
+            >
+              Contact Us
+            </Nav.Link>
+          </Navbar.Brand>
         </Nav>
       </Container>
     </Navbar>
