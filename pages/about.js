@@ -30,7 +30,7 @@ export default function about() {
           </Row>
           <Row style = {{marginTop: "40px"}}>
             <Col lg={12}>
-              <img src="Image/mission.jpg" className = "img-fluid d-flex"></img>
+              <img src="Image/mission.jpg" className = "img-fluid d-flex imgAbout"></img>
             </Col>
           </Row>
         </Container>

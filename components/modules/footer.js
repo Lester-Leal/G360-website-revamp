@@ -6,7 +6,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 export default function footer() {
   return (
     <Container fluid className = "conFooter">
-      <Container>
+      <Container fluid>
         <Row>
           <Col lg={5}>
             <img
