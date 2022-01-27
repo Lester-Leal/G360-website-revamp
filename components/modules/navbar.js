@@ -46,7 +46,14 @@ export default function navbar() {
             />
           </Navbar.Brand>
         </Nav>
-        <Nav className="mx-auto text-center" style = {{position:"absolute", left: "50%", transform: "translate(-50%)"}}>
+        <Nav
+          className="mx-auto text-center"
+          style={{
+            position: "absolute",
+            left: "50%",
+            transform: "translate(-50%)",
+          }}
+        >
           <Nav.Link
             href="#home"
             className={scrollNav ? "navLight" : "navLight"}

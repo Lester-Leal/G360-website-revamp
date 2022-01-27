@@ -5,40 +5,40 @@ import { AiFillLinkedin } from "react-icons/ai";
 
 export default function footer() {
   return (
-    <Container fluid className = "conFooter">
-      <Container fluid>
+    <Container fluid className="conFooter">
+      <Container>
         <Row>
           <Col lg={5}>
             <img
               src="Image/logo_white.png"
               className="img-fluid imgLogoFooter"
+              style={{ width: "150px" }}
             ></img>
-            <p className="pCopy">
-              © 2021 Guerilla 360 Integrated Solutions. All Rights Reserved.
-            </p>
+            <p className="pCopy">© Guerilla360 2021. All rights reserved.</p>
           </Col>
-          <Col lg={7}>
-            <div className="divFooterUl">
-              <ul className="ulFooter">
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Portfolio</li>
-                <li>Careers</li>
-                <li>Contact Us</li>
-              </ul>
-              <div>
-                <i>
-                  <AiFillLinkedin />
-                </i>
-                <i>
-                  <BsInstagram />
-                </i>
-                <i>
-                  <BsFacebook />
-                </i>
-              </div>
+          <Col lg={4}>
+            <p className="pTitle">Location</p>
+            <p className="pAddress">
+              290 Aguire Ave, Paranaque <br/>1720 Metro Manila
+            </p>
+            <p className="pTitle">Socials</p>
+            <div className="form-inline divSocials">
+              <i>
+                <BsFacebook />
+              </i>
+              <i>
+                <BsInstagram />
+              </i>
+              <i>
+                <AiFillLinkedin />
+              </i>
             </div>
+          </Col>
+          <Col lg={3}>
+            <p className="pFooter">Home</p>
+            <p className="pFooter">About</p>
+            <p className="pFooter">Services</p>
+            <p className="pFooter">Careers</p>
           </Col>
         </Row>
       </Container>

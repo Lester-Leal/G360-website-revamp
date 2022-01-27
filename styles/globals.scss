@@ -729,37 +729,51 @@ canvas {
 
 .conFooter {
   background-color: #1a1a1a;
-  padding: 50px 15px 30px 15px;
-  .imgLogoFooter {
-    width: 150px;
-  }
+  padding: 5.5rem 15px 5.5rem 15px;
   .pCopy {
     font-family: Inter;
-    font-size: 13px;
-    margin-top: 10px;
-    color: white;
-    margin-bottom: 0px;
+    color: #bfbfbf;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 25px;
   }
-  ul {
-    list-style: none;
-    li {
-      font-family: Inter;
-      font-weight: 400;
-      margin-right: 20px;
-      display: inline;
+  .pTitle {
+    font-family: Inter;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .pAddress {
+    font-family: Inter;
+    color: #bfbfbf;
+    font-family: 17px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+  .divSocials {
+    i {
+      font-size: 1.5rem;
+      color: #fd6b3b;
+      margin-right: 25px;
+      margin-top: 5px;
       cursor: pointer;
-      color: white;
     }
   }
-  i {
-    color: #fd6b3b;
-    font-size: 1.5rem;
-    margin-right: 15px;
-    float: right;
+  .pFooter {
+    font-family: Inter;
+    margin-bottom: 18px;
+    color: #bfbfbf;
+    font-size: 1.1rem;
+    cursor: pointer;
+    &:hover {
+      color: #fd6b3b;
+    }
   }
-  .divFooterUl {
-    float: right;
-  }
+}
+
+.conFounder {
+  background-color: #1a1a1a;
+  padding: 5.5rem 15px 5.5rem 15px;
 }
 
 @keyframes lights {
@@ -1222,19 +1236,9 @@ canvas {
 
 .conAbout {
   padding-top: 170px;
+  padding-bottom: 100px;
   position: relative;
   background: #1a1a1a;
-  .divBubble {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    #canvasBubble {
-      width: 100%;
-      height: 400px;
-      margin: auto 0;
-      pointer-events: none;
-    }
-  }
   .divHeader {
     width: 900px;
     margin: 0 auto;
@@ -1273,13 +1277,13 @@ canvas {
       }
     }
   }
-  .imgAbout {
+  .divImage {
     border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    border: 3px solid #fd6b3b;
+    border: 3px solid white;
     position: relative;
     &::before {
       content: none !important;
-      border: 2px solid #fd6b3b;
+      border: 2px solid white;
       display: block;
       width: 100%;
       height: 100%;
@@ -1290,6 +1294,132 @@ canvas {
       left: 50%;
       transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
       border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+    }
+    .imgAbout {
+      border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+    }
+  }
+}
+
+.conValues {
+  background-color: #1a1a1a;
+  padding: 70px 15px;
+  padding-bottom: 150px;
+  .divValues {
+    width: 100%;
+    background-color: white;
+    padding: 70px;
+    position: relative;
+    .divInner {
+      margin-left: 20%;
+    }
+    .form-inline {
+      div {
+        width: 100px;
+        height: 2px;
+        background-color: #fd6b3b;
+        margin-right: 10px;
+        margin-top: -15px;
+      }
+      .p1 {
+        font-family: Vollkorn;
+        font-size: #1a1a1a;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+    .p2 {
+      font-family: Inter;
+      font-size: #1a1a1a;
+      font-size: 2rem;
+      font-weight: 700;
+      width: 400px;
+      line-height: 2ch;
+    }
+    .pDesc {
+      font-family: Vollkorn;
+      font-size: #1a1a1a;
+      font-size: 18px;
+      font-weight: 500;
+      max-width: 500px;
+    }
+    .imgDiv {
+      position: absolute;
+      top: 80px;
+      right: -300px;
+      width: 470px;
+    }
+    .imgDiv1 {
+      position: absolute;
+      top: 80px;
+      left: -340px;
+      width: 470px;
+    }
+  }
+}
+
+.conWhy {
+  background-color: #1a1a1a;
+  padding: 150px 15px;
+  .pStroke {
+    font-family: Inter;
+    font-size: 5.1rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    -ms-text-stroke-width: 2px;
+    -ms-text-stroke-color: #fff;
+    -moz-text-stroke-width: 2px;
+    -moz-text-stroke-color: #fff;
+    text-rendering: geometricPrecision;
+    margin-bottom: -30px;
+  }
+  .pNoStroke {
+    font-family: Inter;
+    color: white;
+    font-size: 5.1rem;
+    font-weight: 700;
+  }
+  .pOver {
+    font-family: Vollkorn;
+    font-size: 2.4rem;
+    color: white;
+    font-weight: 500;
+    margin-top: 25px;
+  }
+  .pDesc {
+    font-family: Vollkorn;
+    font-size: 1.1rem;
+    color: #bfbfbf;
+    font-weight: 500;
+    width: 400px;
+  }
+  .conChoose {
+    padding: 32px 55px;
+    margin: 0 auto;
+    margin-top: 40px;
+    .p1 {
+      font-family: Inter;
+      color: white;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      text-align: center;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    .pWork {
+      font-family: Inter;
+      color: #bfbfbf;
+      text-align: center;
+      margin-bottom: 5px;
+      margin-left: 10px;
+    }
+    .cardChoose {
+      background-color: #242424;
+      padding: 15px;
+      border-radius: 5px;
+      min-height: 300px;
     }
   }
 }
@@ -1598,7 +1728,7 @@ $shellSpeed: 2s;
     &::before {
       content: "";
       border: 2px solid #fd6b3b;
-      display: block; 
+      display: block;
       width: 100%;
       height: 100%;
       position: absolute;
@@ -1655,14 +1785,4 @@ $shellSpeed: 2s;
       }
     }
   }
-}
-
-.btnTest {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 10px transparent;
-  border-right: 2px solid white;
-  border-bottom: 2px solid white;
-  -webkit-transform: rotate(-80deg);
 }
