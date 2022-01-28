@@ -171,7 +171,65 @@ export default function about() {
         <Container>
           <Row>
             <Col lg={12}>
-              <p>The Founder</p>
+              <p className="pStroke">
+                The Co-Founder <span style={{ color: "#fd6b3b" }}>.</span>
+              </p>
+            </Col>
+          </Row>
+          <Row style={{ marginTop: "50px" }} className = "align-items-center">
+            <Col lg={6}>
+              <div className="divFounderDesc">
+                <div className="divLine"></div>
+                <p className="pName">Randolph Yu</p>
+                <p className="pPosition">Co-Founder & Managing Partner</p>
+                <p className="pDesc">
+                  Randolph is the head of operations and solutions architecture
+                  for Guerilla 360. With his in-depth knowledge on the latest
+                  cutting-edge technology and it’s real-world application for
+                  enterprise solutions, he is able to integrate new practices
+                  and applications geared towards a company’s growth and
+                  digitalization through software applications and automations.
+                  Formerly a full stack software engineer and solutions
+                  architect, he is experienced in implementing highly customized
+                  system applications that can scale towards any company size.
+                  It is his directive that every project Guerilla 360 ensures
+                  the proper solution is architected and built to scale
+                  following a quality-first approach.
+                </p>
+              </div>
+            </Col>
+            <Col lg={6}>
+              <div className="divImageFounder">
+                <img
+                  src="Image/randolph_new.jpg"
+                  className="img-fluid image2 mx-auto d-flex"
+                ></img>
+              </div>
+            </Col>
+          </Row>
+          <Row style={{ marginTop: "50px" }} className = "align-items-center">
+            <Col lg={6}>
+              <div className="divImageFounder">
+                <img
+                  src="Image/randolph_new.jpg"
+                  className="img-fluid image2 mx-auto d-flex"
+                ></img>
+              </div>
+            </Col>
+            <Col lg={6}>
+              <div className="divFounderDesc">
+                <div className="divLine"></div>
+                <p className="pName">Nathan Nakar</p>
+                <p className="pPosition">Co-Founder & Managing Partner</p>
+                <p className="pDesc">
+                  Nathan Nakar is the co-founder and managing partner of
+                  Guerilla 360 specializing in Innovations Ideation. With around
+                  a decade of experience in business development and marketing,
+                  he has been able to conceptualize and engineer new solutions
+                  and innovations that create both value and revenue for a
+                  business of any scale.
+                </p>
+              </div>
             </Col>
           </Row>
         </Container>
