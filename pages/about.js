@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import TextTransition, { presets } from "react-text-transition";
 import { ImQuotesLeft } from "react-icons/im";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import Marquee from "react-fast-marquee";
 import Slider from "react-slick";
 import Banner from "../components/modules/banner";
 
@@ -176,7 +177,7 @@ export default function about() {
               </p>
             </Col>
           </Row>
-          <Row style={{ marginTop: "50px" }} className = "align-items-center">
+          <Row style={{ marginTop: "50px" }} className="align-items-center">
             <Col lg={6}>
               <div className="divFounderDesc">
                 <div className="divLine"></div>
@@ -207,7 +208,7 @@ export default function about() {
               </div>
             </Col>
           </Row>
-          <Row style={{ marginTop: "50px" }} className = "align-items-center">
+          <Row style={{ marginTop: "50px" }} className="align-items-center">
             <Col lg={6}>
               <div className="divImageFounder">
                 <img
@@ -233,6 +234,69 @@ export default function about() {
             </Col>
           </Row>
         </Container>
+      </Container>
+      <Container fluid className="conTeam">
+        <Container>
+          <Row>
+            <Col lg={12}>
+              <p className="pStroke">
+                The Team <span style={{ color: "#fd6b3b" }}>.</span>
+              </p>
+            </Col>
+          </Row>
+        </Container>
+        <Row style={{ marginTop: "70px" }}>
+          <Col lg={12}>
+            <Marquee
+              gradientColor={[26, 26, 26]}
+              pauseOnHover={true}
+              speed={80}
+            >
+              <div className="form-inline wrapper">
+                <div className="card">
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/alfonblack.jpg')" }}
+                  ></div>
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/alfonblack1.jpg')" }}
+                  ></div>
+                </div>
+                <div className="card">
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/eskyeblack.jpg')" }}
+                  ></div>
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/eskyeblack1.jpg')" }}
+                  ></div>
+                </div>
+                <div className="card">
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/alfonblack.jpg')" }}
+                  ></div>
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/alfonblack1.jpg')" }}
+                  ></div>
+                </div>
+                <div className="card">
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/alfonblack.jpg')" }}
+                  ></div>
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/alfonblack1.jpg')" }}
+                  ></div>
+                </div>
+              </div>
+            </Marquee>
+          </Col>
+        </Row>
       </Container>
       <Banner />
     </>
