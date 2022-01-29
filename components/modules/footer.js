@@ -19,19 +19,33 @@ export default function footer() {
           <Col lg={4}>
             <p className="pTitle">Location</p>
             <p className="pAddress">
-              290 Aguire Ave, Paranaque <br/>1720 Metro Manila
+              290 Aguire Ave, Paranaque <br />
+              1720 Metro Manila
             </p>
             <p className="pTitle">Socials</p>
-            <div className="form-inline divSocials">
-              <i>
-                <BsFacebook />
-              </i>
-              <i>
-                <BsInstagram />
-              </i>
-              <i>
-                <AiFillLinkedin />
-              </i>
+            <div className="divSocials">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i className="fab fa-facebook-f icon"></i>{" "}
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fab fa-twitter icon"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fab fa-linkedin-in icon"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fab fa-google-plus-g icon"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
           </Col>
           <Col lg={3}>

@@ -24,14 +24,12 @@ export default function navbar(props) {
     window.addEventListener("scroll", changeBackground, true);
   });
   useEffect(() => {
-      if (full) {
-        props.show()
-      }else {
-        props.unShow()
-      }
+    if (full) {
+      props.show();
+    } else {
+      props.unShow();
+    }
   }, [full]);
-
-  
 
   return (
     <>
@@ -114,6 +112,31 @@ export default function navbar(props) {
                     <div className="divClient">
                       <p className="pMenu1">Email</p>
                       <p className="pDesc">info@guerilla360.com</p>
+                    </div>
+                    <div className="divClient">
+                      <p className="pMenu1">Socials</p>
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-facebook-f icon"></i>{" "}
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-twitter icon"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-linkedin-in icon"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-google-plus-g icon"></i>
+                          </a>
+                        </li>
+                      </ul>
                     </div>
                   </Col>
                 </Row>

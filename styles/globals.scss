@@ -124,6 +124,77 @@ canvas {
         cursor: pointer;
         margin-bottom: 5px;
       }
+      ul {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px;
+      }
+
+      ul li {
+        list-style: none;
+      }
+
+      ul li a {
+        width: 60px;
+        height: 60px;
+        background-color: #fff;
+        text-align: center;
+        line-height: 54px;
+        font-size: 25px;
+        margin-right: 15px;
+        display: block;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        border: 3px solid #fff;
+        z-index: 1;
+      }
+
+      ul li a .icon {
+        position: relative;
+        color: #262626;
+        transition: 0.5s;
+        z-index: 3;
+      }
+
+      ul li a:hover .icon {
+        color: #fff;
+        transform: rotateY(360deg);
+      }
+
+      ul li a:before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f00;
+        transition: 0.5s;
+        z-index: 2;
+      }
+
+      ul li a:hover:before {
+        top: 0;
+      }
+
+      ul li:nth-child(1) a:before {
+        background: #3b5999;
+      }
+
+      ul li:nth-child(2) a:before {
+        background: #55acee;
+      }
+
+      ul li:nth-child(3) a:before {
+        background: #0077b5;
+      }
+
+      ul li:nth-child(4) a:before {
+        background: #dd4b39;
+      }
     }
   }
 }
@@ -896,12 +967,76 @@ canvas {
     margin-bottom: 35px;
   }
   .divSocials {
-    i {
-      font-size: 1.5rem;
-      color: #fd6b3b;
-      margin-right: 25px;
-      margin-top: 5px;
-      cursor: pointer;
+    ul {
+      display: flex;
+      margin-top: 20px;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding: 0px;
+
+      li {
+        list-style: none;
+
+        a {
+          width: 50px;
+          height: 50px;
+          background-color: #fff;
+          text-align: center;
+          line-height: 44px;
+          font-size: 22px;
+          margin-right: 15px;
+          display: block;
+          border-radius: 50%;
+          position: relative;
+          overflow: hidden;
+          border: 3px solid #fff;
+          z-index: 1;
+
+          .icon {
+            position: relative;
+            color: #262626;
+            transition: 0.5s;
+            z-index: 3;
+          }
+
+          &:hover .icon {
+            color: #fff;
+            transform: rotateY(360deg);
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f00;
+            transition: 0.5s;
+            z-index: 2;
+          }
+
+          &:hover:before {
+            top: 0;
+          }
+        }
+
+        &:nth-child(1) a:before {
+          background: #3b5999;
+        }
+
+        &:nth-child(2) a:before {
+          background: #55acee;
+        }
+
+        &:nth-child(3) a:before {
+          background: #0077b5;
+        }
+
+        &:nth-child(4) a:before {
+          background: #dd4b39;
+        }
+      }
     }
   }
   .pFooter {
