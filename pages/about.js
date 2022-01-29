@@ -301,4 +301,5 @@ export default function about() {
       <Banner />
     </>
   );
+  
 }

@@ -8,6 +8,7 @@ const Navbar = dynamic(() => import("../modules/navbar"));
 const Footer = dynamic(() => import("../modules/footer"));
 
 const Layout = ({ children }) => {
+  const [show, setShow] = useState(false);
   return (
     <>
       <Head>
@@ -24,15 +25,27 @@ const Layout = ({ children }) => {
       </Head>
 
       <div
+        className=" "
         style={{
           height: "100%",
           backgroundColor: "transparent",
           position: "relative",
         }}
       >
-        {<Navbar />}
-        {children}
-        {<Footer />}
+        {
+          <Navbar
+            show={() => {
+              setShow(true);
+            }}
+            unShow={() => {
+              setShow(false);
+            }}
+          />
+        }
+        <div className={show ? "d-none" : ""}>
+          {children}
+          {<Footer />}
+        </div>
       </div>
     </>
   );

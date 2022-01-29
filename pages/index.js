@@ -83,6 +83,10 @@ export default function index() {
     },
   ];
 
+  function showNav() {
+    document.querySelector(".navFull").classList.toggle("showNav");
+  }
+
   return (
     <>
       <Container fluid className="h-100 bgCon">
@@ -102,7 +106,9 @@ export default function index() {
                   <span className="circle" aria-hidden="true">
                     <span className="icon arrow"></span>
                   </span>
-                  <span className="button-text">Get Started</span>
+                  <span className="button-text" onClick={showNav}>
+                    Get Started
+                  </span>
                 </button>
               </div>
               <p className="pCall">If you're in a hurry, quick call to us</p>

@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
       ></Script>
       <Script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></Script>
       <Layout>
-        <div class="mouse"> </div>
+        <div className="mouse"> </div>
         <Component {...pageProps} />
       </Layout>
     </>
