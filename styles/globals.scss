@@ -2307,3 +2307,50 @@ $shellSpeed: 2s;
     }
   }
 }
+
+.conContact {
+  .divContact {
+    background-color: #d3ccbd;
+    width: 100%;
+    height: 100%;
+    .divBrown {
+      max-width: 500px;
+    }
+    .pHeader {
+      font-family: Inter;
+      color: #3e342f;
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 65px;
+    }
+    .pDesc {
+      font-family: Inter;
+      color: #3e342f;
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 35px;
+      margin-top: 30px;
+    }
+  }
+  .divContactForm {
+    width: 100%;
+    height: 100%;
+    .row {
+      margin-bottom: 20px;
+    }
+    .divBlack {
+      max-width: 100%;
+    }
+    .pHeader {
+      font-family: Inter;
+      color: white;
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 65px;
+    }
+    .txtInput {
+      color:  white !important;
+      border-color: white;
+    }
+  }
+}

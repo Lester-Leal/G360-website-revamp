@@ -31,6 +31,7 @@ export default function navbar(props) {
     }
   }, [full]);
 
+
   return (
     <>
       <Container fluid className="navFull">
@@ -85,7 +86,9 @@ export default function navbar(props) {
                         <p className="pMenu">Services</p>
                       </div>
                       <div className="divClient">
-                        <p className="pMenu">About</p>
+                        <a href="/about">
+                          <p className="pMenu">About</p>
+                        </a>
                       </div>
                       <div className="divClient">
                         <p className="pMenu">Portfolio</p>
@@ -148,7 +151,7 @@ export default function navbar(props) {
       <Container
         fluid
         className="divNavbar"
-        style={{ background: full ? "transparent" : "" }}
+        style={{ background: full || urlPath === "/contact" ? "transparent" : "" }}
       >
         <Row>
           <Col lg={6}>

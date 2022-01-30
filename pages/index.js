@@ -16,9 +16,11 @@ import { AiFillStar } from "react-icons/ai";
 import { CgArrowLeft, CgArrowRight } from "react-icons/cg";
 import Banner from "../components/modules/banner";
 import GlobeCanvas from "../components/elements/globe";
+import { useRouter } from 'next/router'
 import Slider from "react-slick";
 
 export default function index() {
+  const router = useRouter()
   const ref = useRef(null);
   const [count, setCount] = useState(0);
   const refClient = useRef(null);
@@ -86,6 +88,11 @@ export default function index() {
   function showNav() {
     document.querySelector(".navFull").classList.toggle("showNav");
   }
+
+  useEffect(() => {
+    // Prefetch the dashboard page
+    router.prefetch("/about");
+  }, []);
 
   return (
     <>

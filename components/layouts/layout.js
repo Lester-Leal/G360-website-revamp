@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
             }}
           />
         }
-        <div className={show ? "d-none" : ""}>
+        <div className={show ? "d-none" : "h-100"}>
           {children}
           {<Footer />}
         </div>
