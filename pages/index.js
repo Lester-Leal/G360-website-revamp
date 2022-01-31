@@ -16,11 +16,11 @@ import { AiFillStar } from "react-icons/ai";
 import { CgArrowLeft, CgArrowRight } from "react-icons/cg";
 import Banner from "../components/modules/banner";
 import GlobeCanvas from "../components/elements/globe";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 import Slider from "react-slick";
 
 export default function index() {
-  const router = useRouter()
+  const router = useRouter();
   const ref = useRef(null);
   const [count, setCount] = useState(0);
   const refClient = useRef(null);
@@ -497,24 +497,52 @@ export default function index() {
               >
                 <span className="pCount">{next === 1 ? 1 : 2} / 2</span>
                 <hr></hr>
-                <div style={{ marginTop: "-15px" }}>
-                  <button className="btnLeft" onClick={handlePrevSlideClient}>
-                    <i>
-                      <HiChevronLeft />
-                    </i>
-                    <span>Prev</span>
-                  </button>
-                  <button className="btnRight" onClick={handleNextSlideClient}>
-                    <span>Next</span>
-                    <i>
-                      <HiChevronRight />
-                    </i>
-                  </button>
+                <div style={{ marginTop: "-5px" }}>
+                  <div className="demo">
+                    <a
+                      href
+                      className="arrow left"
+                      onClick={handlePrevSlideClient}
+                    >
+                      <i />
+                      <svg>
+                        <use xlinkHref="#circle"></use>
+                      </svg>
+                    </a>
+                    <a
+                      href
+                      className="arrow"
+                      onClick={handleNextSlideClient}
+                      style={{ marginLeft: "85px" }}
+                    >
+                      <i />
+                      <svg>
+                        <use xlinkHref="#circle"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </Col>
             <Col lg={11}>
               <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={{ display: "none" }}
+                >
+                  <symbol
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 44 44"
+                    width="44px"
+                    height="44px"
+                    id="circle"
+                    fill="none"
+                    stroke="#fd6b3b"
+                  >
+                    <circle r={20} cy={22} cx={22} id="test"></circle>
+                  </symbol>
+                </svg>
+
                 <Slider {...settings_testimonials} ref={refClient}>
                   <div>
                     <Container style={{ padding: "0px" }}>
@@ -785,28 +813,40 @@ export default function index() {
                   </Col>
                   <Col lg={6}>
                     <div className="float-end">
-                      <i
-                        onClick={(e) => {
-                          if (count === 0) {
-                            setCount(2);
-                          } else {
-                            setCount(count - 1);
-                          }
-                        }}
-                      >
-                        <CgArrowLeft />
-                      </i>
-                      <i
-                        onClick={(e) => {
-                          if (count === 2) {
-                            setCount(0);
-                          } else {
-                            setCount(count + 1);
-                          }
-                        }}
-                      >
-                        <CgArrowRight />
-                      </i>
+                      <div className="demo">
+                        <a
+                          href
+                          className="arrow left"
+                          onClick={(e) => {
+                            if (count === 0) {
+                              setCount(2);
+                            } else {
+                              setCount(count - 1);
+                            }
+                          }}
+                        >
+                          <i />
+                          <svg>
+                            <use xlinkHref="#circle"></use>
+                          </svg>
+                        </a>
+                        <a
+                          href
+                          className="arrow"
+                          onClick={(e) => {
+                            if (count === 2) {
+                              setCount(0);
+                            } else {
+                              setCount(count + 1);
+                            }
+                          }}
+                        >
+                          <i />
+                          <svg>
+                            <use xlinkHref="#circle"></use>
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </Col>
                 </Row>

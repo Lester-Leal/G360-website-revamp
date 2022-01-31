@@ -19,7 +19,7 @@ export default function contact() {
   return (
     <Container fluid className="h-100 conContact">
       <Row className="h-100">
-        <Col lg={6} className="h-100">
+        <Col lg={6} className="h-100 p-0">
           <div className="divContact  align-items-center justify-content-center d-flex">
             <div className="divBrown">
               <lord-icon
@@ -39,68 +39,28 @@ export default function contact() {
             </div>
           </div>
         </Col>
-        <Col lg={6} className="h-100">
-          <div className="divContactForm align-items-center justify-content-center d-flex">
+        <Col lg={6} className="h-100 p-0">
+          <div className="divContactForm  align-items-center justify-content-center d-flex">
             <div className="divBlack">
               <p className="pHeader">Work with us!</p>
-              <div>
-                <Row className="p-0">
-                  <Col lg={6}>
-                    <TextField
-                      label="Contact Number"
-                      variant="standard"
-                      sx={{ outline: "none", borderColor: "#fff" }}
-                      inputProps={{
-                        sx: { color: "#fff", borderBottom: "1px solid #fff" },
-                      }}
-                      InputLabelProps={{
-                        style: { color: "#fff" },
-                      }}
-                    />
-                  </Col>
-                  <Col lg={6}>
-                    <TextField
-                      label="Full name"
-                      variant="standard"
-                      sx={{ outline: "none", borderColor: "#fff" }}
-                      inputProps={{
-                        sx: { color: "#fff", borderBottom: "1px solid #fff" },
-                      }}
-                      InputLabelProps={{
-                        style: { color: "#fff" },
-                      }}
-                    />
-                  </Col>
-                </Row>
+              <Container>
                 <Row>
                   <Col lg={6}>
                     <TextField
-                      label="Email"
-                      variant="standard"
-                      sx={{ outline: "none", borderColor: "#fff" }}
-                      inputProps={{
-                        sx: { color: "#fff", borderBottom: "1px solid #fff" },
-                      }}
-                      InputLabelProps={{
-                        style: { color: "#fff" },
-                      }}
+                      id="outlined-basic"
+                      label="Outlined"
+                      variant="outlined"
                     />
                   </Col>
                   <Col lg={6}>
                     <TextField
-                      label="Service"
-                      variant="standard"
-                      sx={{ outline: "none", borderColor: "#fff" }}
-                      inputProps={{
-                        sx: { color: "#fff", borderBottom: "1px solid #fff" },
-                      }}
-                      InputLabelProps={{
-                        style: { color: "#fff" },
-                      }}
+                      id="outlined-basic"
+                      label="Outlined"
+                      variant="outlined"
                     />
                   </Col>
                 </Row>
-              </div>
+              </Container>
             </div>
           </div>
         </Col>

@@ -197,3 +197,16 @@ jQuery(document).ready(function ($) {
     );
   }, 350);
 });
+
+$(".arrow").on("click touch", function (e) {
+  e.preventDefault();
+
+  let arrow = $(this);
+
+  if (!arrow.hasClass("animate")) {
+    arrow.addClass("animate");
+    setTimeout(() => {
+      arrow.removeClass("animate");
+    }, 1600);
+  }
+});
