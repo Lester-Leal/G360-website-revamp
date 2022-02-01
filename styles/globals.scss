@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 $highlight: #5bc0eb;
 $darkhighlight: #fde74c;
 html,
@@ -73,6 +73,139 @@ canvas {
   z-index: 1;
 }
 
+.wrapper {
+  background: transparent;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.background-shapes {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 21;
+}
+
+.shape {
+  animation: slow-spin 15s infinite;
+  bottom: -100px;
+  display: block;
+  list-style: none;
+  position: absolute;
+  transition-timing-function: linear;
+}
+
+.square {
+  background-color: rgba(255,255,255,0.5);
+  height: 40px;
+  width: 40px;
+}
+
+.triangle {
+  border-bottom: 100px solid rgba(255, 255, 255, 0.15);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  height: 0;
+  width: 0;
+}
+
+.circle {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+}
+
+.shape:nth-child(1) {
+  background-color: rgba(253, 107, 59, 0.2);
+  left: 10%;
+}
+.shape:nth-child(2) {
+  background-color: rgba(3, 155, 229, 0.2);
+  animation-delay: 2s;
+  animation-duration: 17s;
+  height: 80px;
+  left: 20%;
+  width: 80px;
+}
+
+.shape:nth-child(3) {
+  background-color: rgba(33, 33, 33, 0.2);
+  animation-delay: 4s;
+  left: 70%;
+}
+
+.shape:nth-child(4) {
+  animation-duration: 22s;
+  height: 60px;
+  left: 40%;
+  width: 60px;
+}
+
+.square:nth-child(4) {
+  background-color: rgba(253, 107, 59, 0.2);
+}
+.shape:nth-child(5) {
+  left: 70%;
+}
+.shape:nth-child(6) {
+  animation-delay: 3s;
+  height: 120px;
+  left: 80%;
+  width: 120px;
+}
+
+.square:nth-child(6) {
+  background-color: rgba(253, 107, 59, 0.2);
+}
+.shape:nth-child(7) {
+  animation-delay: 7s;
+  height: 160px;
+  left: 32%;
+  width: 160px;
+}
+
+.shape:nth-child(8) {
+  animation-delay: 15s;
+  animation-duration: 40s;
+  height: 20px;
+  left: 55%;
+  width: 20px;
+}
+
+.shape:nth-child(9) {
+  animation-delay: 2s;
+  animation-duration: 40s;
+  height: 10px;
+  left: 25%;
+  width: 10px;
+}
+
+.square:nth-child(9) {
+  background-color: rgba(253, 107, 59, 0.2);
+}
+.shape:nth-child(10) {
+  animation-delay: 11s;
+  height: 160px;
+  left: 90%;
+  width: 160px;
+}
+
+@keyframes slow-spin {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-700px) rotate(600deg);
+  }
+}
+
 .navFull {
   height: 100%;
   width: 100%;
@@ -94,8 +227,8 @@ canvas {
     .pMenu {
       font-family: Poppins;
       color: #1a1a1a;
-      font-size: 6.2rem;
-      font-weight: bolder;
+      font-size: 5.5rem;
+      font-weight: 800;
       margin-bottom: 0px;
       cursor: pointer;
       padding: 5px;
@@ -2459,51 +2592,7 @@ $shellSpeed: 2s;
 }
 
 .conContact {
-  .divContact {
-    background-color: #d3ccbd;
-    width: 100%;
-    height: 100%;
-    .divBrown {
-      max-width: 500px;
-    }
-    .pHeader {
-      font-family: Inter;
-      color: #3e342f;
-      font-size: 3.5rem;
-      font-weight: 800;
-      line-height: 65px;
-    }
-    .pDesc {
-      font-family: Inter;
-      color: #3e342f;
-      font-size: 1.2rem;
-      font-weight: 500;
-      line-height: 35px;
-      margin-top: 30px;
-    }
-  }
-  .divContactForm {
-    background-color: #1a1a1a;
-    width: 100%;
-    height: 100%;
-    .row {
-      margin-bottom: 20px;
-    }
-    .divBlack {
-      max-width: 500px;
-    }
-    .pHeader {
-      font-family: Inter;
-      color: white;
-      font-size: 2rem;
-      font-weight: 800;
-      line-height: 65px;
-    }
-    .txtInput {
-      color: white !important;
-      border-color: white;
-    }
-  }
+  background: linear-gradient(90deg, white 50%, #1a1a1a 50%);
 }
 
 .arrow {

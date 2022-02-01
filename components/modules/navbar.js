@@ -34,6 +34,20 @@ export default function navbar(props) {
 
   return (
     <>
+      <div className={!full ? "d-none" : "wrapper"}>
+        <ul className="background-shapes">
+          <li className="shape square" />
+          <li className="shape triangle" />
+          <li className="shape circle" />
+          <li className="shape circle" />
+          <li className="shape triangle" />
+          <li className="shape square" />
+          <li className="shape square" />
+          <li className="shape circle" />
+          <li className="shape triangle" />
+          <li className="shape square" />
+        </ul>
+      </div>
       <Container fluid className="navFull">
         <Container className="h-100">
           <Row className="align-items-center justify-content-center d-flex h-100">
@@ -65,6 +79,22 @@ export default function navbar(props) {
               <div className="form-inline">
                 <p className="pCount">04</p>
                 <p className="pMenu Animation">Careers</p>
+              </div>
+              <div className="form-inline">
+                <p className="pCount">05</p>
+                <p
+                  className="pMenu Animation"
+                  onClick={(e) => {
+                    router.push("/contact");
+                    setFull(false);
+                    document
+                      .querySelector(".navFull")
+                      .classList.toggle("showNav");
+                    setChecked((full) => !full);
+                  }}
+                >
+                  Contact
+                </p>
               </div>
             </Col>
             <Col lg={4}>
