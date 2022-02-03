@@ -58,7 +58,19 @@ export default function navbar(props) {
               </div>
               <div className="form-inline">
                 <p className="pCount">02</p>
-                <p className="pMenu Animation">Portfolio</p>
+                <p
+                  className="pMenu Animation"
+                  onClick={(e) => {
+                    router.push("/project");
+                    setFull(false);
+                    document
+                      .querySelector(".navFull")
+                      .classList.toggle("showNav");
+                    setChecked((full) => !full);
+                  }}
+                >
+                  Portfolio
+                </p>
               </div>
               <div className="form-inline">
                 <p className="pCount">03</p>
