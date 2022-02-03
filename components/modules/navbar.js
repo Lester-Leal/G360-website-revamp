@@ -154,7 +154,14 @@ export default function navbar(props) {
             <img
               src={!full ? "Image/logo_white.png" : ""}
               className="img-fluid"
-              style={{ width: "140px" }}
+              style={{
+                width: "120px",
+                cursor: "pointer",
+                filter: full || urlPath === "/contact" ? "brightness(0)" : "",
+              }}
+              onClick={(e) => {
+                router.push("/");
+              }}
             />
           </Col>
           <Col lg={6}>

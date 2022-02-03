@@ -23,6 +23,10 @@ function MyApp({ Component, pageProps }) {
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
         strategy="beforeInteractive"
       ></Script>
+      <Script
+        src="https://cdn.jsdelivr.net/npm/warpjs@1.0.8/dist/warp.js"
+        strategy="beforeInteractive"
+      ></Script>
       <Script src="/script/3dGlobe.js" />
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.1/ocanvas.min.js"
@@ -35,6 +39,10 @@ function MyApp({ Component, pageProps }) {
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous"
       ></link>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      />
       <Layout>
         <div className="mouse"> </div>
         <Component {...pageProps} />
