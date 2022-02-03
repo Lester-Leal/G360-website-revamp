@@ -1,5 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
+import Tilt from "react-parallax-tilt";
 import React, { useState, useEffect } from "react";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 import { useRouter } from "next/router";
 
 export default function projects() {
@@ -8,104 +11,195 @@ export default function projects() {
     <>
       <Container fluid className="conProjects h-100">
         <Container fluid className="h-100 conInnerProject">
+          <div className="divIcons">
+            <i>
+              <FaFacebookF />
+            </i>
+            <i>
+              <FaLinkedinIn />
+            </i>
+            <i>
+              <SiGmail />
+            </i>
+          </div>
+          <div className="divArrow">
+            <div className="demo">
+              <a
+                href
+                className="arrow left"
+                style={{ cursor: "pointer" }}
+                onClick={(e) => {
+                  if (click === 0) {
+                  } else {
+                    setClick(click - 1);
+                  }
+                }}
+              >
+                <i />
+                <svg>
+                  <use xlinkHref="#circle"></use>
+                </svg>
+              </a>
+              <a
+                href
+                className="arrow"
+                style={{ cursor: "pointer" }}
+                onClick={(e) => {
+                  if (click === 0) {
+                  } else {
+                    setClick(click + 1);
+                  }
+                }}
+              >
+                <i />
+                <svg>
+                  <use xlinkHref="#circle"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
           <Row className="h-100 align-items-center justify-content-center d-flex">
             <Col lg={12}>
-              <div className="gallery">
-                <div
-                  className={
-                    click === "1"
-                      ? "item item-1 hoverCard align-items-center  d-flex"
-                      : "item item-1"
-                  }
-                  id={click === 0 || click === "1" ? "" : "reduceBright"}
-                  data-id="1"
-                  onClick={(e) => {
-                    try {
+              <Tilt
+                tiltMaxAngleX={click !== 0 ? 10 : 0}
+                tiltMaxAngleY={click !== 0 ? 10 : 0}
+              >
+                <div className="gallery">
+                  <div
+                    className={
+                      click === 1
+                        ? "item item-1 hoverCard align-items-center  d-flex"
+                        : "item item-1"
+                    }
+                    id={click === 0 || click === 1 ? "" : "reduceBright"}
+                    data-id={1}
+                    onClick={(e) => {
+                      try {
+                        if (click === 0) {
+                          setClick(
+                            parseInt(
+                              e.target.attributes.getNamedItem("data-id").value
+                            )
+                          );
+                        } else {
+                          setClick(0);
+                        }
+                      } catch (error) {}
+                    }}
+                  >
+                    <div
+                      className={
+                        click === 1
+                          ? "divDesc align-items-center justify-content-center d-flex"
+                          : "d-none"
+                      }
+                    >
+                      <p className="pClient">Washwell</p>
+                    </div>
+                  </div>
+                  <div
+                    className={
+                      click === 2 ? "item item-2 hoverCard" : "item item-2"
+                    }
+                    id={click === 0 || click === 2 ? "" : "reduceBright"}
+                    data-id={2}
+                    onClick={(e) => {
                       if (click === 0) {
                         setClick(
-                          e.target.attributes.getNamedItem("data-id").value
+                          parseInt(
+                            e.target.attributes.getNamedItem("data-id").value
+                          )
                         );
                       } else {
                         setClick(0);
                       }
-                    } catch (error) {}
-                  }}
-                ></div>
-                <div
-                  className={
-                    click === "2" ? "item item-2 hoverCard" : "item item-2"
-                  }
-                  id={click === 0 || click === "2" ? "" : "reduceBright"}
-                  data-id="2"
-                  onClick={(e) => {
-                    if (click === 0) {
-                      setClick(
-                        e.target.attributes.getNamedItem("data-id").value
-                      );
-                    } else {
-                      setClick(0);
-                    }
-                  }}
-                ></div>
-                <div
-                  className={
-                    click === "3" ? "item item-3 hoverCard" : "item item-3"
-                  }
-                  id={click === 0 || click === "3" ? "" : "reduceBright"}
-                  data-id="3"
-                  onClick={(e) => {
-                    if (click === 0) {
-                      setClick(
-                        e.target.attributes.getNamedItem("data-id").value
-                      );
-                    } else {
-                      setClick(0);
-                    }
-                  }}
-                >
-                  <div className="divDesc align-items-center justify-content-center d-none d-flex">
-                    <p className="pClient">Washwell</p>
+                    }}
+                  >
+                    <div
+                      className={
+                        click === 2
+                          ? "divDesc align-items-center justify-content-center d-flex"
+                          : "d-none"
+                      }
+                    >
+                      <div
+                        className={
+                          click === 2
+                            ? "divDesc align-items-center justify-content-center d-flex"
+                            : "d-none"
+                        }
+                      >
+                        <p className="pClient">Washwell</p>
+                      </div>
+                    </div>
                   </div>
+                  <div
+                    className={
+                      click === 3 ? "item item-3 hoverCard" : "item item-3"
+                    }
+                    id={click === 0 || click === 3 ? "" : "reduceBright"}
+                    data-id={3}
+                    onClick={(e) => {
+                      if (click === 0) {
+                        setClick(
+                          parseInt(
+                            e.target.attributes.getNamedItem("data-id").value
+                          )
+                        );
+                      } else {
+                        setClick(0);
+                      }
+                    }}
+                  >
+                    <div
+                      className={
+                        click === 3
+                          ? "divDesc align-items-center justify-content-center d-flex"
+                          : "d-none"
+                      }
+                    >
+                      <p className="pClient">Washwell</p>
+                    </div>
+                  </div>
+                  <div
+                    className={
+                      click === 4 ? "item item-4 hoverCard" : "item item-4"
+                    }
+                    id={click === 0 || click === 4 ? "" : "reduceBright"}
+                    data-id={4}
+                    onClick={(e) => {
+                      if (click === 0) {
+                        setClick(
+                          parseInt(
+                            e.target.attributes.getNamedItem("data-id").value
+                          )
+                        );
+                      } else {
+                        setClick(0);
+                      }
+                    }}
+                  />
+                  <div
+                    className={
+                      click === 5 ? "item item-5 hoverCard" : "item item-5"
+                    }
+                    id={click === 0 || click === 5 ? "" : "reduceBright"}
+                    data-id={5}
+                    onClick={(e) => {
+                      if (click === 0) {
+                        setClick(
+                          parseInt(
+                            e.target.attributes.getNamedItem("data-id").value
+                          )
+                        );
+                      } else {
+                        setClick(0);
+                      }
+                    }}
+                  />
+                  <div />
                 </div>
-                <div
-                  className={
-                    click === "4" ? "item item-4 hoverCard" : "item item-4"
-                  }
-                  id={click === 0 || click === "4" ? "" : "reduceBright"}
-                  data-id="4"
-                  onClick={(e) => {
-                    if (click === 0) {
-                      setClick(
-                        e.target.attributes.getNamedItem("data-id").value
-                      );
-                    } else {
-                      setClick(0);
-                    }
-                  }}
-                />
-                <div
-                  className={
-                    click === "5" ? "item item-5 hoverCard" : "item item-5"
-                  }
-                  id={click === 0 || click === "5" ? "" : "reduceBright"}
-                  data-id="5"
-                  onClick={(e) => {
-                    if (click === 0) {
-                      setClick(
-                        e.target.attributes.getNamedItem("data-id").value
-                      );
-                    } else {
-                      setClick(0);
-                    }
-                  }}
-                />
-                <div />
-              </div>
-              <Row>
-                <Col lg={6}>
-                  <p style={{ marginBottom: "0px" }}>test</p>
-                </Col>
-              </Row>
+              </Tilt>
             </Col>
           </Row>
         </Container>

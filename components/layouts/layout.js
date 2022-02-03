@@ -8,6 +8,7 @@ const Navbar = dynamic(() => import("../modules/navbar"));
 const Footer = dynamic(() => import("../modules/footer"));
 
 const Layout = ({ children }) => {
+  const router = useRouter();
   const [show, setShow] = useState(false);
   return (
     <>
@@ -52,7 +53,9 @@ const Layout = ({ children }) => {
         }
         <div className={show ? "d-none" : "h-100"}>
           {children}
-          {<Footer />}
+          <div className={router.pathname === "/project" ? "d-none" : ""}>
+            {<Footer />}
+          </div>
         </div>
       </div>
     </>
