@@ -29,6 +29,7 @@ export default function projects() {
   return (
     <>
       <Container fluid className="conProjects h-100">
+        <div className="bg"></div>
         <Container fluid className="h-100 conInnerProject">
           <div className="divIcons">
             <i>
@@ -49,7 +50,7 @@ export default function projects() {
                 style={{ cursor: "pointer" }}
                 onClick={(e) => {
                   if (click === 0) {
-                    handlePrevSlide()
+                    handlePrevSlide();
                   } else {
                     setClick(click - 1);
                   }
@@ -66,7 +67,7 @@ export default function projects() {
                 style={{ cursor: "pointer" }}
                 onClick={(e) => {
                   if (click === 0) {
-                    handleNextSlide()
+                    handleNextSlide();
                   } else {
                     setClick(click + 1);
                   }
@@ -287,7 +288,7 @@ export default function projects() {
                         }}
                       >
                         <div className="divText">
-                          <p className="pSlide">Seedbox</p>
+                          <p className="pSlide">Lifeline</p>
                         </div>
                         <div
                           className={
@@ -321,7 +322,7 @@ export default function projects() {
                         }}
                       >
                         <div className="divText">
-                          <p className="pSlide">Seedbox</p>
+                          <p className="pSlide">Paymaya</p>
                         </div>
                         <div
                           className={
@@ -355,11 +356,45 @@ export default function projects() {
                         }}
                       >
                         <div className="divText">
-                          <p className="pSlide">Seedbox</p>
+                          <p className="pSlide">Find Cargo</p>
                         </div>
                         <div
                           className={
                             click === 8
+                              ? "divDesc align-items-center justify-content-center d-flex"
+                              : "d-none"
+                          }
+                        >
+                          <p className="pClient animate__animated animate__zoomIn">
+                            Seedbox
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        className={
+                          click === 9 ? "item item-9 hoverCard" : "item item-9"
+                        }
+                        id={click === 0 || click === 9 ? "" : "reduceBright"}
+                        data-id={9}
+                        onClick={(e) => {
+                          if (click === 0) {
+                            setClick(
+                              parseInt(
+                                e.target.attributes.getNamedItem("data-id")
+                                  .value
+                              )
+                            );
+                          } else {
+                            setClick(0);
+                          }
+                        }}
+                      >
+                        <div className="divText">
+                          <p className="pSlide">Lifeline Web</p>
+                        </div>
+                        <div
+                          className={
+                            click === 9
                               ? "divDesc align-items-center justify-content-center d-flex"
                               : "d-none"
                           }
