@@ -3496,6 +3496,7 @@ section#animated-cta-bar {
     transform: scale(0.95);
     margin-right: -14px;
     border-radius: 0;
+    position: relative;
     cursor: pointer;
     will-change: flex, transform;
     transition: all 0.4s;
@@ -3505,6 +3506,13 @@ section#animated-cta-bar {
     &:last-child {
       border-radius: 0 5px 5px 0;
       margin-right: 0 !important;
+    }
+    &:hover .divText {
+      display: inline-block;
+      margin: 0 0.5rem;
+      animation: lightSpeedInLeft; /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 0.5s;
+      
     }
     .divDesc {
       width: 100%;
@@ -3533,6 +3541,16 @@ section#animated-cta-bar {
         font-size: 1.2rem;
       }
     }
+    .divText {
+      display: none;
+      font-family: Poppins;
+      color: white;
+      font-size: 2rem;
+      font-weight: 600;
+      position: absolute;
+      left: 15px;
+      bottom: 10px;
+    }
   }
 
   .item-1 {
@@ -3554,21 +3572,106 @@ section#animated-cta-bar {
     background-image: url("/Image/Projects/box2.png");
     background-repeat: no-repeat;
     background-size: cover;
+    &:hover {
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background: linear-gradient(
+          180deg,
+          hsla(209, 11%, 38%, 0) 0%,
+          hsla(209, 36%, 20%, 0.7) 100%
+        ),
+        url("/Image/Projects/box2.png");
+    }
   }
   .item-3 {
     background-image: url("/Image/Projects/box3.png");
     background-repeat: no-repeat;
     background-size: cover;
+    &:hover {
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background: linear-gradient(
+          180deg,
+          hsla(209, 11%, 38%, 0) 0%,
+          hsla(209, 36%, 20%, 0.7) 100%
+        ),
+        url("/Image/Projects/box3.png");
+    }
   }
   .item-4 {
     background-image: url("/Image/Projects/box4.png");
     background-repeat: no-repeat;
     background-size: cover;
+    &:hover {
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background: linear-gradient(
+          180deg,
+          hsla(209, 11%, 38%, 0) 0%,
+          hsla(209, 36%, 20%, 0.7) 100%
+        ),
+        url("/Image/Projects/box4.png");
+    }
   }
   .item-5 {
     background-image: url("/Image/Projects/box5.png");
     background-repeat: no-repeat;
     background-size: cover;
+    &:hover {
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background: linear-gradient(
+          180deg,
+          hsla(209, 11%, 38%, 0) 0%,
+          hsla(209, 36%, 20%, 0.7) 100%
+        ),
+        url("/Image/Projects/box5.png");
+    }
+  }
+  .item-6 {
+    background-image: url("/Image/Projects/box6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:hover {
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background: linear-gradient(
+          180deg,
+          hsla(209, 11%, 38%, 0) 0%,
+          hsla(209, 36%, 20%, 0.7) 100%
+        ),
+        url("/Image/Projects/box6.png");
+    }
+  }
+  .item-7 {
+    background-image: url("/Image/Projects/box7.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:hover {
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background: linear-gradient(
+          180deg,
+          hsla(209, 11%, 38%, 0) 0%,
+          hsla(209, 36%, 20%, 0.7) 100%
+        ),
+        url("/Image/Projects/box7.png");
+    }
+  }
+  .item-8 {
+    background-image: url("/Image/Projects/box8.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:hover {
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background: linear-gradient(
+          180deg,
+          hsla(209, 11%, 38%, 0) 0%,
+          hsla(209, 36%, 20%, 0.7) 100%
+        ),
+        url("/Image/Projects/box8.png");
+    }
   }
 }
 :root {
