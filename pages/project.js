@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { useRouter } from "next/router";
+import Slider from "react-slick";
 
 export default function projects() {
   const [click, setClick] = useState(0);
@@ -94,7 +95,8 @@ export default function projects() {
                           : "d-none"
                       }
                     >
-                      <p className="pClient">Washwell</p>
+                      <p className="pClient animate__animated animate__zoomIn">Washwell</p>
+                      <p className="pVisit">VISIT WEBSITE</p>
                     </div>
                   </div>
                   <div
@@ -129,7 +131,9 @@ export default function projects() {
                             : "d-none"
                         }
                       >
-                        <p className="pClient">Washwell</p>
+                        <p className="pClient animate__animated animate__zoomIn">
+                          Aquamundo
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -158,7 +162,7 @@ export default function projects() {
                           : "d-none"
                       }
                     >
-                      <p className="pClient">Washwell</p>
+                      <p className="pClient animate__animated animate__zoomIn">Natural Works</p>
                     </div>
                   </div>
                   <div
@@ -178,7 +182,17 @@ export default function projects() {
                         setClick(0);
                       }
                     }}
-                  />
+                  >
+                    <div
+                      className={
+                        click === 4
+                          ? "divDesc align-items-center justify-content-center d-flex"
+                          : "d-none"
+                      }
+                    >
+                      <p className="pClient animate__animated animate__zoomIn">Phoenix</p>
+                    </div>
+                  </div>
                   <div
                     className={
                       click === 5 ? "item item-5 hoverCard" : "item item-5"
@@ -196,8 +210,17 @@ export default function projects() {
                         setClick(0);
                       }
                     }}
-                  />
-                  <div />
+                  >
+                    <div
+                      className={
+                        click === 5
+                          ? "divDesc align-items-center justify-content-center d-flex"
+                          : "d-none"
+                      }
+                    >
+                      <p className="pClient animate__animated animate__zoomIn">Seedbox</p>
+                    </div>
+                  </div>
                 </div>
               </Tilt>
             </Col>

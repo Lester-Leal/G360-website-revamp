@@ -5,7 +5,7 @@ $highlight: #5bc0eb;
 $darkhighlight: #fde74c;
 
 @media only screen and (max-width: 1270px) {
-  .gallery{
+  .gallery {
     gap: 0.8% !important;
   }
 }
@@ -3485,8 +3485,8 @@ section#animated-cta-bar {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 68vh;
-  gap: 0.1%;
+  height: 65vh;
+  gap: 0.2%;
   .item {
     flex: 1;
     height: 100%;
@@ -3495,10 +3495,9 @@ section#animated-cta-bar {
     background-repeat: none;
     transform: scale(0.95);
     margin-right: -14px;
-    box-shadow: 0 1px 4px 0 rgba(10, 16, 34, 0.2);
     border-radius: 0;
     cursor: pointer;
-    will-change: flex, transform, box-shadow;
+    will-change: flex, transform;
     transition: all 0.4s;
     &:first-child {
       border-radius: 5px 0 0 5px;
@@ -3525,91 +3524,31 @@ section#animated-cta-bar {
         -moz-text-stroke-color: #1a1a1a;
         text-rendering: geometricPrecision;
         text-transform: uppercase;
+        --animate-duration: 0.6s !important;
       }
-    }
-    h1 {
-      font-family: Poppins, sans-serif;
-      font-size: 5.5rem;
-      font-weight: 800;
-      width: -webkit-min-content;
-      width: -moz-min-content;
-      width: min-content;
-      margin: auto;
-      text-transform: uppercase;
-      background: linear-gradient(
-        219deg,
-        var(--color-1) 19%,
-        transparent 19%,
-        transparent 20%,
-        var(--color-2) 20%,
-        var(--color-2) 39%,
-        transparent 39%,
-        transparent 40%,
-        var(--color-3) 40%,
-        var(--color-3) 59%,
-        transparent 59%,
-        transparent 60%,
-        var(--color-4) 60%,
-        var(--color-4) 79%,
-        transparent 79%,
-        transparent 80%,
-        var(--color-5) 80%
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .con {
-      padding: 1.5rem;
-      text-align: center;
-      background: radial-gradient(
-          circle at 1.4% 1.4%,
-          var(--color-1) 0.8%,
-          transparent 0.8%
-        ),
-        radial-gradient(
-          circle at 5.5% 3%,
-          var(--color-2) 0.45%,
-          transparent 0.45%
-        ),
-        radial-gradient(
-          circle at 2.5% 3.5%,
-          var(--color-3) 0.5%,
-          transparent 0.5%
-        ),
-        radial-gradient(
-          circle at 4.5% 1.2%,
-          var(--color-4) 0.25%,
-          transparent 0.25%
-        ),
-        radial-gradient(
-          circle at 98% 98%,
-          var(--color-1) 0.8%,
-          transparent 0.8%
-        ),
-        radial-gradient(
-          circle at 95% 95%,
-          var(--color-2) 0.45%,
-          transparent 0.45%
-        ),
-        radial-gradient(
-          circle at 94.5% 97.5%,
-          var(--color-3) 0.5%,
-          transparent 0.5%
-        ),
-        radial-gradient(
-          circle at 98.5% 95.5%,
-          var(--color-4) 0.25%,
-          transparent 0.25%
-        );
+      .pVisit {
+        font-family: Inter;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
     }
   }
 
   .item-1 {
     background-image: url("/Image/Projects/box1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    &:hover {
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background: linear-gradient(
+          180deg,
+          hsla(209, 11%, 38%, 0) 0%,
+          hsla(209, 36%, 20%, 0.7) 100%
+        ),
+        url("/Image/Projects/box1.png");
+    }
   }
   .item-2 {
     background-image: url("/Image/Projects/box2.png");
@@ -3622,10 +3561,14 @@ section#animated-cta-bar {
     background-size: cover;
   }
   .item-4 {
-    background-image: url("https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80");
+    background-image: url("/Image/Projects/box4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .item-5 {
-    background-image: url("https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80");
+    background-image: url("/Image/Projects/box5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 :root {
