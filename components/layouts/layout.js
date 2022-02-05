@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 const Navbar = dynamic(() => import("../modules/navbar"));
 const Footer = dynamic(() => import("../modules/footer"));
+const Loader = dynamic(() => import("../modules/loader"));
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -51,6 +52,7 @@ const Layout = ({ children }) => {
             }}
           />
         }
+        {<Loader />}
         <div className={show ? "d-none" : "h-100"}>
           {children}
           <div className={router.pathname === "/project" ? "d-none" : ""}>
