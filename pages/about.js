@@ -252,45 +252,45 @@ export default function about() {
               pauseOnHover={true}
               speed={80}
             >
-              <div className="form-inline wrapper">
+              <div className="form-inline wrapperCard">
                 <div className="card">
                   <div
                     className="photo"
-                    style={{ background: "url('Image/alfonblack.jpg')" }}
+                    style={{ background: "url('Image/Team/alfonblack.jpg')" }}
                   ></div>
                   <div
                     className="photo"
-                    style={{ background: "url('Image/alfonblack1.jpg')" }}
+                    style={{ background: "url('Image/Team/alfonblack1.jpg')" }}
                   ></div>
                 </div>
                 <div className="card">
                   <div
                     className="photo"
-                    style={{ background: "url('Image/eskyeblack.jpg')" }}
+                    style={{ background: "url('Image/Team/eskyeblack.jpg')" }}
                   ></div>
                   <div
                     className="photo"
-                    style={{ background: "url('Image/eskyeblack1.jpg')" }}
-                  ></div>
-                </div>
-                <div className="card">
-                  <div
-                    className="photo"
-                    style={{ background: "url('Image/alfonblack.jpg')" }}
-                  ></div>
-                  <div
-                    className="photo"
-                    style={{ background: "url('Image/alfonblack1.jpg')" }}
+                    style={{ background: "url('Image/Team/eskyeblack1.jpg')" }}
                   ></div>
                 </div>
                 <div className="card">
                   <div
                     className="photo"
-                    style={{ background: "url('Image/alfonblack.jpg')" }}
+                    style={{ background: "url('Image/Team/alfonblack.jpg')" }}
                   ></div>
                   <div
                     className="photo"
-                    style={{ background: "url('Image/alfonblack1.jpg')" }}
+                    style={{ background: "url('Image/Team/alfonblack1.jpg')" }}
+                  ></div>
+                </div>
+                <div className="card">
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/Team/alfonblack.jpg')" }}
+                  ></div>
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/Team/alfonblack1.jpg')" }}
                   ></div>
                 </div>
               </div>

@@ -279,13 +279,13 @@ canvas {
     margin-bottom: -20px;
     .pCount {
       font-family: Inter;
-      color: #1a1a1a;
+      color: #141414;
       font-weight: 700;
       margin-right: 50px;
     }
     .pMenu {
       font-family: Poppins;
-      color: #1a1a1a;
+      color: #141414;
       font-size: 5.5rem;
       font-weight: 800;
       margin-bottom: 0px;
@@ -295,7 +295,7 @@ canvas {
   }
   .pHeader {
     font-family: Inter;
-    color: #1a1a1a;
+    color: #141414;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 30px;
@@ -311,7 +311,7 @@ canvas {
     }
     .pDesc {
       font-family: Inter;
-      color: #1a1a1a;
+      color: #141414;
       font-size: 14px;
       font-weight: 500;
       max-width: 320px;
@@ -630,7 +630,7 @@ canvas {
 }
 
 .bgCon {
-  background: #1a1a1a;
+  background: #141414;
   position: relative;
 
   .pCenter {
@@ -725,7 +725,7 @@ canvas {
 }
 
 .conHow {
-  background: #1a1a1a;
+  background: #141414;
   position: relative;
   .pHeader {
     font-family: Vollkorn;
@@ -911,13 +911,13 @@ button {
 }
 
 .conDesc {
-  background: #1a1a1a;
+  background: #141414;
   position: relative;
   padding: 75px 0px;
   .pText {
-    font-family: Inter;
+    font-family: Poppins;
     font-size: 5rem;
-    font-weight: 700;
+    font-weight: 800;
     color: transparent;
     min-width: fit-content;
     -webkit-text-stroke-width: 2px;
@@ -1394,16 +1394,16 @@ canvas {
   }
 }
 
-.wrapper {
+.wrapperCard {
   .card {
     width: 400px;
     height: 500px;
     position: relative;
     overflow: hidden;
     border-radius: 0px !important;
-    background-color: #1a1a1a;
+    background-color: #141414;
     border: 0px;
-    border-left: 1px solid #1a1a1a !important;
+    border-left: 1px solid #141414 !important;
     &:hover {
       .photo {
         &:first-child {
@@ -1449,7 +1449,7 @@ canvas {
 }
 
 .conFounder {
-  background-color: #1a1a1a;
+  background-color: #141414;
   padding: 6rem 15px 10rem 15px;
   margin-top: 70px;
   .pStroke {
@@ -1567,7 +1567,7 @@ canvas {
 }
 
 .conTest {
-  background: #1a1a1a;
+  background: #141414;
   padding: 70px 0px;
   .pQuote {
     animation: lights 5s 750ms linear infinite;
@@ -1731,7 +1731,7 @@ canvas {
 
 .conClients {
   padding: 100px 15px;
-  background: #1a1a1a;
+  background: #141414;
   .pHeader {
     font-family: Vollkorn;
     font-weight: 800;
@@ -1991,7 +1991,7 @@ canvas {
   padding-top: 170px;
   padding-bottom: 100px;
   position: relative;
-  background: #1a1a1a;
+  background: #141414;
   .divHeader {
     width: 900px;
     margin: 0 auto;
@@ -2055,7 +2055,7 @@ canvas {
 }
 
 .conValues {
-  background-color: #1a1a1a;
+  background-color: #141414;
   padding: 70px 15px;
   padding-bottom: 150px;
   .divValues {
@@ -2077,14 +2077,14 @@ canvas {
       }
       .p1 {
         font-family: Vollkorn;
-        font-size: #1a1a1a;
+        font-size: #141414;
         font-size: 16px;
         font-weight: 500;
       }
     }
     .p2 {
       font-family: Inter;
-      font-size: #1a1a1a;
+      font-size: #141414;
       font-size: 2rem;
       font-weight: 700;
       width: 400px;
@@ -2092,7 +2092,7 @@ canvas {
     }
     .pDesc {
       font-family: Vollkorn;
-      font-size: #1a1a1a;
+      font-size: #141414;
       font-size: 18px;
       font-weight: 500;
       max-width: 500px;
@@ -2113,7 +2113,7 @@ canvas {
 }
 
 .conWhy {
-  background-color: #1a1a1a;
+  background-color: #141414;
   padding: 150px 15px;
   .pStroke {
     font-family: Inter;
@@ -2578,7 +2578,7 @@ $shellSpeed: 2s;
 }
 
 .conBanner {
-  background: #1a1a1a;
+  background: #141414;
   position: relative;
   padding-top: 15px;
   padding-bottom: 20px;
@@ -2608,23 +2608,23 @@ $shellSpeed: 2s;
     width: 900px;
     margin: 0 auto;
     .pTitle {
-      font-family: Inter;
+      font-family: Poppins;
       font-size: 5rem;
       font-weight: 700;
       color: transparent;
       min-width: fit-content;
       -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: #1a1a1a;
+      -webkit-text-stroke-color: #141414;
       -ms-text-stroke-width: 2px;
-      -ms-text-stroke-color: #1a1a1a;
+      -ms-text-stroke-color: #141414;
       -moz-text-stroke-width: 2px;
-      -moz-text-stroke-color: #1a1a1a;
+      -moz-text-stroke-color: #141414;
       text-rendering: geometricPrecision;
       margin-bottom: -15px;
     }
     .pTitleSub {
-      font-family: Inter;
-      color: #1a1a1a;
+      font-family: Poppins;
+      color: #141414;
       font-size: 4rem;
       font-weight: 700;
     }
@@ -2634,7 +2634,7 @@ $shellSpeed: 2s;
       float: right;
       .pHeader {
         font-family: Inter;
-        color: #1a1a1a;
+        color: #141414;
         font-size: 1.5rem;
         max-width: 400px;
         line-height: 32px;
@@ -2652,74 +2652,68 @@ $shellSpeed: 2s;
 }
 
 .conContact {
-  background: linear-gradient(90deg, white 50%, #1a1a1a 50%);
   position: relative;
-  .conInner {
-    max-width: 2100px !important;
+  padding-top: 170px;
+  .pStroke {
+    font-family: Poppins;
+    font-size: 5.1rem;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    -ms-text-stroke-width:1px;
+    -ms-text-stroke-color: #fff;
+    -moz-text-stroke-width: 1px;
+    -moz-text-stroke-color: #fff;
+    text-rendering: geometricPrecision;
   }
-  .divLeft {
-    max-width: 600px !important;
-    margin: 0 auto;
-    .pHeader {
+  .pNoStroke {
+    font-family: Poppins;
+    color: white;
+    font-size: 5.1rem;
+    font-weight: 800;
+    margin-bottom: -25px;
+  }
+  .row1 {
+    margin-top: 45px;
+    padding-top: 30px;
+    .pLight {
       font-family: Inter;
-      color: #1a1a1a;
-      font-weight: 800;
-      font-size: 4rem;
-      margin-bottom: 0px;
-    }
-    .pHeaderSub {
-      font-family: Inter;
-      color: #424242;
+      color: #555555;
+      font-size: 14px;
+      margin-top: 28px;
       font-weight: 500;
-      margin-left: 5px;
-      margin-bottom: 40px;
+      margin-bottom: 2px;
     }
-  }
-  .divRight {
-    max-width: 600px !important;
-    margin: 0 auto;
-    .pQuote {
-      font-family: Vollkorn;
-      font-size: 10rem;
-      width: max-content;
-      padding: 0px;
-      margin: 0px;
-      height: 85px;
-      margin-left: -10px;
-      color: transparent;
-      min-width: fit-content;
-      -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: #fff;
-      -ms-text-stroke-width: 2px;
-      -ms-text-stroke-color: #fff;
-      -moz-text-stroke-width: 2px;
-      -moz-text-stroke-color: #fff;
-      text-rendering: geometricPrecision;
-      font-weight: 700;
-    }
-    .pStroke {
+    .pDesc {
       font-family: Inter;
-      font-size: 5.1rem;
-      font-weight: 700;
-      color: transparent;
-      -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: #fff;
-      -ms-text-stroke-width: 2px;
-      -ms-text-stroke-color: #fff;
-      -moz-text-stroke-width: 2px;
-      -moz-text-stroke-color: #fff;
-      text-rendering: geometricPrecision;
-      margin-bottom: -30px;
-    }
-    .pNoStroke {
-      font-family: Inter;
-      font-size: 4rem;
-      font-weight: 700;
       color: white;
-      margin-bottom: -30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0px;
+      max-width: 320px;
     }
-    .pMargin {
-      margin-left: 30px;
+    .divForm {
+      background-color: #242424;
+      padding: 30px;
+      width: 100%;
+      border-radius: 2px;
+      .pHeader {
+        font-family: Inter;
+        color: white;
+        font-weight: 500;
+        font-size: 1.4rem;
+        margin-bottom: 0x;
+      }
+      .divInnerForm {
+        margin-top: 40px;
+        .pForm {
+          font-family: Inter;
+          color: whitesmoke;
+          font-size: 1.1rem;
+          font-size: 500;
+        }
+      }
     }
   }
 }
@@ -3577,10 +3571,10 @@ section#animated-cta-bar {
         font-weight: 800;
         color: rgba(255, 255, 255, 0.8);
         -webkit-text-stroke-width: 3px;
-        -webkit-text-stroke-color: #1a1a1a;
-        -ms-text-stroke-color: #1a1a1a;
+        -webkit-text-stroke-color: #141414;
+        -ms-text-stroke-color: #141414;
         -moz-text-stroke-width: 3px;
-        -moz-text-stroke-color: #1a1a1a;
+        -moz-text-stroke-color: #141414;
         text-rendering: geometricPrecision;
         text-transform: uppercase;
         --animate-duration: 0.6s !important;

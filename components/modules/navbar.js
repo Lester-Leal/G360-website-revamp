@@ -80,7 +80,7 @@ export default function navbar(props) {
                 <p
                   className="pMenu Animation"
                   onClick={(e) => {
-                    setLoader(true)
+                    setLoader(true);
                     router.push("/about");
                     setFull(false);
                     document
@@ -173,10 +173,10 @@ export default function navbar(props) {
               style={{
                 width: "120px",
                 cursor: "pointer",
-                filter: full || urlPath === "/contact" ? "brightness(0)" : "",
+                filter: full ? "brightness(0)" : "",
               }}
               onClick={(e) => {
-                setLoader(false)
+                setLoader(false);
                 router.push("/");
               }}
             />
