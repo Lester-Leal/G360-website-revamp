@@ -3797,30 +3797,6 @@ section#animated-cta-bar {
   transition: width 0s 1.4s ease;
 }
 
-.loader .loader__icon {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.loader .loader__icon h1 {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  color: #eee;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.loader .loader__icon svg {
-  transform-origin: 0 0;
-}
 
 .loader .loader__tile {
   position: absolute;

@@ -3,7 +3,10 @@ import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { useRouter } from "next/router";
+import { useLoaderStore } from "../../store/store";
+
 export default function navbar(props) {
+  const setLoader = useLoaderStore((state) => state.addReset);
   const router = useRouter();
   const [scrollNav, setScrollnav] = useState(false);
   const [full, setFull] = useState(false);
@@ -77,6 +80,7 @@ export default function navbar(props) {
                 <p
                   className="pMenu Animation"
                   onClick={(e) => {
+                    setLoader(true)
                     router.push("/about");
                     setFull(false);
                     document
@@ -172,6 +176,7 @@ export default function navbar(props) {
                 filter: full || urlPath === "/contact" ? "brightness(0)" : "",
               }}
               onClick={(e) => {
+                setLoader(false)
                 router.push("/");
               }}
             />

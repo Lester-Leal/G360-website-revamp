@@ -9,8 +9,11 @@ const Footer = dynamic(() => import("../modules/footer"));
 const Loader = dynamic(() => import("../modules/loader"));
 
 const Layout = ({ children }) => {
+
   const router = useRouter();
   const [show, setShow] = useState(false);
+
+
   return (
     <>
       <Head>
