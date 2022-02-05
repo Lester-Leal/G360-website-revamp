@@ -52,8 +52,8 @@ img {
   bottom: -50%;
   width: 200%;
   height: 200vh;
-  background: #141414
-    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background: #141414 url("http://assets.iceable.com/img/noise-transparent.png")
+    repeat 0 0;
   background-repeat: repeat;
   animation: bg-animation 0.2s infinite;
   opacity: 1;
@@ -3785,8 +3785,6 @@ section#animated-cta-bar {
   }
 }
 
-
-
 .loader {
   position: fixed;
   z-index: 999;
@@ -3796,7 +3794,6 @@ section#animated-cta-bar {
   height: 100vh;
   transition: width 0s 1.4s ease;
 }
-
 
 .loader .loader__tile {
   position: absolute;
@@ -3942,4 +3939,9 @@ section#animated-cta-bar {
 
 .loader--active .loader__tileP:nth-child(11) {
   transition-delay: 0.4s;
+}
+
+.removeAnimation * {
+  transition: all 0s !important;
+  transition-delay: 0s !important;
 }

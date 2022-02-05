@@ -9,7 +9,7 @@ export default function loader() {
     (e) => {
       var $loader = document.querySelector(".loader");
       window.setTimeout(function () {
-        $loader.classList.remove("loader--active");
+        $loader.classList.remove("loader--active", "removeAnimation");
       }, 2000);
     },
     [router.pathname]
@@ -18,7 +18,7 @@ export default function loader() {
   useEffect(
     (e) => {
       var $loader = document.querySelector(".loader");
-      $loader.classList.add("loader--active");
+      $loader.classList.add("loader--active", "removeAnimation");
     },
     [router.pathname]
   );
