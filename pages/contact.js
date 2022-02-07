@@ -13,7 +13,7 @@ export default function contact() {
           </Col>
         </Row>
         <Row className="row1">
-          <Col lg={4}>
+          <Col lg={5}>
             <p className="pLight">PHONE</p>
             <p className="pDesc">+63 917 766 1380 | +63 999 124 4211</p>
             <p className="pLight">EMAIL</p>
@@ -23,50 +23,45 @@ export default function contact() {
               290 Aguirre Ave, Parañaque, 1720 Metro Manila
             </p>
           </Col>
-          <Col lg={8}>
+          <Col lg={7}>
             <div className="divForm">
-              <p className="pHeader">
-                No time to chat at the moment? Use our form instead.
-              </p>
               <div className="divInnerForm">
-                <p className="pGreetings">Hi Guerilla360,</p>
-                <div className="form-inline">
-                  <p className="pForm">My name is,</p>
-                  <div className="input-box">
-                    <input type="text" id="field" placeholder=" " required />
-                    <label className="lbl">First name</label>
-                  </div>
-                  <div className="input-box">
-                    <input type="text" id="field" placeholder=" " required />
-                    <label className="lbl">Last name</label>
-                  </div>
-                </div>
-                <div className="form-inline">
-                  <p className="pForm">and I work with</p>
-                  <div className="input-box">
-                    <input type="text" id="field" placeholder=" " required />
-                    <label className="lbl">Company name</label>
-                  </div>
-                  <p className="pForm">as</p>
-                  <div className="input-box">
-                    <input type="text" id="field" placeholder=" " required />
-                    <label className="lbl">Position</label>
-                  </div>
-                </div>
-                <div className="form-inline">
-                  <p className="pForm">I would love to talk about</p>
-                  <div className="input-box">
-                    <input type="text" id="field" placeholder=" " required />
-                    <label className="lbl">Your enquiry</label>
-                  </div>
-                </div>
-                <div className="form-inline">
-                  <p className="pForm">You can reach me at</p>
-                  <div className="input-box">
-                    <input type="text" id="field" placeholder=" " required />
-                    <label className="lbl">Email address</label>
-                  </div>
-                </div>
+                <p className="pHeader">Work with us!</p>
+                <p className="pHeaderSub">
+                  No time to chat at the moment? Use our form instead.
+                </p>
+                <Row style={{ margin: "20px auto" }} className="p-0">
+                  <Col lg={6} className="p-0">
+                    <div className="input-box">
+                      <input type="text" id="field" placeholder=" " required />
+                      <label className="lbl">First name</label>
+                    </div>
+                  </Col>
+                  <Col lg={6} className="p-0">
+                    <div className="input-box">
+                      <input type="text" id="field" placeholder=" " required />
+                      <label className="lbl">Last name</label>
+                    </div>
+                  </Col>
+                  <Col lg={6} className="p-0">
+                    <div className="input-box">
+                      <input type="text" id="field" placeholder=" " required />
+                      <label className="lbl">Email</label>
+                    </div>
+                  </Col>
+                  <Col lg={6} className="p-0">
+                    <div className="input-box">
+                      <input type="text" id="field" placeholder=" " required />
+                      <label className="lbl">Number</label>
+                    </div>
+                  </Col>
+                  <Col lg={12} className="p-0">
+                    <div className="input-box" style = {{width: "100%"}}>
+                      <textarea type="text" id="field" placeholder=" " required rows = "10"/>
+                      <label className="lbl">Message</label>
+                    </div>
+                  </Col>
+                </Row>
                 <div>
                   <input
                     className="inp-cbx"
@@ -80,7 +75,10 @@ export default function contact() {
                         <polyline points="1.5 6 4.5 9 10.5 1" />
                       </svg>
                     </span>
-                    <span className = "spanText">I agree my information can be used to contact me regarding my enquiry.</span>
+                    <span className="spanText">
+                      I agree my information can be used to contact me regarding
+                      my enquiry.
+                    </span>
                   </label>
                 </div>
               </div>
