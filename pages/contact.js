@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
+import Banner from "../components/modules/banner";
 
 export default function contact() {
   useEffect((e) => {
@@ -146,10 +147,7 @@ export default function contact() {
       <Container fluid className="conMap">
         <Container>
           <Row className="align-items-center">
-            <Col lg={6}>
-              <div id="map"></div>
-            </Col>
-            <Col lg={6}>
+            <Col lg={12}>
               <p className="pMap">
                 Pay us a <span>visit.</span>
               </p>
@@ -157,14 +155,14 @@ export default function contact() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
-              <p className="pMapSub">
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
-              </p>
+            </Col>
+            <Col lg={12}>
+              <div id="map"></div>
             </Col>
           </Row>
         </Container>
       </Container>
+      <Banner />
     </>
   );
 }
