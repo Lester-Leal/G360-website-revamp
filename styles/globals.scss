@@ -1394,8 +1394,6 @@ canvas {
   }
 }
 
-
-
 .wrapperCard {
   display: flex;
   flex-wrap: no-wrap;
@@ -1431,22 +1429,7 @@ canvas {
         line-height: 24px;
       }
     }
-    &:hover {
-      .photo {
-        &:first-child {
-          left: -50%;
-          transform: scalex(2);
-          opacity: 0;
-          filter: blur(20px);
-        }
-        &:last-child {
-          left: 0;
-          transform: scalex(1);
-          opacity: 1;
-          filter: blur(0);
-        }
-      }
-    }
+
     .photo {
       transition: 0.35s;
       position: absolute;
@@ -1534,20 +1517,30 @@ canvas {
 }
 
 .conTeam {
-  padding: 0px 0px 6rem 0px;
-  .pStroke {
+  padding: 0px 15px 6rem 15px;
+  .conInnerTeam {
+    min-width: calc(100vw - 20%);
+    z-index: 1000;
+    padding: 0px;
+    &:hover {
+      cursor: url('/Image/mouse.png'), auto;	
+    }
+  }
+  .pHeader {
     font-family: Poppins;
-    font-size: 5.1rem;
-    font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #fff;
-    -ms-text-stroke-width: 2px;
-    -ms-text-stroke-color: #fff;
-    -moz-text-stroke-width: 2px;
-    -moz-text-stroke-color: #fff;
-    text-rendering: geometricPrecision;
-    margin-bottom: -30px;
+    font-size: calc(2.125rem + 20 * ((100vw - 26.25rem) / 860));
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+    margin-left: 18px;
+  }
+  .pHeaderSub {
+    font-family: Poppins;
+    color: #d5d5d5;
+    font-size: 16px;
+    line-height: 24px;
+    width: 500px;
+    margin-left: 18px;
   }
   .divTeam {
     max-width: 350px;

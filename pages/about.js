@@ -27,7 +27,7 @@ export default function about() {
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 3; //scroll-fast
+      const walk = (x - startX) * 1; //scroll-fast
       slider.scrollLeft = scrollLeft - walk;
       console.log(walk);
     });
@@ -226,7 +226,7 @@ export default function about() {
             <Col lg={6}>
               <div className="divImageFounder">
                 <img
-                  src="Image/randolph_new.jpg"
+                  src="Image/Team/randolph_new.jpg"
                   className="img-fluid image2 mx-auto d-flex"
                 ></img>
               </div>
@@ -236,7 +236,7 @@ export default function about() {
             <Col lg={6}>
               <div className="divImageFounder">
                 <img
-                  src="Image/randolph_new.jpg"
+                  src="Image/Team/randolph_new.jpg"
                   className="img-fluid image2 mx-auto d-flex"
                 ></img>
               </div>
@@ -259,75 +259,74 @@ export default function about() {
           </Row>
         </Container>
       </Container>
-      <Container fluid className="conTeam">
-        <Container>
-          <Row>
-            <Col lg={12}>
-              <p className="pStroke">
-                The Team <span style={{ color: "#fd6b3b" }}>.</span>
+      <Container className="conTeam">
+        <Container className="conInnerTeam">
+          <Row style={{ marginTop: "70px" }}>
+            <Col lg={4}>
+              <p className="pHeader">The Team</p>
+              <p className="pHeaderSub">
+                Meet our team of intelligent and creative individuals who can
+                collaborate to build projects to any requirements.
               </p>
+            </Col>
+            <Col lg={12}>
+              <div className="wrapperCard">
+                <div className="card">
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/Team/alfonblack.jpg')" }}
+                  ></div>
+                  <div className="divDesc">
+                    <p className="pName">Alfon Labadan</p>
+                    <p className="pPosition">Senior Lead Design Engineer</p>
+                  </div>
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/Team/alfonblack1.jpg')" }}
+                  ></div>
+                </div>
+                <div className="card">
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/Team/marblack.jpg')" }}
+                  ></div>
+                  <div className="divDesc">
+                    <p className="pName">Mark Seaglle</p>
+                    <p className="pPosition">Director</p>
+                  </div>
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/Team/markblack1.jpg')" }}
+                  ></div>
+                </div>
+                <div className="card">
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/Team/eskyeblack.jpg')" }}
+                  ></div>
+                  <div className="divDesc">
+                    <p className="pName">Eskye Custodio</p>
+                    <p className="pPosition">Senior Designer</p>
+                  </div>
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/Team/eskyeblack1.jpg')" }}
+                  ></div>
+                </div>
+                <div className="card">
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/Team/alfonblack.jpg')" }}
+                  ></div>
+                  <div
+                    className="photo"
+                    style={{ background: "url('Image/Team/alfonblack1.jpg')" }}
+                  ></div>
+                </div>
+              </div>
             </Col>
           </Row>
         </Container>
-        <Row style={{ marginTop: "70px" }}>
-          <Col lg={4}></Col>
-          <Col lg={8}>
-            <div className="wrapperCard">
-              <div className="card">
-                <div
-                  className="photo"
-                  style={{ background: "url('Image/Team/alfonblack.jpg')" }}
-                ></div>
-                <div className="divDesc">
-                  <p className="pName">Alfon Labadan</p>
-                  <p className="pPosition">Senior Lead Design Engineer</p>
-                </div>
-                <div
-                  className="photo"
-                  style={{ background: "url('Image/Team/alfonblack1.jpg')" }}
-                ></div>
-              </div>
-              <div className="card">
-                <div
-                  className="photo"
-                  style={{ background: "url('Image/Team/marblack.jpg')" }}
-                ></div>
-                <div className="divDesc">
-                  <p className="pName">Mark Seaglle</p>
-                  <p className="pPosition">Director</p>
-                </div>
-                <div
-                  className="photo"
-                  style={{ background: "url('Image/Team/markblack1.jpg')" }}
-                ></div>
-              </div>
-              <div className="card">
-                <div
-                  className="photo"
-                  style={{ background: "url('Image/Team/eskyeblack.jpg')" }}
-                ></div>
-                <div className="divDesc">
-                  <p className="pName">Eskye Custodio</p>
-                  <p className="pPosition">Senior Designer</p>
-                </div>
-                <div
-                  className="photo"
-                  style={{ background: "url('Image/Team/eskyeblack1.jpg')" }}
-                ></div>
-              </div>
-              <div className="card">
-                <div
-                  className="photo"
-                  style={{ background: "url('Image/Team/alfonblack.jpg')" }}
-                ></div>
-                <div
-                  className="photo"
-                  style={{ background: "url('Image/Team/alfonblack1.jpg')" }}
-                ></div>
-              </div>
-            </div>
-          </Col>
-        </Row>
       </Container>
       <Banner />
     </>
