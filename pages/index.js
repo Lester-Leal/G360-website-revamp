@@ -131,9 +131,7 @@ export default function index() {
                 </div>
               </div>
             </Col>
-            <Col lg={6}>
-              <GlobeCanvas />
-            </Col>
+            <Col lg={6}></Col>
           </Row>
         </Container>
       </Container>
@@ -211,7 +209,7 @@ export default function index() {
         <Row>
           <Col lg={12}>
             <Marquee
-              gradientColor={[26, 26, 26]}
+              gradientColor={[255, 255, 255]}
               pauseOnHover={true}
               speed={80}
             >
@@ -220,7 +218,7 @@ export default function index() {
               </p>
             </Marquee>
             <Marquee
-              gradientColor={[26, 26, 26]}
+              gradientColor={[255, 255, 255]}
               pauseOnHover={true}
               direction="right"
               speed={80}
@@ -230,7 +228,7 @@ export default function index() {
               </p>
             </Marquee>
             <Marquee
-              gradientColor={[26, 26, 26]}
+              gradientColor={[255, 255, 255]}
               pauseOnHover={true}
               speed={80}
             >
@@ -857,6 +855,14 @@ export default function index() {
         </Container>
       </Container>
       <Banner />
+      <Container fluid className = "conJoin">
+        <Row>
+          <Col lg={12}>
+            <p>Test</p>
+            <canvas id="canvasPeeps"></canvas>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }

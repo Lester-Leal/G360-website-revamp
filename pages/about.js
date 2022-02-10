@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import Banner from "../components/modules/banner";
-
+import Tilt from "react-parallax-tilt";
 export default function about() {
   useEffect(() => {
     const slider = document.querySelector(".wrapperCard");
@@ -29,7 +29,6 @@ export default function about() {
       const x = e.pageX - slider.offsetLeft;
       const walk = (x - startX) * 1; //scroll-fast
       slider.scrollLeft = scrollLeft - walk;
-      console.log(walk);
     });
   }, []);
   return (
@@ -260,7 +259,17 @@ export default function about() {
         </Container>
       </Container>
       <Container className="conTeam">
-        <Container className="conInnerTeam">
+        <Container
+          className="conInnerTeam"
+          onMouseOver={(e) => {
+            const mouse = document.querySelector(".mouse");
+            mouse.classList.add("d-flex");
+          }}
+          onMouseOut={(e) => {
+            const mouse = document.querySelector(".mouse");
+            mouse.classList.remove("d-flex");
+          }}
+        >
           <Row style={{ marginTop: "70px" }}>
             <Col lg={4}>
               <p className="pHeader">The Team</p>
@@ -271,48 +280,59 @@ export default function about() {
             </Col>
             <Col lg={12}>
               <div className="wrapperCard">
-                <div className="card">
-                  <div
-                    className="photo"
-                    style={{ background: "url('Image/Team/alfonblack.jpg')" }}
-                  ></div>
-                  <div className="divDesc">
-                    <p className="pName">Alfon Labadan</p>
-                    <p className="pPosition">Senior Lead Design Engineer</p>
+                <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
+                  <div className="card">
+                    <div
+                      className="photo"
+                      style={{ background: "url('Image/Team/alfonblack.jpg')" }}
+                    ></div>
+                    <div className="divDesc">
+                      <p className="pName">Alfon Labadan</p>
+                      <p className="pPosition">Senior Lead Design Engineer</p>
+                    </div>
+                    <div
+                      className="photo"
+                      style={{
+                        background: "url('Image/Team/alfonblack1.jpg')",
+                      }}
+                    ></div>
                   </div>
-                  <div
-                    className="photo"
-                    style={{ background: "url('Image/Team/alfonblack1.jpg')" }}
-                  ></div>
-                </div>
-                <div className="card">
-                  <div
-                    className="photo"
-                    style={{ background: "url('Image/Team/marblack.jpg')" }}
-                  ></div>
-                  <div className="divDesc">
-                    <p className="pName">Mark Seaglle</p>
-                    <p className="pPosition">Director</p>
+                </Tilt>
+
+                <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
+                  <div className="card">
+                    <div
+                      className="photo"
+                      style={{ background: "url('Image/Team/marblack.jpg')" }}
+                    ></div>
+                    <div className="divDesc">
+                      <p className="pName">Mark Seaglle</p>
+                      <p className="pPosition">Director</p>
+                    </div>
+                    <div
+                      className="photo"
+                      style={{ background: "url('Image/Team/markblack1.jpg')" }}
+                    ></div>
                   </div>
-                  <div
-                    className="photo"
-                    style={{ background: "url('Image/Team/markblack1.jpg')" }}
-                  ></div>
-                </div>
-                <div className="card">
-                  <div
-                    className="photo"
-                    style={{ background: "url('Image/Team/eskyeblack.jpg')" }}
-                  ></div>
-                  <div className="divDesc">
-                    <p className="pName">Eskye Custodio</p>
-                    <p className="pPosition">Senior Designer</p>
+                </Tilt>
+                <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
+                  <div className="card">
+                    <div
+                      className="photo"
+                      style={{ background: "url('Image/Team/eskyeblack.jpg')" }}
+                    ></div>
+                    <div className="divDesc">
+                      <p className="pName">Eskye Custodio</p>
+                      <p className="pPosition">Senior Designer</p>
+                    </div>
+                    <div
+                      className="photo"
+                      style={{
+                        background: "url('Image/Team/eskyeblack1.jpg')",
+                      }}
+                    ></div>
                   </div>
-                  <div
-                    className="photo"
-                    style={{ background: "url('Image/Team/eskyeblack1.jpg')" }}
-                  ></div>
-                </div>
+                </Tilt>
                 <div className="card">
                   <div
                     className="photo"

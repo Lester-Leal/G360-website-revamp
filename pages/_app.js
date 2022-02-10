@@ -7,18 +7,28 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    const mouse = document.querySelector(".mouse");
+    var $circle = $(".mouse");
+    function moveCircle(e) {
+      TweenLite.to($circle, 0.1, {
+        css: {
+          left: e.pageX - 50,
+          top: e.pageY - 50,
+        },
+      });
+    }
 
-    document.addEventListener("mousemove", (event) => {
-      let left = event.pageX;
-      let top = event.pageY;
-      mouse.style.top = `${top - 20}px`;
-      mouse.style.left = `${left - 20}px`;
-    });
+    $(window).on("mousemove", moveCircle);
   }, []);
   return (
     <>
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js" />
+      <Script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"
+        strategy="beforeInteractive"
+      />
+      <Script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"
+        strategy="beforeInteractive"
+      ></Script>
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
         strategy="beforeInteractive"
@@ -28,6 +38,7 @@ function MyApp({ Component, pageProps }) {
         strategy="beforeInteractive"
       ></Script>
       <Script src="/script/3dGlobe.js" />
+      <Script src="/script/peeps.js" />
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.1/ocanvas.min.js"
         strategy="beforeInteractive"
@@ -59,8 +70,11 @@ function MyApp({ Component, pageProps }) {
         crossorigin=""
         strategy="beforeInteractive"
       ></Script>
+
       <Layout>
-        <div className="mouse"> </div>
+        <div className="mouse">
+          <p>DRAG</p>
+        </div>
         <Component {...pageProps} />
       </Layout>
     </>
