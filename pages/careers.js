@@ -2,6 +2,34 @@ import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 
 export default function careers() {
+  useEffect(() => {
+    const slider = document.querySelector(".wrapperCard");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener("mousedown", (e) => {
+      isDown = true;
+      slider.classList.add("active");
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener("mouseleave", () => {
+      isDown = false;
+      slider.classList.remove("active");
+    });
+    slider.addEventListener("mouseup", () => {
+      isDown = false;
+      slider.classList.remove("active");
+    });
+    slider.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 1; //scroll-fast
+      slider.scrollLeft = scrollLeft - walk;
+    });
+  }, []);
   return (
     <>
       <Container fluid className="conJoin h-100">
@@ -68,7 +96,7 @@ export default function careers() {
         </Container>
       </Container>
       <Container fluid className="conBenefits">
-        <Container>
+        <Container className="conInner">
           <Row className="align-items-center">
             <Col lg={4}>
               <p className="pNoStroke">
@@ -80,12 +108,78 @@ export default function careers() {
               </p>
             </Col>
             <Col lg={8}>
-              <div className="wrapperCard">
-                <div className="card">
-                  <div
-                    className="photo"
-                    style={{ background: "url('Image/Team/alfonblack.jpg')" }}
-                  ></div>
+              <div className="divWrapperCard">
+                <div className="wrapperCard">
+                  <div className="card align-items-center justify-content-center d-flex">
+                    <div className="cardInner">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/qhviklyi.json"
+                        trigger="loop"
+                        colors="primary:#121331,secondary:#fd6b3b"
+                        style={{
+                          width: "100px",
+                          height: "100px",
+                          marginLeft: "-20px",
+                        }}
+                      ></lord-icon>
+                      <p className="pHeader">Competitve Salary</p>
+                      <p className="pHeaderSub">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="card align-items-center justify-content-center d-flex">
+                    <div className="cardInner">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/yyecuati.json"
+                        trigger="loop"
+                        colors="primary:#121331,secondary:#fd6b3b"
+                        style={{
+                          width: "100px",
+                          height: "100px",
+                          marginLeft: "-20px",
+                        }}
+                      ></lord-icon>
+                      <p className="pHeader">Goverment Benefits</p>
+                      <p className="pHeaderSub">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="card align-items-center justify-content-center d-flex">
+                    <div className="cardInner">
+                      <p className="pHeader">Holidays</p>
+                      <p className="pHeaderSub">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="card align-items-center justify-content-center d-flex">
+                    <div className="cardInner">
+                      <p className="pHeader">Paid Leaves</p>
+                      <p className="pHeaderSub">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="card align-items-center justify-content-center d-flex">
+                    <div className="cardInner">
+                      <p className="pHeader">Great Co-workers</p>
+                      <p className="pHeaderSub">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Col>
