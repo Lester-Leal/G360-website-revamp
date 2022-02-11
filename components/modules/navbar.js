@@ -94,7 +94,20 @@ export default function navbar(props) {
               </div>
               <div className="form-inline">
                 <p className="pCount">04</p>
-                <p className="pMenu Animation">Careers</p>
+                <p
+                  className="pMenu Animation"
+                  onClick={(e) => {
+                    setLoader(true);
+                    router.push("/careers");
+                    setFull(false);
+                    document
+                      .querySelector(".navFull")
+                      .classList.toggle("showNav");
+                    setChecked((full) => !full);
+                  }}
+                >
+                  Careers
+                </p>
               </div>
               <div className="form-inline">
                 <p className="pCount">05</p>
@@ -173,7 +186,8 @@ export default function navbar(props) {
               style={{
                 width: "120px",
                 cursor: "pointer",
-                filter: full ? "brightness(0)" : "",
+                filter:
+                  full || router.pathname === "/careers" ? "brightness(0)" : "",
               }}
               onClick={(e) => {
                 setLoader(false);
@@ -197,8 +211,19 @@ export default function navbar(props) {
                         .classList.toggle("showNav");
                     }}
                   />
-                  <label htmlFor="menu_checkbox" id="menu_label">
-                    <div id="menu_text_bar" />
+                  <label
+                    htmlFor="menu_checkbox"
+                    id="menu_label"
+                    className={
+                      router.pathname === "/careers" ? "menuLabel" : ""
+                    }
+                  >
+                    <div
+                      id="menu_text_bar"
+                      className={
+                        router.pathname === "/careers" ? "menuBlack" : ""
+                      }
+                    />
                   </label>
                 </div>
               </div>

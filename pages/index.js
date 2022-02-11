@@ -855,14 +855,7 @@ export default function index() {
         </Container>
       </Container>
       <Banner />
-      <Container fluid className = "conJoin">
-        <Row>
-          <Col lg={12}>
-            <p>Test</p>
-            <canvas id="canvasPeeps"></canvas>
-          </Col>
-        </Row>
-      </Container>
+   
     </>
   );
 }

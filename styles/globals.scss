@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Restless";
+  src: url("/Font/Restless-Regular.otf");
+}
 $highlight: #5bc0eb;
 $darkhighlight: #fde74c;
 
@@ -503,6 +507,18 @@ canvas {
     content: "";
     transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) left;
     top: 12px;
+  }
+}
+.menuBlack {
+  background-color: #141414 !important;
+}
+
+.menuLabel {
+  &:before {
+    background-color: #141414 !important;
+  }
+  &:after {
+    background-color: #141414 !important;
   }
 }
 #menu_text_bar {
@@ -1339,6 +1355,7 @@ canvas {
 .conFooter {
   background-color: #141414;
   padding: 5.5rem 15px 5.5rem 15px;
+  display: none;
   .pCopy {
     font-family: Inter;
     color: #bfbfbf;
@@ -4380,9 +4397,152 @@ section#animated-cta-bar {
 .conJoin {
   background-color: white;
   padding: 15px 0px;
+  .divHiring {
+    background-color: transparent;
+    z-index: 1;
+    p {
+      font-family: Restless;
+      color: #141414;
+      font-size: 110px;
+      text-align: center;
+      margin-bottom: 0px;
+    }
+  }
   #canvasPeeps {
+    background-color: transparent;
+    position: absolute;
     width: 100%;
     height: 100%;
-    max-height: 400px;
+    bottom: 0px;
+    z-index: 0;
+  }
+}
+
+.conJobs {
+  padding: 100px 15px;
+  .pHeader {
+    font-family: Poppins;
+    color: white;
+    font-weight: 700;
+    font-size: 5.35714vw;
+    border-bottom: 2px solid white;
+    padding-bottom: 20px;
+    margin-bottom: 70px;
+  }
+  .form-inline {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+    transition: all 0.2s;
+    &:hover {
+      border-color: white;
+      .pPosition {
+        color: white;
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: #fff;
+        -ms-text-stroke-width: 0px;
+        -ms-text-stroke-color: #fff;
+        -moz-text-stroke-width: 0px;
+        -moz-text-stroke-color: #fff;
+      }
+    }
+    .pNumber {
+      font-family: Poppins;
+      color: white;
+      font-weight: 700;
+      margin-right: 50px;
+      margin-bottom: 30px;
+    }
+    .pPosition {
+      font-family: Poppins;
+      color: #141414;
+      font-size: 2.7381vw;
+      font-weight: 800;
+      margin-bottom: 15px;
+      cursor: pointer;
+      color: transparent;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: #fff;
+      -ms-text-stroke-width: 2px;
+      -ms-text-stroke-color: #fff;
+      -moz-text-stroke-width: 2px;
+      -moz-text-stroke-color: #fff;
+      text-rendering: geometricPrecision;
+      padding: 5px;
+      transition: all 0.2s;
+    }
+    .pJobDesc {
+      font-family: Poppins;
+      color: #cdcdcd;
+      font-size: 1rem;
+      margin-left: 75px;
+    }
+  }
+}
+
+.conBenefits {
+  padding: 100px 15px;
+  background-color: white;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    height: 20px;
+    width: 100%;
+    left: 0;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/23618/rip.svg)
+      bottom;
+    background-repeat: repeat;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    height: 20px;
+    width: 100%;
+    left: 0;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/23618/rip.svg)
+      bottom;
+    background-repeat: repeat;
+    transform: rotate(180deg);
+  }
+  .pNoStroke {
+    font-family: Poppins;
+    color: #141414;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 59px;
+    margin-bottom: 0px;
+  }
+  .pStroke {
+    font-family: Poppins;
+    font-size: 3rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #141414;
+    -ms-text-stroke-width: 2px;
+    -ms-text-stroke-color: #141414;
+    -moz-text-stroke-width: 2px;
+    -moz-text-stroke-color: #141414;
+    text-rendering: geometricPrecision;
+  }
+  .pDesc {
+    font-family: Poppins;
+    color: #606051;
+    max-width: 26em;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+  .wrapperCard {
+    display: flex;
+    flex-wrap: no-wrap;
+    overflow-x: scroll;
+    margin: 20px;
+    .card {
+      flex: 0 0 auto; 
+    }
   }
 }
