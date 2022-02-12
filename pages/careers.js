@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
+import Banner from "../components/modules/banner";
 
 export default function careers() {
   useEffect(() => {
@@ -99,18 +100,30 @@ export default function careers() {
         <Container className="conInner">
           <Row className="align-items-center">
             <Col lg={4}>
-              <p className="pNoStroke">
-                Benefits <br /> <span className="pStroke">Simplified</span>
-              </p>
+              <div className="form-inline">
+                <p className="pNoStroke">Benefits</p>
+                <p className="spanHeart">❤️</p>
+              </div>
+              <span className="pStroke">Simplified</span>
               <p className="pDesc">
                 You don't have to be a big company to offer great employee
                 benefits.
               </p>
             </Col>
             <Col lg={8}>
-              <div className="divWrapperCard">
-                <div className="wrapperCard">
-                  <div className="card align-items-center justify-content-center d-flex">
+              <div
+                className="wrapperCard"
+                onMouseOver={(e) => {
+                  const mouse = document.querySelector(".mouse");
+                  mouse.classList.add("d-flex");
+                }}
+                onMouseOut={(e) => {
+                  const mouse = document.querySelector(".mouse");
+                  mouse.classList.remove("d-flex");
+                }}
+              >
+                <div className="card align-items-center justify-content-center d-flex">
+                  <div className="cardShadow">
                     <div className="cardInner">
                       <lord-icon
                         src="https://cdn.lordicon.com/qhviklyi.json"
@@ -130,55 +143,85 @@ export default function careers() {
                       </p>
                     </div>
                   </div>
-                  <div className="card align-items-center justify-content-center d-flex">
-                    <div className="cardInner">
-                      <lord-icon
-                        src="https://cdn.lordicon.com/yyecuati.json"
-                        trigger="loop"
-                        colors="primary:#121331,secondary:#fd6b3b"
-                        style={{
-                          width: "100px",
-                          height: "100px",
-                          marginLeft: "-20px",
-                        }}
-                      ></lord-icon>
-                      <p className="pHeader">Goverment Benefits</p>
-                      <p className="pHeaderSub">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                      </p>
-                    </div>
+                </div>
+                <div className="card align-items-center justify-content-center d-flex">
+                  <div className="cardInner">
+                    <lord-icon
+                      src="https://cdn.lordicon.com/yyecuati.json"
+                      trigger="loop"
+                      colors="primary:#121331,secondary:#fd6b3b"
+                      style={{
+                        width: "100px",
+                        height: "100px",
+                        marginLeft: "-20px",
+                      }}
+                    ></lord-icon>
+                    <p className="pHeader">Goverment Benefits</p>
+                    <p className="pHeaderSub">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
                   </div>
-                  <div className="card align-items-center justify-content-center d-flex">
-                    <div className="cardInner">
-                      <p className="pHeader">Holidays</p>
-                      <p className="pHeaderSub">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                      </p>
-                    </div>
+                </div>
+                <div className="card align-items-center justify-content-center d-flex">
+                  <div className="cardInner">
+                    <lord-icon
+                      src="https://cdn.lordicon.com/lupuorrc.json"
+                      trigger="loop"
+                      colors="primary:#121331,secondary:#fd6b3b"
+                      style={{
+                        width: "100px",
+                        height: "100px",
+                        marginLeft: "-20px",
+                      }}
+                    ></lord-icon>
+                    <p className="pHeader">Holidays</p>
+                    <p className="pHeaderSub">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
                   </div>
-                  <div className="card align-items-center justify-content-center d-flex">
-                    <div className="cardInner">
-                      <p className="pHeader">Paid Leaves</p>
-                      <p className="pHeaderSub">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                      </p>
-                    </div>
+                </div>
+                <div className="card align-items-center justify-content-center d-flex">
+                  <div className="cardInner">
+                    <lord-icon
+                      src="https://cdn.lordicon.com/hovbgwmd.json"
+                      trigger="loop"
+                      colors="primary:#121331,secondary:#fd6b3b"
+                      style={{
+                        width: "100px",
+                        height: "100px",
+                        marginLeft: "-20px",
+                      }}
+                    ></lord-icon>
+                    <p className="pHeader">Paid Leaves</p>
+                    <p className="pHeaderSub">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
                   </div>
-                  <div className="card align-items-center justify-content-center d-flex">
-                    <div className="cardInner">
-                      <p className="pHeader">Great Co-workers</p>
-                      <p className="pHeaderSub">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                      </p>
-                    </div>
+                </div>
+                <div className="card align-items-center justify-content-center d-flex">
+                  <div className="cardInner">
+                    <lord-icon
+                      src="https://cdn.lordicon.com/zpxybbhl.json"
+                      trigger="loop"
+                      colors="primary:#121331,secondary:#fd6b3b"
+                      style={{
+                        width: "100px",
+                        height: "100px",
+                        marginLeft: "-20px",
+                      }}
+                    ></lord-icon>
+                    <p className="pHeader">Great Co-workers</p>
+                    <p className="pHeaderSub">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -186,6 +229,7 @@ export default function careers() {
           </Row>
         </Container>
       </Container>
+      <Banner />
     </>
   );
 }
