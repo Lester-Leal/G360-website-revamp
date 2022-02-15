@@ -99,17 +99,12 @@ export default function index() {
     const d = el.getBoundingClientRect();
     let x = e.pageX - (d.left + Math.floor(d.width / 2));
     let y = e.pageY - (d.top + Math.floor(d.height / 2));
-    x = x - x * 2;
-    y = y - y * 2;
-    $("#image").css({
-      transform: "translateX(" + x + "px) translateY(" + y + "px) scale(1.6)",
-    });
-  };
-
-  const handleMouseLeave = () => {
-    document.documentElement.style.setProperty("--scale", 1);
-    document.documentElement.style.setProperty("--x", 0);
-    document.documentElement.style.setProperty("--y", 0);
+    x = x - x * 1.1;
+    y = y - y * 1.1;
+    $("#image").css(
+      "background-position",
+      "calc(25% + " + x + "px) calc(25% + " + y + "px)"
+    );
   };
 
   return (
@@ -119,48 +114,8 @@ export default function index() {
         className="conIndex"
         id="conIndex"
         onMouseMove={handleMouseMove}
-        onClick={handleMouseLeave}
       >
         <img id="image" />
-      </Container>
-      <Container fluid className="h-100 bgCon">
-        <Container className="h-100">
-          <Row className="h-100 align-items-center justty-content-center d-flex">
-            <Col lg={6}>
-              <p className="pCenter">
-                Innovative <span style={{ color: "#fd6b3b" }}>Outsource</span>{" "}
-                and Digital <span style={{ color: "#fd6b3b" }}>Solutions</span>
-              </p>
-              <p className="pCenterSub">
-                We seek to lead companies towards business directions they would
-                like to pursue both in the U.S. and globally.
-              </p>
-              <div id="container">
-                <button className="learn-more">
-                  <span className="circle" aria-hidden="true">
-                    <span className="icon arrow"></span>
-                  </span>
-                  <span className="button-text" onClick={showNav}>
-                    Get Started
-                  </span>
-                </button>
-              </div>
-              <p className="pCall">If you're in a hurry, quick call to us</p>
-              <div className="divCall">
-                <div>
-                  <i>
-                    <BiPhoneCall />
-                  </i>
-                </div>
-                <div className="divPhone">
-                  <p className="p1">Phone number</p>
-                  <p className="pNumber">+63 917 766 1380 | +53 999 124 4211</p>
-                </div>
-              </div>
-            </Col>
-            <Col lg={6}></Col>
-          </Row>
-        </Container>
       </Container>
       <Container fluid className="conHow">
         <Container>
