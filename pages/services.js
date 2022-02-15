@@ -18,6 +18,13 @@ export default function services() {
           </Col>
         </Row>
       </Container>
+      <Container fluid className="h-100 conServicesPage2">
+        <Container className="h-100">
+          <Row className="h-100">
+            <Col lg={12}></Col>
+          </Row>
+        </Container>
+      </Container>
     </>
   );
 }

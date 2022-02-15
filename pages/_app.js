@@ -44,6 +44,10 @@ function MyApp({ Component, pageProps }) {
         strategy="beforeInteractive"
       ></Script>
       <Script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></Script>
+      <Script
+        src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"
+        strategy="beforeInteractive"
+      ></Script>
       <link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"

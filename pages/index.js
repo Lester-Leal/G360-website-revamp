@@ -94,8 +94,35 @@ export default function index() {
     router.prefetch("/about");
   }, []);
 
+  const handleMouseMove = (e) => {
+    const el = document.getElementById("conIndex");
+    const d = el.getBoundingClientRect();
+    let x = e.pageX - (d.left + Math.floor(d.width / 2));
+    let y = e.pageY - (d.top + Math.floor(d.height / 2));
+    x = x - x * 2;
+    y = y - y * 2;
+    $("#image").css({
+      transform: "translateX(" + x + "px) translateY(" + y + "px) scale(1.6)",
+    });
+  };
+
+  const handleMouseLeave = () => {
+    document.documentElement.style.setProperty("--scale", 1);
+    document.documentElement.style.setProperty("--x", 0);
+    document.documentElement.style.setProperty("--y", 0);
+  };
+
   return (
     <>
+      <Container
+        fluid
+        className="conIndex"
+        id="conIndex"
+        onMouseMove={handleMouseMove}
+        onClick={handleMouseLeave}
+      >
+        <img id="image" />
+      </Container>
       <Container fluid className="h-100 bgCon">
         <Container className="h-100">
           <Row className="h-100 align-items-center justty-content-center d-flex">
@@ -855,7 +882,6 @@ export default function index() {
         </Container>
       </Container>
       <Banner />
-   
     </>
   );
 }

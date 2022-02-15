@@ -427,6 +427,28 @@ canvas {
   }
 }
 
+:root {
+  --scale:1.5;
+--y: 0;
+--x: 0;
+}
+.conIndex {
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+  #image {
+    width: 100vw;
+    backface-visibility: hidden;
+    height: 100vh;
+    pointer-events:none;
+    background-image: url("https://images.unsplash.com/photo-1539035104074-dee66086b5e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI0MX0&auto=format&fit=crop&w=2550&q=80");
+    background-size: cover;
+    transform: translateX(var(--x)) translateY(var(--y)) scale(var(--scale));
+    transition: all 0.7s;
+  }
+}
+
 .Animation {
   text-decoration: none;
   background-image: linear-gradient(to right, transparent 50%, #fd6b3b 50%);
@@ -3235,15 +3257,15 @@ $shellSpeed: 2s;
   }
   &.animate {
     svg {
-      animation: stroke 0.5s ease forwards 0.3s;
+      animation: stroke 0.2s ease forwards 0.2s;
     }
     i {
-      animation: arrow 1s ease forwards;
+      animation: arrow 0.5s ease forwards;
       &:before {
-        animation: arrowUp 1s ease forwards;
+        animation: arrowUp 0.5s ease forwards;
       }
       &:after {
-        animation: arrowDown 1s ease forwards;
+        animation: arrowDown 0.5s ease forwards;
       }
     }
   }
@@ -3311,6 +3333,20 @@ $shellSpeed: 2s;
   display: grid;
   grid-template-columns: repeat(2, 44px);
   grid-gap: 32px;
+}
+
+.demoProject {
+  margin-top: 30px;
+  grid-gap: 10px !important;
+  .arrow {
+    width: 70px !important;
+    height: 70px !important;
+    cursor: pointer;
+  }
+  svg {
+    width: 70px !important;
+    height: 70px !important;
+  }
 }
 
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
@@ -4758,44 +4794,6 @@ section#animated-cta-bar {
   }
 }
 
-.conProject1 {
-  background-color: #141414 !important;
-  padding: 15px 15px;
-  position: relative;
-  .colLeft {
-    .pHeader {
-      font-family: Poppins;
-      color: white;
-      font-size: 40px;
-      font-weight: 700;
-      line-height: 1.2em;
-      margin-bottom: 5px;
-    }
-    .pHeaderSub {
-      font-family: Poppins;
-      color: #707070;
-      font-size: 14px;
-      margin-top: 20px;
-    }
-  }
-  .colRight {
-    background-color: #0077b5;
-    .wrapperCard {
-      display: flex;
-      flex-wrap: no-wrap;
-      overflow-x: scroll;
-      min-width: calc(60vw);
-      margin: 20px;
-      height: 65vh;
-      .card {
-        flex: 0 0 auto;
-        margin-right: 70px;
-        width: 400px;
-        height: 400px;
-      }
-    }
-  }
-}
 
 .conProject1 {
   padding: 100px 15px;
@@ -4805,8 +4803,6 @@ section#animated-cta-bar {
   .conInner {
     z-index: 1000;
     padding: 0px;
-    cursor: grab;
-
     .colLeft {
       .pHeader {
         font-family: Poppins;
@@ -4827,9 +4823,12 @@ section#animated-cta-bar {
       display: flex;
       flex-wrap: no-wrap;
       overflow-x: scroll;
+      scroll-behavior: smooth;
       min-width: calc(60vw);
       margin: 20px;
       height: 65vh;
+      cursor: grab;
+      margin-top: 5%;
       padding-left: 40px;
       .card {
         flex: 0 0 auto;
@@ -4841,38 +4840,33 @@ section#animated-cta-bar {
         overflow: hidden;
         border-radius: 0px !important;
         border: 0px !important;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
         transition: all 0.2s !important;
-        background-image: url("/Image/Projects/box1.png");
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-        &:hover {
+        background: transparent;
+        .cardInner {
+          transition: all 0.2s !important;
           background-repeat: no-repeat !important;
           background-size: cover !important;
-          background: linear-gradient(
-              180deg,
-              hsla(209, 11%, 38%, 0) 0%,
-              hsla(209, 36%, 20%, 0.7) 100%
-            ),
-            url("/Image/Projects/box1.png") !important;
+          height: 85%;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          width: 100%;
         }
-        .cardInner {
-          padding: 40px;
+        .divDesc {
+          position: absolute;
+          bottom: -5px;
           .pHeader {
             font-family: Poppins;
-            color: #141414;
+            color: white;
             font-weight: 700;
             font-size: 1.5rem;
             text-align: left !important;
-            margin-bottom: -5px !important;
+            margin-bottom: 2px;
           }
           .pHeaderSub {
             font-family: Poppins;
-            color: #606051;
-            max-width: 26em;
+            color: #d5d5d5;
             font-weight: 500;
-            margin-top: 20px;
             text-align: left !important;
           }
         }
