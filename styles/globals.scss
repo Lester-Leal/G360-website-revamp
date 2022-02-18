@@ -4815,14 +4815,20 @@ section#animated-cta-bar {
     font-family: Inter;
     color: #141414;
     font-size: 14rem;
+    transition: all 0.2s;
     font-weight: 700;
     margin-bottom: 0px;
+  }
+  .divOuterService {
+    overflow: auto;
+    margin-top: 70px;
   }
   .divService {
     border-top: 4px solid #141414;
     width: 100%;
     padding: 25px 0px 50px 0px;
     margin-bottom: 70px;
+    min-height: 700px;
     .pHeader {
       font-family: Poppins;
       color: #141414;
