@@ -6,45 +6,58 @@ export default function services() {
   const [count, setCount] = useState("01");
   useEffect(() => {
     const count = document.querySelector("#pNumber");
-    window.onload = function () {
-      window.onscroll = function () {
-        if (isInView(divService1, true)) {
-          var testDiv = document.getElementById("divService1");
-          count.style.marginTop = testDiv.offsetTop + "px";
-          if (count !== "01") {
-            console.log(1);
-            setCount("01");
-          }
+    window.onscroll = function () {
+      if (isInView(divService1, true)) {
+        var testDiv = document.getElementById("divService1");
+        count.style.marginTop = testDiv.offsetTop + "px";
+        if (count !== "01") {
+          console.log(1);
+          setCount("01");
         }
-        if (isInView(divService2, true)) {
-          var testDiv = document.getElementById("divService2");
-          count.style.marginTop = testDiv.offsetTop + "px";
-          if (count !== "02") {
-            setCount("02");
-            console.log(2);
-          }
+      }
+      if (isInView(divService2, true)) {
+        var testDiv = document.getElementById("divService2");
+        count.style.marginTop = testDiv.offsetTop + "px";
+        if (count !== "02") {
+          setCount("02");
+          console.log(2);
         }
-        if (isInView(divService3, true)) {
-          var testDiv = document.getElementById("divService3");
-          count.style.marginTop = testDiv.offsetTop + "px";
-          if (count !== "03") {
-            setCount("03");
-            console.log(3);
-          }
+      }
+      if (isInView(divService3, true)) {
+        var testDiv = document.getElementById("divService3");
+        count.style.marginTop = testDiv.offsetTop + "px";
+        if (count !== "03") {
+          setCount("03");
+          console.log(3);
         }
-        try {
-          if (isInView(divService4, true)) {
-            var testDiv = document.getElementById("divService4");
-            count.style.marginTop = testDiv.offsetTop + "px";
-          }
-        } catch (error) {}
-      };
+      }
+      try {
+        if (isInView(divService4, true)) {
+          var testDiv = document.getElementById("divService4");
+          count.style.marginTop = testDiv.offsetTop + "px";
+        }
+      } catch (error) {}
     };
   });
   function isInView(el) {
     const box = el.getBoundingClientRect();
     return box.top < window.innerHeight / 2 && box.bottom > window.innerHeight;
   }
+
+  var x = [
+    {
+      desc: "Web Design and Development",
+    },
+    { desc: "Mobile Development" },
+    { desc: "Api Development" },
+    { desc: "Development Options" },
+    { desc: "Third Party Platform Integrations" },
+    { desc: "Product Develpment & Prototyping" },
+    { desc: "User Interface and User Experience Development & Design" },
+    { desc: "Graphic Design Services" },
+    { desc: "Server Management" },
+    { desc: "Business Aanalysis and Quality Assurance Engineering" },
+  ];
 
   return (
     <>
@@ -102,6 +115,20 @@ export default function services() {
                         We work with companies at different stages of their
                         business and ensure the use of Agile Methodologies.
                       </p>
+                      <div className="divCapabilities">
+                        <p className="pHead">Our Capabilities</p>
+                        {x.map((number, i) => (
+                          <div className="form-inline">
+                            <p className="pCount">{i + 1}</p>
+                            <p className="pCapabilities">{number.desc}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col lg={4}>
+                      <p className="pSide">Framewor Used</p>
                     </Col>
                   </Row>
                 </div>

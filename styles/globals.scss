@@ -4822,6 +4822,21 @@ section#animated-cta-bar {
   .divOuterService {
     overflow: auto;
     margin-top: 70px;
+    .pNumber {
+      font-family: Inter;
+      color: #141414;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: right;
+    }
+    .p1 {
+      font-family: Poppins;
+      color: #141414;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+    }
   }
   .divService {
     border-top: 4px solid #141414;
@@ -4842,5 +4857,37 @@ section#animated-cta-bar {
       font-size: 17px;
       line-height: 28px;
     }
+  }
+  .divCapabilities {
+    margin-top: 40px;
+    .pHead {
+      font-family: Poppins;
+      color: #323232;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .form-inline {
+      border-bottom: 1px solid lightgray;
+      padding-bottom: 15px;
+      margin-top: 20px;
+      cursor: pointer;
+      .pCount {
+        font-family: Poppins;
+        color: #141414;
+        font-size: 14px;
+        margin-right: 40px;
+      }
+      .pCapabilities {
+        font-family: Poppins;
+        color: #141414;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .pSide {
+    font-family: Poppins;
+
   }
 }
