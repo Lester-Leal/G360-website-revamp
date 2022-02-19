@@ -4,6 +4,8 @@ import TextField from "@mui/material/TextField";
 import Banner from "../components/modules/banner";
 
 export default function contact() {
+  const [active, setActive] = useState("");
+
   useEffect((e) => {
     var map = L.map("map", {
       // Set latitude and longitude of the map center (required)
@@ -139,6 +141,111 @@ export default function contact() {
                     <div className="dot"></div>
                   </div>
                 </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+        <Container className="conWhatsnext">
+          <Row>
+            <Col lg={5}>
+              <p className="pSo">So What's next?</p>
+            </Col>
+            <Col lg={7}>
+              <div className="row rowDesc">
+                <Col lg={1}>
+                  <p className="pCount">01</p>
+                </Col>
+                <Col lg={11}>
+                  <div
+                    className="divDesc"
+                    onClick={(e) => {
+                      setActive(1);
+                    }}
+                  >
+                    <p className="pTitle">We get back!</p>
+                    <p className={active === 1 ? "pDesc d-flex" : "pDesc"}>
+                      Will email you with some more info about us, and get some
+                      more info about you. If it sounds like a good fit we’ll
+                      arrange a video call
+                    </p>
+                  </div>
+                </Col>
+              </div>
+              <div className="row rowDesc">
+                <Col lg={1}>
+                  <p className="pCount">02</p>
+                </Col>
+                <Col lg={11}>
+                  <div
+                    className="divDesc"
+                    onClick={(e) => {
+                      setActive(2);
+                    }}
+                  >
+                    <p className="pTitle">A friendly chat</p>
+                    <p className={active === 2 ? "pDesc d-flex" : "pDesc"}>
+                      On the call we’ll discover what success looks like for
+                      your project and how we can help you get there.
+                    </p>
+                  </div>
+                </Col>
+              </div>
+              <div className="row rowDesc">
+                <Col lg={1}>
+                  <p className="pCount">03</p>
+                </Col>
+                <Col lg={11}>
+                  <div
+                    className="divDesc"
+                    onClick={(e) => {
+                      setActive(3);
+                    }}
+                  >
+                    <p className="pTitle">We draft a plan</p>
+                    <p className={active === 3 ? "pDesc d-flex" : "pDesc"}>
+                      Our team goes away and puts a plan of action together to
+                      bring your idea to life.
+                    </p>
+                  </div>
+                </Col>
+              </div>
+              <div className="row rowDesc">
+                <Col lg={1}>
+                  <p className="pCount">04</p>
+                </Col>
+                <Col lg={11}>
+                  <div
+                    className="divDesc"
+                    onClick={(e) => {
+                      setActive(4);
+                    }}
+                  >
+                    <p className="pTitle">Present proposal</p>
+                    <p className={active === 4 ? "pDesc d-flex" : "pDesc"}>
+                      We present our ideas to you in the form of a beautiful
+                      proposal in another call.
+                    </p>
+                  </div>
+                </Col>
+              </div>
+              <div className="row rowDesc">
+                <Col lg={1}>
+                  <p className="pCount">05</p>
+                </Col>
+                <Col lg={11}>
+                  <div
+                    className="divDesc"
+                    onClick={(e) => {
+                      setActive(5);
+                    }}
+                  >
+                    <p className="pTitle">Magic happens</p>
+                    <p className={active === 5 ? "pDesc d-flex" : "pDesc"}>
+                      If you are happy with our proposal, we’ll proceed to start
+                      working together and doing the fun part, making it!
+                    </p>
+                  </div>
+                </Col>
               </div>
             </Col>
           </Row>

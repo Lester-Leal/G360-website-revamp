@@ -7,6 +7,8 @@
 }
 $highlight: #5bc0eb;
 $darkhighlight: #fde74c;
+$prime: #ff6e48;
+$second: #1b2431;
 
 @media only screen and (max-width: 1270px) {
   .gallery {
@@ -2822,6 +2824,69 @@ $shellSpeed: 2s;
       }
     }
   }
+  .conWhatsnext {
+    margin-top: 120px;
+    padding: 50px 15px;
+    .pSo {
+      font-family: Poppins;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 130%;
+      margin-top: 40px;
+    }
+    .rowDesc {
+      border-bottom: 1px solid #333;
+      padding-bottom: 30px;
+      margin-bottom: 55px;
+      transition: all 0.2s;
+      .divDesc {
+        margin-left: 20px;
+        cursor: pointer;
+        transition: all 0.2s;
+        &:hover {
+          .pTitle {
+            color: white;
+            -webkit-text-stroke-width: 0px;
+            -ms-text-stroke-width: 0px;
+            -moz-text-stroke-width: 0px;
+          }
+        }
+      }
+      .pCount {
+        font-family: Poppins;
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0px;
+        margin-left: -14px;
+      }
+      .pTitle {
+        font-family: Poppins;
+        font-weight: 800;
+        font-size: 55px;
+        margin-top: -10px;
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #fff;
+        -ms-text-stroke-width: 1px;
+        -ms-text-stroke-color: #fff;
+        -moz-text-stroke-width: 1px;
+        -moz-text-stroke-color: #fff;
+        text-rendering: geometricPrecision;
+        transition: all 0.2s;
+      }
+      .pDesc {
+        font-family: Poppins;
+        color: #cdcdcd;
+        font-size: 14px;
+        line-height: 1.8em;
+        width: 85%;
+        display: none;
+        transition: all 0.2s;
+      }
+    }
+  }
 }
 
 :root {
@@ -4888,6 +4953,8 @@ section#animated-cta-bar {
   }
   .pSide {
     font-family: Poppins;
-
+    color: #424242;
+    font-size: 2rem;
+    font-weight: 500;
   }
 }

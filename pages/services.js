@@ -127,8 +127,25 @@ export default function services() {
                     </Col>
                   </Row>
                   <Row>
-                    <Col lg={4}>
-                      <p className="pSide">Framewor Used</p>
+                    <Col lg={4}></Col>
+                    <Col lg={8}>
+                      <div className="divCapabilities">
+                        <p className="pHead">Frameworks and Laguages</p>
+                      </div>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col lg={2}>
+                      <img
+                        src="Image/react.png"
+                        className="img-fluid d-flex"
+                      ></img>
+                    </Col>
+                    <Col lg={2}>
+                      <img
+                        src="Image/next.png"
+                        className="img-fluid d-flex"
+                      ></img>
                     </Col>
                   </Row>
                 </div>
