@@ -16,10 +16,10 @@ export default function navbar(props) {
   const changeBackground = () => {
     if (window.scrollY >= 70) {
       setScrollnav(true);
-     // console.log(window.scrollY);
+      // console.log(window.scrollY);
     } else {
       setScrollnav(false);
-     // console.log(window.scrollY);
+      // console.log(window.scrollY);
     }
   };
 

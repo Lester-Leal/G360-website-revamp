@@ -33,7 +33,7 @@ export default function careers() {
   }, []);
   return (
     <>
-      <Container fluid className="conJoin h-100">
+      <Container fluid className="conJoin">
         <Row className="h-100 align-items-center">
           <Col lg={12}>
             <div className="divHiring">

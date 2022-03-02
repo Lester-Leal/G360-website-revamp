@@ -1,8 +1,11 @@
 import { Container, Row, Col } from "react-bootstrap";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Banner from "../components/modules/banner";
 import Tilt from "react-parallax-tilt";
+import Slider from "react-slick";
+import { HiOutlineArrowSmRight, HiOutlineArrowSmLeft } from "react-icons/hi";
 export default function about() {
+  const ref = useRef(null);
   useEffect(() => {
     const slider = document.querySelector(".wrapperCard");
     let isDown = false;
@@ -31,6 +34,44 @@ export default function about() {
       slider.scrollLeft = scrollLeft - walk;
     });
   }, []);
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+  const handleNextSlide = () => {
+    ref.current.slickNext();
+  };
+  const handlePrevSlide = () => {
+    ref.current.slickPrev();
+  };
+
+  const things = [
+    {
+      header: "teamwork",
+      desc: `We each bring a different perspective, background and expertise to the table and that’s what magnifies our collective impact. In the remote working era we’re in, teamwork plays as big a role as ever in Squaredot. We keep it simple, every voice is heard and the best ideas win.`,
+    },
+    {
+      header: "creativity",
+      desc: `The bigger and bolder the better. It’s easier to reign big ideas than plug gaps in small ones. Every client has very specific and unique challenges, so we approach every project with enthusiasm, excitement and a big, blank, open canvas of limitless possibilities.`,
+    },
+    {
+      header: "excellence",
+      desc: `We set a high bar of standards in everything we do, right down to the little details. We dig deep on details in our research and scheduling, and even in the execution of aesthetic designs or copy quirks, as it’s often the little details that have the biggest impact. Excellence for us is a mindset and keeps us on our toes no matter what the task. The output must always be something to be proud of, and we always strive to raise the bar.`,
+    },
+    {
+      header: "balance",
+      desc: `We strike a balanced approach. We have agency and client backgrounds, B2B and B2C. We play to our strengths and value our differences and engage both the left and right brain hemispheres, where rational planning meets emotional connections.`,
+    },
+    {
+      header: "honesty",
+      desc: `We’re courteous, not blunt, but we do tell it as it is. It helps to achieve better work and push marketing boundaries together. But our honesty principle goes beyond telling the truth and project updates, it also reflects our honesty of effort and intention. Good people, great work, amazing results. (Honestly!)`,
+    },
+  ];
   return (
     <>
       <Container fluid className="conAbout">
@@ -185,6 +226,102 @@ export default function about() {
                     directions they would like to pursue both in the U.S. and
                     globally.
                   </p>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </Container>
+      <Container fluid className="conThings">
+        <Container>
+          <Row>
+            <Col lg={12}>
+              <Slider {...settings} ref={ref}>
+                {things.map((event) => (
+                  <div className="divThings">
+                    <p className="pHeader">{event.header}</p>
+                    <p className="pHeaderSub">{event.desc}</p>
+                  </div>
+                ))}
+              </Slider>
+            </Col>
+            <Col lg={12}>
+              <div className="tableDots">
+                <div className="cell">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ display: "none" }}
+                  >
+                    <symbol
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 44 44"
+                      width="44px"
+                      height="44px"
+                      id="circle"
+                      fill="none"
+                      stroke="#fd6b3b"
+                    >
+                      <circle r={20} cy={22} cx={22} id="test"></circle>
+                    </symbol>
+                  </svg>
+
+                  <ul className="dots">
+                    <li className="liArrow" onClick={handlePrevSlide}>
+                      <a>
+                        <i>
+                          <HiOutlineArrowSmLeft />
+                        </i>
+                      </a>
+                    </li>
+                    <li
+                      className="li"
+                      onClick={(e) => {
+                        ref.current.slickGoTo(0);
+                      }}
+                    >
+                      <a></a>
+                    </li>
+                    <li
+                      className="li"
+                      onClick={(e) => {
+                        ref.current.slickGoTo(1);
+                      }}
+                    >
+                      <a></a>
+                    </li>
+                    <li
+                      className="li"
+                      onClick={(e) => {
+                        ref.current.slickGoTo(2);
+                      }}
+                    >
+                      <a></a>
+                    </li>
+                    <li
+                      className="li"
+                      onClick={(e) => {
+                        ref.current.slickGoTo(3);
+                      }}
+                    >
+                      <a></a>
+                    </li>
+                    <li
+                      className="li"
+                      onClick={(e) => {
+                        ref.current.slickGoTo(4);
+                      }}
+                    >
+                      <a></a>
+                    </li>
+
+                    <li className="liArrow" onClick={handleNextSlide}>
+                      <a>
+                        <i>
+                          <HiOutlineArrowSmRight />
+                        </i>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </Col>
