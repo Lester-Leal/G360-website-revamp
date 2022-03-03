@@ -21,7 +21,6 @@ function MyApp({ Component, pageProps }) {
     $(window).on("mousemove", moveCircle);
   }, []);
 
-
   return (
     <>
       <Script
@@ -41,7 +40,8 @@ function MyApp({ Component, pageProps }) {
         strategy="beforeInteractive"
       ></Script>
       {/* <Script src="/script/3dGlobe.js" />
-      <Script src="/script/peeps.js" /> */}
+       */}
+      <Script src="/script/peeps.js" />
       <Script src="/script/script.js" />
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.1/ocanvas.min.js"

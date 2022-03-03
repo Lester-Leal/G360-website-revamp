@@ -49,22 +49,6 @@ img {
   height: 100%;
 }
 
-.bg {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  right: -50%;
-  bottom: -50%;
-  width: 200%;
-  height: 200vh;
-  background: #141414 url("http://assets.iceable.com/img/noise-transparent.png")
-    repeat 0 0;
-  background-repeat: repeat;
-  animation: bg-animation 0.2s infinite;
-  opacity: 1;
-  visibility: visible;
-}
-
 @keyframes bg-animation {
   0% {
     transform: translate(0, 0);
@@ -440,19 +424,83 @@ canvas {
   position: relative;
   overflow: hidden;
   border: 0px;
-  #image {
-    top: 0px;
-    right: 0px;
+  .bg {
     position: absolute;
-    width: 100vw;
-    backface-visibility: hidden;
-    height: 100vh;
-    pointer-events: none;
-    border: 0px;
-    background-image: url("https://unsplash.com/photos/cgq4_dNgXiw/download?ixid=MnwxMjA3fDB8MXx0b3BpY3x8aVVJc25WdGpCMFl8fHx8fDJ8fDE2NDQ5MjM0MTg&force=true&w=2400");
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: scale(1.1);
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: #111111
+      url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation 0.5s infinite;
+    opacity: 1;
+    visibility: visible;
+  }
+  h1 {
+    font-family: Poppins;
+    color: white;
+    font-size: 4em;
+    line-height: 1.3;
+    font-weight: 700;
+    word-spacing: 3px;
+  }
+  .divBorder {
+    transform: rotate(-1deg);
+    margin-top: -5px;
+    margin-left: -14px;
+    position: relative;
+    width: max-content;
+    .boxBorder {
+      background-color: white;
+      border: 2px solid #19457a;
+      width: 14px;
+      height: 14px;
+      &:nth-child(1) {
+        position: absolute;
+        top: -5px;
+        left: -5px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+      }
+      &:nth-child(3) {
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
+      }
+      &:nth-child(4) {
+        position: absolute;
+        bottom: -5px;
+        left: -5px;
+      }
+    }
+    span {
+      font-family: Poppins;
+      font-weight: 700;
+      color: #19457a;
+      background-color: rgb(179, 229, 252);
+      border-radius: 2px;
+      font-size: 4em;
+      padding: 0px 8px;
+      border: 2px solid #19457a;
+    }
+  }
+  .pHeaderSub {
+    font-family: Poppins;
+    color: #fafafa;
+    font-size: 1rem;
+    margin-top: 25px;
+    font-weight: 600;
+    max-width: 550px;
+    line-height: 28px;
+  }
+  .divButton {
+    width: 350px;
   }
 }
 
@@ -4931,7 +4979,7 @@ section#animated-cta-bar {
         padding: 15px;
       }
       .imgIcon {
-        max-width: 100px !important;
+        max-width: 75px !important;
       }
     }
     .divModel {
@@ -5257,6 +5305,9 @@ section#animated-cta-bar {
   outline: 0;
 }
 
+.button-index::after {
+  border: 1px solid white !important;
+}
 .button-53:after {
   content: "";
   position: absolute;

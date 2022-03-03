@@ -90,8 +90,56 @@ export default function index() {
   }
 
   useEffect(() => {
-    // Prefetch the dashboard page
-    router.prefetch("/about");
+    const editable = document.querySelector(".changing-text");
+
+    const words = [
+      "Differently.",
+      "Exciting.",
+      "Superb.",
+      "Unique.",
+      "Flawless.",
+      "Absolute.",
+    ];
+    const animationTimeInms = 50;
+    const delayInms = 1500;
+
+    function close(index) {
+      editable.textContent = words[index % words.length];
+      const interval = setInterval(function () {
+        const text = editable.textContent;
+        if (!text) {
+          clearInterval(interval);
+          setTimeout(function () {
+            open(++index);
+          }, 100);
+        }
+        editable.textContent = text.slice(0, -1);
+      }, animationTimeInms);
+    }
+
+    function open(index) {
+      const initialText = words[index % words.length];
+      let i = 1;
+      editable.textContent = "";
+      const interval = setInterval(function () {
+        const text = editable.textContent;
+        console.log(text.length === initialText.length);
+        if (text.length === initialText.length) {
+          clearInterval(interval);
+          setTimeout(function () {
+            close(index);
+          }, delayInms);
+        }
+        editable.textContent = initialText.slice(0, i++);
+      }, animationTimeInms);
+    }
+
+    function writeWords() {
+      const i = 0;
+      open(i);
+    }
+
+    writeWords();
   }, []);
 
   const handleMouseMove = (e) => {
@@ -109,13 +157,30 @@ export default function index() {
 
   return (
     <>
-      <Container
-        fluid
-        className="conIndex"
-        id="conIndex"
-        onMouseMove={handleMouseMove}
-      >
-        <img id="image" />
+      <Container fluid className="conIndex">
+        <Container fluid className="bg"></Container>
+        <Container className="h-100" style={{ position: "relative" }}>
+          <Row className="h-100 align-items-center">
+            <Col lg={6}>
+              <h1>We’ve always done things a bit </h1>
+              <div className="divBorder">
+                <div className="boxBorder"></div>
+                <div className="boxBorder"></div>
+                <div className="boxBorder"></div>
+                <div className="boxBorder"></div>
+                <span className = "changing-text"></span>
+              </div>
+              <p className="pHeaderSub">
+                GUERILLA 360 is a global business solutions company, focused on
+                providing integrated business solutions in the areas of Software
+                Solutions and Personnel Outsourcing.
+              </p>
+              <div className="divButton">
+                <button className="button-53 button-index">Get started!</button>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </Container>
       <Container fluid className="conHow">
         <Container>

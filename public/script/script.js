@@ -1,6 +1,6 @@
 const body = document.body,
   scrollWrap = document.querySelector("body");
-(height = scrollWrap.getBoundingClientRect().height - 1), (speed = 0.07);
+(height = scrollWrap.getBoundingClientRect().height - 1), (speed = 0.08);
 
 var offset = 0;
 
