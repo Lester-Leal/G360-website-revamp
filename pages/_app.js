@@ -39,8 +39,7 @@ function MyApp({ Component, pageProps }) {
         src="https://cdn.jsdelivr.net/npm/warpjs@1.0.8/dist/warp.js"
         strategy="beforeInteractive"
       ></Script>
-      {/* <Script src="/script/3dGlobe.js" />
-       */}
+      <Script src="/script/3dGlobe.js" />
       <Script src="/script/peeps.js" />
       <Script src="/script/script.js" />
       <Script

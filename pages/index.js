@@ -168,7 +168,7 @@ export default function index() {
                 <div className="boxBorder"></div>
                 <div className="boxBorder"></div>
                 <div className="boxBorder"></div>
-                <span className = "changing-text"></span>
+                <span className="changing-text"></span>
               </div>
               <p className="pHeaderSub">
                 GUERILLA 360 is a global business solutions company, focused on
@@ -179,10 +179,96 @@ export default function index() {
                 <button className="button-53 button-index">Get started!</button>
               </div>
             </Col>
+            <Col lg={6}>
+              <canvas id="scene"></canvas>
+            </Col>
           </Row>
         </Container>
       </Container>
-      <Container fluid className="conHow">
+      <Container fluid className="conHow1">
+        <Container>
+          <Row>
+            <Col lg={6}></Col>
+            <Col lg={6}>
+              <svg>
+                <g className="loader-3 center-2-of-3">
+                  <circle />
+                  <circle />
+                  <circle />
+                </g>
+              </svg>
+              <div className="form-inline">
+                <p className="pNumber">01</p>
+                <p className="pHeader">Define</p>
+              </div>
+              <p className="pDesc">
+                We define your project needs by working closely with you and
+                conducting business assessments. We will understand the entire
+                process of your project and provide you with comprehensive
+                analysis on the best ways to execute it.
+              </p>
+              <svg>
+                <g className="loader-10 center-3-of-3">
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                </g>
+              </svg>
+              <div className="form-inline">
+                <p className="pNumber">02</p>
+                <p className="pHeader">Arrange</p>
+              </div>
+              <p className="pDesc">
+                Once we have a clear understanding of your project scope, we
+                will create a digital plan that will be used as our basis and
+                reference to the development and execution of your project. The
+                design plan will contain the User Stories, Design Options and
+                Timetable. Our team will also appoint a Business Relationship
+                Manager to directly interface with your company.
+              </p>
+              <svg>
+                <g className="loader-20 center-1-of-3">
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                  <circle />
+                </g>
+              </svg>
+              <div className="form-inline">
+                <p className="pNumber">03</p>
+                <p className="pHeader">Execution</p>
+              </div>
+              <p className="pDesc">
+                Our team of business analysts and software developers will begin
+                the software development life cycle and create a feature tracker
+                that will be shared with the client in order for the client to
+                keep track of progress. Upon launch of project, client may opt
+                for a complete turn over or maintenance under our BPO Services.
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      </Container>
+      <Container fluid className="conHow d-none">
         <Container>
           <Row>
             <Col lg={12}>
