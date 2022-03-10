@@ -188,7 +188,11 @@ export default function index() {
       <Container fluid className="conHow1">
         <Container>
           <Row>
-            <Col lg={6}></Col>
+            <Col lg={6}>
+              <h1>
+                To show the power of <span>humanity in business</span>
+              </h1>
+            </Col>
             <Col lg={6}>
               <svg>
                 <g className="loader-3 center-2-of-3">
