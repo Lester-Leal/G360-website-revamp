@@ -6,34 +6,6 @@ import Slider from "react-slick";
 import { HiOutlineArrowSmRight, HiOutlineArrowSmLeft } from "react-icons/hi";
 export default function about() {
   const ref = useRef(null);
-  useEffect(() => {
-    const slider = document.querySelector(".wrapperCard");
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    slider.addEventListener("mousedown", (e) => {
-      isDown = true;
-      slider.classList.add("active");
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    });
-    slider.addEventListener("mouseleave", () => {
-      isDown = false;
-      slider.classList.remove("active");
-    });
-    slider.addEventListener("mouseup", () => {
-      isDown = false;
-      slider.classList.remove("active");
-    });
-    slider.addEventListener("mousemove", (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 1; //scroll-fast
-      slider.scrollLeft = scrollLeft - walk;
-    });
-  }, []);
 
   const settings = {
     dots: false,
@@ -72,64 +44,154 @@ export default function about() {
       desc: `We’re courteous, not blunt, but we do tell it as it is. It helps to achieve better work and push marketing boundaries together. But our honesty principle goes beyond telling the truth and project updates, it also reflects our honesty of effort and intention. Good people, great work, amazing results. (Honestly!)`,
     },
   ];
+
   return (
     <>
-      <Container fluid className="conAbout">
-        <Container>
+      <Container fluid className="conAbout1 h-100">
+        <Container clasName="h-100">
+          <Row className="h-100 align-items-center">
+            <Col lg={6}>
+              <p className="p1">
+                {" "}
+                Behind every <span>great business</span> lies an epiphany.
+              </p>
+            </Col>
+            <Col lg={6}></Col>
+          </Row>
+        </Container>
+      </Container>
+      <Container fluid className="conTeam1">
+        <Container className="conTeamInner">
           <Row>
-            <Col lg={12}>
-              <div className="divHeader">
-                <p className="pHeader">About</p>
-                <p className="pHeaderSub">Guerilla 360</p>
+            <Col lg={6}>
+              <div className="divSticky">
+                <p className="p1">
+                  Meet the people who help bring <span>our vision</span> to
+                  life.
+                </p>
+                <p className="p1Sub">
+                  Everyone here at This is Beyond has a role to play in our
+                  journey (while having plenty of fun at the same time). These
+                  are some of the people leading the way…
+                </p>
+              </div>
+            </Col>
+            <Col lg={3}>
+              <div className="card">
+                <div
+                  className="photo"
+                  style={{ background: "url('Image/Team/alfonblack.jpg')" }}
+                ></div>
                 <div className="divDesc">
-                  <p className="pTitle">
-                    GUERILLA 360 is a global business solutions company, focused
-                    on providing integrated business solutions in the areas of
-                    Software Solutions and Personnel Outsourcing. It is founded
-                    by diverse group of industries ranging from finance,
-                    Business Development Technology and Outsource Service
-                    Solutions.
-                  </p>
+                  <p className="pName">Alfon Labadan</p>
+                  <p className="pPosition">Senior Lead Design Engineer</p>
+                </div>
+              </div>
+              <div className="card">
+                <div
+                  className="photo"
+                  style={{ background: "url('Image/Team/eskyeblack.jpg')" }}
+                ></div>
+                <div className="divDesc">
+                  <p className="pName">Eskye Custodio</p>
+                  <p className="pPosition">Senior Designer</p>
+                </div>
+              </div>
+              <div className="card">
+                <div
+                  className="photo"
+                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                ></div>
+                <div className="divDesc">
+                  <p className="pName">Mark Seaglle</p>
+                  <p className="pPosition">Director</p>
+                </div>
+              </div>
+              <div className="card">
+                <div
+                  className="photo"
+                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                ></div>
+                <div className="divDesc">
+                  <p className="pName">Mark Seaglle</p>
+                  <p className="pPosition">Director</p>
+                </div>
+              </div>
+              <div className="card">
+                <div
+                  className="photo"
+                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                ></div>
+                <div className="divDesc">
+                  <p className="pName">Mark Seaglle</p>
+                  <p className="pPosition">Director</p>
                 </div>
               </div>
             </Col>
-          </Row>
-          <Row style={{ marginTop: "70px" }}>
-            <Col lg={12}>
-              <div className="divImage">
-                <img
-                  src="Image/mission.jpg"
-                  className="img-fluid d-flex imgAbout"
-                ></img>
+            <Col lg={3}>
+              <div className="card">
+                <div
+                  className="photo"
+                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                ></div>
+                <div className="divDesc">
+                  <p className="pName">Mark Seaglle</p>
+                  <p className="pPosition">Director</p>
+                </div>
+              </div>
+              <div className="card">
+                <div
+                  className="photo"
+                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                ></div>
+                <div className="divDesc">
+                  <p className="pName">Mark Seaglle</p>
+                  <p className="pPosition">Director</p>
+                </div>
+              </div>
+              <div className="card">
+                <div
+                  className="photo"
+                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                ></div>
+                <div className="divDesc">
+                  <p className="pName">Mark Seaglle</p>
+                  <p className="pPosition">Director</p>
+                </div>
+              </div>
+              <div className="card">
+                <div
+                  className="photo"
+                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                ></div>
+                <div className="divDesc">
+                  <p className="pName">Mark Seaglle</p>
+                  <p className="pPosition">Director</p>
+                </div>
+              </div>
+              <div className="card">
+                <div
+                  className="photo"
+                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                ></div>
+                <div className="divDesc">
+                  <p className="pName">Mark Seaglle</p>
+                  <p className="pPosition">Director</p>
+                </div>
               </div>
             </Col>
           </Row>
         </Container>
       </Container>
-      <Container fluid className="conValues">
-        <Container>
-          <Row>
-            <Col lg={8}>
-              <div className="divValues">
-                <img src="Image/mission1.jpg" className="img-fluid imgDiv" />
-                <div className="form-inline">
-                  <div></div>
-                  <p className="p1">Our Mission</p>
-                </div>
-                <p className="p2">
-                  Our core purpose is to provide{" "}
-                  <span style={{ color: "#fd6b3b" }}>extensive</span> expertise.
-                </p>
-                <p className="pDesc">
-                  Our core purpose is to provide companies extensive expertise
-                  and services at cost expertise and services at cost effective
-                  price points, while upholding a standard for quality service.
-                  We seek to lead companies towards business directions they
-                  would like to pursue both in the U.S. and globally.
-                </p>
-              </div>
+      <Container fluid className=" h-100 conVissionSection">
+        <Container className="h-100">
+          <Row className="h-100 align-items-center">
+            <Col lg={6}>
+              <p className="p1">Our Vission</p>
+              <p className="p2">
+                Our core purpose is to provide <span>extensive expertise.</span>
+              </p>
             </Col>
-            <Col lg={4}></Col>
           </Row>
         </Container>
       </Container>
@@ -196,37 +258,6 @@ export default function about() {
                 <p className="pWork">Social Media Merketting</p>
                 <p className="pWork">Search Engine Optimization</p>
                 <p className="pWork">Blogging</p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </Container>
-      <Container fluid className="conValues">
-        <Container>
-          <Row>
-            <Col lg={4}></Col>
-            <Col lg={8}>
-              <div className="divValues">
-                <div className="divInner">
-                  <img src="Image/mission1.jpg" className="img-fluid imgDiv1" />
-                  <div className="form-inline">
-                    <div></div>
-                    <p className="p1">Our Vission</p>
-                  </div>
-                  <p className="p2 ">
-                    Our core purpose is to provide{" "}
-                    <span style={{ color: "#fd6b3b" }}>extensive</span>{" "}
-                    expertise.
-                  </p>
-                  <p className="pDesc">
-                    Our core purpose is to provide companies extensive expertise
-                    and services at cost expertise and services at cost
-                    effective price points, while upholding a standard for
-                    quality service. We seek to lead companies towards business
-                    directions they would like to pursue both in the U.S. and
-                    globally.
-                  </p>
-                </div>
               </div>
             </Col>
           </Row>
@@ -390,96 +421,6 @@ export default function about() {
                   and innovations that create both value and revenue for a
                   business of any scale.
                 </p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </Container>
-      <Container className="conTeam">
-        <Container
-          className="conInnerTeam"
-          onMouseOver={(e) => {
-            const mouse = document.querySelector(".mouse");
-            mouse.classList.add("d-flex");
-          }}
-          onMouseOut={(e) => {
-            const mouse = document.querySelector(".mouse");
-            mouse.classList.remove("d-flex");
-          }}
-        >
-          <Row style={{ marginTop: "70px" }}>
-            <Col lg={4}>
-              <p className="pHeader">The Team</p>
-              <p className="pHeaderSub">
-                Meet our team of intelligent and creative individuals who can
-                collaborate to build projects to any requirements.
-              </p>
-            </Col>
-            <Col lg={12}>
-              <div className="wrapperCard">
-                <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
-                  <div className="card">
-                    <div
-                      className="photo"
-                      style={{ background: "url('Image/Team/alfonblack.jpg')" }}
-                    ></div>
-                    <div className="divDesc">
-                      <p className="pName">Alfon Labadan</p>
-                      <p className="pPosition">Senior Lead Design Engineer</p>
-                    </div>
-                    <div
-                      className="photo"
-                      style={{
-                        background: "url('Image/Team/alfonblack1.jpg')",
-                      }}
-                    ></div>
-                  </div>
-                </Tilt>
-
-                <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
-                  <div className="card">
-                    <div
-                      className="photo"
-                      style={{ background: "url('Image/Team/marblack.jpg')" }}
-                    ></div>
-                    <div className="divDesc">
-                      <p className="pName">Mark Seaglle</p>
-                      <p className="pPosition">Director</p>
-                    </div>
-                    <div
-                      className="photo"
-                      style={{ background: "url('Image/Team/markblack1.jpg')" }}
-                    ></div>
-                  </div>
-                </Tilt>
-                <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
-                  <div className="card">
-                    <div
-                      className="photo"
-                      style={{ background: "url('Image/Team/eskyeblack.jpg')" }}
-                    ></div>
-                    <div className="divDesc">
-                      <p className="pName">Eskye Custodio</p>
-                      <p className="pPosition">Senior Designer</p>
-                    </div>
-                    <div
-                      className="photo"
-                      style={{
-                        background: "url('Image/Team/eskyeblack1.jpg')",
-                      }}
-                    ></div>
-                  </div>
-                </Tilt>
-                <div className="card">
-                  <div
-                    className="photo"
-                    style={{ background: "url('Image/Team/alfonblack.jpg')" }}
-                  ></div>
-                  <div
-                    className="photo"
-                    style={{ background: "url('Image/Team/alfonblack1.jpg')" }}
-                  ></div>
-                </div>
               </div>
             </Col>
           </Row>

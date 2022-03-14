@@ -1549,96 +1549,6 @@ canvas {
   }
 }
 
-.conTeam {
-  padding: 0px 15px 6rem 15px;
-  .conInnerTeam {
-    min-width: calc(100vw - 20%);
-    z-index: 1000;
-    padding: 0px;
-    cursor: grab;
-    .wrapperCard {
-      display: flex;
-      flex-wrap: no-wrap;
-      overflow-x: scroll;
-      margin: 20px;
-      .card {
-        flex: 0 0 auto;
-        margin-right: 70px;
-        width: 400px;
-        height: 600px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 0px !important;
-        background-color: #141414;
-        border: 0px;
-        border-left: 1px solid #141414 !important;
-        .divDesc {
-          position: absolute;
-          bottom: 0px;
-          .pName {
-            font-family: Poppins;
-            color: white;
-            font-size: 20px;
-            font-weight: 600;
-            z-index: 1000;
-            pointer-events: none;
-            margin-bottom: 2px;
-          }
-          .pPosition {
-            font-family: Poppins;
-            color: #d5d5d5;
-            font-size: 16px;
-            line-height: 24px;
-          }
-        }
-
-        .photo {
-          transition: 0.35s;
-          position: absolute;
-          width: 100%;
-          height: 85%;
-          top: 0;
-          background-repeat: no-repeat !important;
-          background-size: cover !important;
-          background-position: 50% 50%;
-          &:first-child {
-            left: 0;
-            transform: scalex(1);
-            opacity: 1;
-            filter: blur(0);
-          }
-          &:last-child {
-            z-index: 1;
-            left: 50%;
-            transform: scalex(2);
-            opacity: 0;
-            filter: blur(20px);
-          }
-        }
-      }
-    }
-  }
-  .pHeader {
-    font-family: Poppins;
-    font-size: calc(2.125rem + 20 * ((100vw - 26.25rem) / 860));
-    font-weight: 600;
-    color: white;
-    margin-bottom: 5px;
-    margin-left: 18px;
-  }
-  .pHeaderSub {
-    font-family: Poppins;
-    color: #d5d5d5;
-    font-size: 16px;
-    line-height: 24px;
-    width: 500px;
-    margin-left: 18px;
-  }
-  .divTeam {
-    max-width: 350px;
-  }
-}
-
 @keyframes lights {
   0% {
     text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
@@ -2097,147 +2007,35 @@ canvas {
   }
 }
 
-.conAbout {
-  padding-top: 170px;
-  padding-bottom: 100px;
-  position: relative;
-  background: #141414;
-  .divHeader {
-    width: 900px;
-    margin: 0 auto;
-    .pHeader {
-      font-family: Inter;
-      font-size: 5.1rem;
-      font-weight: 700;
-      color: transparent;
-      -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: #fff;
-      -ms-text-stroke-width: 2px;
-      -ms-text-stroke-color: #fff;
-      -moz-text-stroke-width: 2px;
-      -moz-text-stroke-color: #fff;
-      text-rendering: geometricPrecision;
-      margin-bottom: -30px;
-    }
-    .pHeaderSub {
-      font-family: Inter;
-      color: white;
-      font-size: 5.1rem;
-      font-weight: 700;
-      margin-left: 50px;
-    }
-    .divDesc {
-      padding-left: 100px;
-      border-left: 2px solid #424242;
-      float: right;
-      .pTitle {
-        font-family: Inter;
-        font-size: 16px;
-        color: #bfbfbf;
-        max-width: 550px;
-        font-weight: 500;
-        line-height: 28px;
-      }
-    }
+.conVissionSection {
+  .p1 {
+    font-family: Poppins;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
   }
-  .divImage {
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    border: 3px solid white;
-    position: relative;
-    &::before {
-      content: none !important;
-      border: 2px solid white;
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 1;
-      top: 50%;
-      background-image: none !important;
-      left: 50%;
-      transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-      border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-    }
-    .imgAbout {
-      border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-    }
-  }
-}
-
-.conValues {
-  background-color: #141414;
-  padding: 70px 15px;
-  padding-bottom: 150px;
-  .divValues {
-    width: 100%;
-    background-color: white;
-    padding: 70px;
-    position: relative;
-
-    .divInner {
-      margin-left: 20%;
-    }
-
-    .form-inline {
-      div {
-        width: 100px;
-        height: 2px;
-        background-color: #fd6b3b;
-        margin-right: 10px;
-        margin-top: -15px;
-      }
-      .p1 {
-        font-family: Vollkorn;
-        font-size: #141414;
-        font-size: 16px;
-        font-weight: 500;
-      }
-    }
-    .p2 {
-      font-family: Inter;
-      font-size: #141414;
-      font-size: 2rem;
-      font-weight: 700;
-      width: 400px;
-      line-height: 2ch;
-    }
-    .pDesc {
-      font-family: Vollkorn;
-      font-size: #141414;
-      font-size: 18px;
-      font-weight: 500;
-      max-width: 500px;
-    }
-    .imgDiv {
-      position: absolute;
-      top: 80px;
-      right: -300px;
-      width: 470px;
-    }
-    .imgDiv1 {
-      position: absolute;
-      top: 80px;
-      left: -340px;
-      width: 470px;
+  .p2 {
+    font-family: Poppins;
+    color: white;
+    font-size: 3.5em;
+    line-height: 1.3;
+    font-weight: 700;
+    word-spacing: 3px;
+    span {
+      background-color: #ff6e48;
+      color: #141414;
     }
   }
 }
 
 .conWhy {
   background-color: #141414;
-  padding: 150px 15px;
+  padding: 170px 15px;
   .pStroke {
     font-family: Inter;
     font-size: 5.1rem;
     font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #fff;
-    -ms-text-stroke-width: 2px;
-    -ms-text-stroke-color: #fff;
-    -moz-text-stroke-width: 2px;
-    -moz-text-stroke-color: #fff;
-    text-rendering: geometricPrecision;
+    color: white;
     margin-bottom: -30px;
   }
   .pNoStroke {
@@ -2247,10 +2045,10 @@ canvas {
     font-weight: 700;
   }
   .pOver {
-    font-family: Vollkorn;
+    font-family: Poppins;
     font-size: 2.4rem;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 25px;
   }
   .pDesc {
@@ -6089,5 +5887,114 @@ section#animated-cta-bar {
   }
   100% {
     transform: rotate(180deg) rotateY(360deg);
+  }
+}
+
+.conAbout1 {
+  background-color: #141414;
+  z-index: 2;
+  .p1 {
+    font-family: Poppins;
+    color: white;
+    font-size: 4em;
+    line-height: 1.3;
+    font-weight: 700;
+    word-spacing: 3px;
+    position: sticky;
+    top: 0;
+    padding-top: 38vh;
+    padding-bottom: 38vh;
+    span {
+      background-color: #ff6e48;
+      color: #141414;
+    }
+  }
+}
+.conTeam1 {
+  background-image: url(https://www.thisisbeyond.com/wp-content/themes/thisisbeyond/library/images/Texture-1.svg);
+  background-size: contain;
+  .conTeamInner {
+    max-width: 1700px;
+  }
+  .divSticky {
+    position: sticky;
+    top: 0;
+    padding-top: 38vh;
+    padding-bottom: 38vh;
+  }
+  .p1 {
+    font-family: Poppins;
+    color: white;
+    font-size: 4em;
+    line-height: 1.3;
+    font-weight: 700;
+    word-spacing: 3px;
+    max-width: 650px;
+    span {
+      background-color: #ff6e48;
+      color: #141414;
+    }
+  }
+  .p1Sub {
+    font-family: Poppins;
+    color: white;
+    font-weight: 1.1rem;
+    font-weight: 500;
+    max-width: 650px;
+  }
+  .card {
+    flex: 0 0 auto;
+    margin-right: 70px;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px !important;
+    background-color: #141414;
+    border: 0px;
+    border-left: 1px solid #141414 !important;
+    .divDesc {
+      position: absolute;
+      bottom: 0px;
+      .pName {
+        font-family: Poppins;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        z-index: 1000;
+        pointer-events: none;
+        margin-bottom: 2px;
+      }
+      .pPosition {
+        font-family: Poppins;
+        color: #d5d5d5;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    .photo {
+      transition: 0.35s;
+      position: absolute;
+      width: 100%;
+      height: 85%;
+      top: 0;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: 50% 50%;
+      &:first-child {
+        left: 0;
+        transform: scalex(1);
+        opacity: 1;
+        filter: blur(0);
+      }
+      &:last-child {
+        z-index: 1;
+        left: 50%;
+        transform: scalex(2);
+        opacity: 0;
+        filter: blur(20px);
+      }
+    }
   }
 }
