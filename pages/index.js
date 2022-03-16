@@ -91,7 +91,6 @@ export default function index() {
 
   useEffect(() => {
     const editable = document.querySelector(".changing-text");
-
     const words = [
       "Differently.",
       "Exciting.",
@@ -180,7 +179,7 @@ export default function index() {
               </div>
             </Col>
             <Col lg={6}>
-              <canvas id="scene"></canvas>
+              {/* <canvas id="scene"></canvas> */}
             </Col>
           </Row>
         </Container>
@@ -618,50 +617,21 @@ export default function index() {
           </Row>
         </Container>
       </Container>
+      
       <Container fluid className="conClients">
         <Container>
           <Row>
+            {/* CONTENT TITLE */}
             <Col lg={8}>
               <p className="pHeader">
                 <span style={{ color: "white" }}>Our</span> Clients.
               </p>
             </Col>
-            <Col lg={4}>
-              <div
-                style={{ width: "200px", float: "right", marginTop: "15px" }}
-              >
-                <span className="pCount">{next === 1 ? 1 : 2} / 2</span>
-                <hr></hr>
-                <div style={{ marginTop: "-5px" }}>
-                  <div className="demo">
-                    <a
-                      href
-                      className="arrow left"
-                      onClick={handlePrevSlideClient}
-                    >
-                      <i />
-                      <svg>
-                        <use xlinkHref="#circle"></use>
-                      </svg>
-                    </a>
-                    <a
-                      href
-                      className="arrow"
-                      onClick={handleNextSlideClient}
-                      style={{ marginLeft: "85px" }}
-                    >
-                      <i />
-                      <svg>
-                        <use xlinkHref="#circle"></use>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Col>
+
+            {/* CLIENT LOGO CARDS */}
             <Col lg={11}>
               <div>
-                <svg
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   style={{ display: "none" }}
                 >
@@ -676,31 +646,25 @@ export default function index() {
                   >
                     <circle r={20} cy={22} cx={22} id="test"></circle>
                   </symbol>
-                </svg>
+                </svg> */}
 
                 <Slider {...settings_testimonials} ref={refClient}>
                   <div>
                     <Container style={{ padding: "0px" }}>
                       <Row>
                         <Col lg={3}>
-                          <a href="#" className="link">
+                          <a className="link">
                             <div className="link__text">
-                              <img
-                                src="Image/client_1.png"
-                                className="img-fluid d-flex"
-                              ></img>
+                              <img src="Image/client_1.png" className="img-fluid d-flex" ></img>
                             </div>
                             <div className="sensor">
-                              {Array.apply(null, { length: 16 }).map((e, i) => (
-                                <div className="sensor__trigger" />
-                              ))}
                               <div className="sensor__background" />
-                              <div className="sensor__effect" />
                             </div>
                           </a>
                         </Col>
+                        
                         <Col lg={3}>
-                          <a href="#" className="link">
+                          <a className="link">
                             <div className="link__text">
                               <img
                                 src="Image/client_2.png"
@@ -708,16 +672,12 @@ export default function index() {
                               ></img>
                             </div>
                             <div className="sensor">
-                              {Array.apply(null, { length: 16 }).map((e, i) => (
-                                <div className="sensor__trigger" />
-                              ))}
                               <div className="sensor__background" />
-                              <div className="sensor__effect" />
                             </div>
                           </a>
                         </Col>
                         <Col lg={3}>
-                          <a href="#" className="link">
+                          <a className="link">
                             <div className="link__text">
                               <img
                                 src="Image/client_3.png"
@@ -725,16 +685,12 @@ export default function index() {
                               ></img>
                             </div>
                             <div className="sensor">
-                              {Array.apply(null, { length: 16 }).map((e, i) => (
-                                <div className="sensor__trigger" />
-                              ))}
                               <div className="sensor__background" />
-                              <div className="sensor__effect" />
                             </div>
                           </a>
                         </Col>
                         <Col lg={3}>
-                          <a href="#" className="link">
+                          <a className="link">
                             <div className="link__text">
                               <img
                                 src="Image/client_4.png"
@@ -742,16 +698,12 @@ export default function index() {
                               ></img>
                             </div>
                             <div className="sensor">
-                              {Array.apply(null, { length: 16 }).map((e, i) => (
-                                <div className="sensor__trigger" />
-                              ))}
                               <div className="sensor__background" />
-                              <div className="sensor__effect" />
                             </div>
                           </a>
                         </Col>
                         <Col lg={3}>
-                          <a href="#" className="link">
+                          <a className="link">
                             <div className="link__text">
                               <img
                                 src="Image/client_5.png"
@@ -759,16 +711,12 @@ export default function index() {
                               ></img>
                             </div>
                             <div className="sensor">
-                              {Array.apply(null, { length: 16 }).map((e, i) => (
-                                <div className="sensor__trigger" />
-                              ))}
                               <div className="sensor__background" />
-                              <div className="sensor__effect" />
                             </div>
                           </a>
                         </Col>
                         <Col lg={3}>
-                          <a href="#" className="link">
+                          <a className="link">
                             <div className="link__text">
                               <img
                                 src="Image/client_6.png"
@@ -776,16 +724,12 @@ export default function index() {
                               ></img>
                             </div>
                             <div className="sensor">
-                              {Array.apply(null, { length: 16 }).map((e, i) => (
-                                <div className="sensor__trigger" />
-                              ))}
                               <div className="sensor__background" />
-                              <div className="sensor__effect" />
                             </div>
                           </a>
                         </Col>
                         <Col lg={3}>
-                          <a href="#" className="link">
+                          <a className="link">
                             <div className="link__text">
                               <img
                                 src="Image/client_7.png"
@@ -793,16 +737,12 @@ export default function index() {
                               ></img>
                             </div>
                             <div className="sensor">
-                              {Array.apply(null, { length: 16 }).map((e, i) => (
-                                <div className="sensor__trigger" />
-                              ))}
                               <div className="sensor__background" />
-                              <div className="sensor__effect" />
                             </div>
                           </a>
                         </Col>
                         <Col lg={3}>
-                          <a href="#" className="link">
+                          <a className="link">
                             <div className="link__text">
                               <img
                                 src="Image/client_8.png"
@@ -810,11 +750,7 @@ export default function index() {
                               ></img>
                             </div>
                             <div className="sensor">
-                              {Array.apply(null, { length: 16 }).map((e, i) => (
-                                <div className="sensor__trigger" />
-                              ))}
                               <div className="sensor__background" />
-                              <div className="sensor__effect" />
                             </div>
                           </a>
                         </Col>
@@ -825,7 +761,7 @@ export default function index() {
                     <Container style={{ padding: "0px" }}>
                       <Row>
                         <Col lg={3} style={{ marginBottom: "20px" }}>
-                          <a href="#" className="link">
+                          <a className="link">
                             <div className="link__text">
                               <img
                                 src="Image/client_9.png"
@@ -833,16 +769,12 @@ export default function index() {
                               ></img>
                             </div>
                             <div className="sensor">
-                              {Array.apply(null, { length: 16 }).map((e, i) => (
-                                <div className="sensor__trigger" />
-                              ))}
                               <div className="sensor__background" />
-                              <div className="sensor__effect" />
                             </div>
                           </a>
                         </Col>
                         <Col lg={3} style={{ marginBottom: "20px" }}>
-                          <a href="#" className="link">
+                          <a className="link">
                             <div className="link__text">
                               <img
                                 src="Image/client_10_plain.png"
@@ -850,16 +782,12 @@ export default function index() {
                               ></img>
                             </div>
                             <div className="sensor">
-                              {Array.apply(null, { length: 16 }).map((e, i) => (
-                                <div className="sensor__trigger" />
-                              ))}
                               <div className="sensor__background" />
-                              <div className="sensor__effect" />
                             </div>
                           </a>
                         </Col>
                         <Col lg={3} style={{ marginBottom: "20px" }}>
-                          <a href="#" className="link">
+                          <a className="link">
                             <div className="link__text">
                               <img
                                 src="Image/client_11.png"
@@ -867,16 +795,12 @@ export default function index() {
                               ></img>
                             </div>
                             <div className="sensor">
-                              {Array.apply(null, { length: 16 }).map((e, i) => (
-                                <div className="sensor__trigger" />
-                              ))}
                               <div className="sensor__background" />
-                              <div className="sensor__effect" />
                             </div>
                           </a>
                         </Col>
                         <Col lg={3} style={{ marginBottom: "20px" }}>
-                          <a href="#" className="link">
+                          <a className="link">
                             <div className="link__text">
                               <img
                                 src="Image/client_12_plain.png"
@@ -884,11 +808,7 @@ export default function index() {
                               ></img>
                             </div>
                             <div className="sensor">
-                              {Array.apply(null, { length: 16 }).map((e, i) => (
-                                <div className="sensor__trigger" />
-                              ))}
                               <div className="sensor__background" />
-                              <div className="sensor__effect" />
                             </div>
                           </a>
                         </Col>
@@ -898,6 +818,8 @@ export default function index() {
                 </Slider>
               </div>
             </Col>
+
+            {/* VERTICALLY TEXT ON RIGHT SIDE */}
             <Col lg={1} style={{ position: "relative" }}>
               <div className="rotate">
                 We are passionate with our clients{" "}
@@ -906,9 +828,34 @@ export default function index() {
                 </span>
               </div>
             </Col>
+            
+            {/* CLIENTS PAGE BUTTONS */}
+            <Col lg={11}>
+              <div style={{ width: "200px", float: 'right'}} >
+                <span className="pCount">{next === 1 ? 1 : 2} / 2</span>
+                <hr></hr>
+                <div style={{ marginTop: "-5px" }}>
+                  <div className="demo">
+                    <a href className="arrow left" onClick={handlePrevSlideClient} >
+                      <i/>
+                      <svg> <use xlinkHref="#circle"></use> </svg>
+                    </a>
+                    <a href className="arrow" onClick={handleNextSlideClient} style={{ marginLeft: "85px" }} >
+                      <i/>
+                      <svg>
+                        <use xlinkHref="#circle"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Col>
+
           </Row>
         </Container>
       </Container>
+
+      {/* CLIENT TESTIMONIALS */}
       <Container fluid className="conTest">
         <Container style={{ position: "relative" }}>
           <p className="pQuote">"</p>
@@ -946,37 +893,31 @@ export default function index() {
                       </div>
                     </div>
                   </Col>
+
                   <Col lg={6}>
                     <div className="float-end">
                       <div className="demo">
-                        <a
-                          href
-                          className="arrow left"
+                        <a href className="arrow left"
                           onClick={(e) => {
                             if (count === 0) {
                               setCount(2);
                             } else {
                               setCount(count - 1);
                             }
-                          }}
-                        >
+                          }} >
                           <i />
                           <svg>
                             <use xlinkHref="#circle"></use>
                           </svg>
                         </a>
-                        <a
-                          href
-                          className="arrow"
-                          onClick={(e) => {
+                        <a href className="arrow" onClick={(e) => {
                             if (count === 2) {
                               setCount(0);
                             } else {
                               setCount(count + 1);
                             }
-                          }}
-                        >
-                          <i />
+                          }} >
+                          <i/>
                           <svg>
                             <use xlinkHref="#circle"></use>
                           </svg>
@@ -991,6 +932,8 @@ export default function index() {
           <Row></Row>
         </Container>
       </Container>
+
+      {/* OUR CULTURE BANNER */}
       <Banner />
     </>
   );

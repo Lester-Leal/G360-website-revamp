@@ -39,7 +39,7 @@ export default function careers() {
             <div className="divHiring">
               <p>Looking a Job?</p>
             </div>
-            <canvas id="canvasPeeps"></canvas>
+            {/* <canvas id="canvasPeeps"></canvas> */}
           </Col>
         </Row>
       </Container>

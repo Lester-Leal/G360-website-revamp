@@ -18,7 +18,7 @@ $second: #1b2431;
 
 html,
 body {
-  background-color: #141414;
+  background-color: #0C173C;
   position: relative;
   height: 100%;
   padding: 0px;
@@ -433,7 +433,7 @@ canvas {
     bottom: -50%;
     width: 200%;
     height: 200vh;
-    background: #111111
+    background: #0C173C
       url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
     background-repeat: repeat;
     animation: bg-animation 0.5s infinite;
@@ -1382,7 +1382,7 @@ canvas {
 }
 
 .conFooter {
-  background-color: #141414;
+  background-color: #0C173C;
   padding: 5.5rem 15px 5.5rem 15px;
   .pCopy {
     font-family: Inter;
@@ -1587,7 +1587,7 @@ canvas {
 }
 
 .conTest {
-  background: #141414;
+  background: #0C173C;
   padding: 70px 0px;
   .pQuote {
     animation: lights 5s 750ms linear infinite;
@@ -1751,7 +1751,7 @@ canvas {
 
 .conClients {
   padding: 100px 15px;
-  background: #141414;
+  background: #0C173C;
   .pHeader {
     font-family: Vollkorn;
     font-weight: 800;
@@ -1827,11 +1827,8 @@ canvas {
       padding: 3em;
       font-size: 1.25rem;
       text-align: center;
-      color: white;
+      color: rgb(216, 39, 39);
       pointer-events: none;
-    }
-    img {
-      filter: brightness(0) invert(1);
     }
   }
 
@@ -1992,7 +1989,7 @@ canvas {
     }
   }
   .rotate {
-    font-family: Inter;
+    font-family: Poppins;
     color: white;
     font-weight: 400;
     transform: rotate(-90deg) translateX(-100%);
@@ -2487,9 +2484,9 @@ $shellSpeed: 2s;
 }
 
 .conBanner {
-  background: #141414;
+  background: #0C173C;
   position: relative;
-  padding-top: 15px;
+  // padding-top: 15px;
   padding-bottom: 20px;
   .container {
     padding: 50px 15px;
@@ -4154,7 +4151,7 @@ section#animated-cta-bar {
   left: 0;
   width: 0;
   height: 20%;
-  background-color: #141414;
+  background-color: #0C173C;
   transition: width 0.7s ease;
   z-index: 1;
 }
