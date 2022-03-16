@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
-import Banner from "../components/modules/banner";
+import Banner from "../../components/modules/banner";
+import Script from "next/script";
 
 export default function careers() {
   useEffect(() => {
@@ -37,9 +38,10 @@ export default function careers() {
         <Row className="h-100 align-items-center">
           <Col lg={12}>
             <div className="divHiring">
-              <p>Looking a Job?</p>
+              <p>Looking for a Job</p>
             </div>
-            {/* <canvas id="canvasPeeps"></canvas> */}
+            <canvas id="canvasPeeps"></canvas>
+            <Script src="/script/peeps.js" />
           </Col>
         </Row>
       </Container>
@@ -229,6 +231,7 @@ export default function careers() {
           </Row>
         </Container>
       </Container>
+      {/* OUR CULTURE BANNER */}
       <Banner />
     </>
   );

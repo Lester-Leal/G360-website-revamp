@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
-import $ from "jquery";
 import React, { useState, useEffect } from "react";
 
 import Head from "next/head";

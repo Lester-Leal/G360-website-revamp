@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 export default function banner() {
   return (
+    <>
       <Container fluid className="conBanner">
         <Container>
           <Row>
@@ -28,5 +29,6 @@ export default function banner() {
           </Row>
         </Container>
       </Container>
+    </>
   );
 }

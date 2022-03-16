@@ -16,11 +16,9 @@ import { AiFillStar } from "react-icons/ai";
 import { CgArrowLeft, CgArrowRight } from "react-icons/cg";
 import Banner from "../components/modules/banner";
 import GlobeCanvas from "../components/elements/globe";
-import { useRouter } from "next/router";
 import Slider from "react-slick";
 
 export default function index() {
-  const router = useRouter();
   const ref = useRef(null);
   const [count, setCount] = useState(0);
   const refClient = useRef(null);
@@ -179,7 +177,7 @@ export default function index() {
               </div>
             </Col>
             <Col lg={6}>
-              {/* <canvas id="scene"></canvas> */}
+              <GlobeCanvas />
             </Col>
           </Row>
         </Container>

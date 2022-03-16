@@ -1,17 +1,16 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect, useRef } from "react";
 import TextTransition, { presets } from "react-text-transition";
-import Scrollbar from "react-smooth-scrollbar";
 
 export default function services() {
   const [count, setCount] = useState("01");
   useEffect(() => {
     const count = document.querySelector("#pNumber");
+    
     window.onscroll = function () {
-      console.log("Asdd");
       if (isInView(divService1, true)) {
         var testDiv = document.getElementById("divService1");
-        count.style.marginTop = testDiv.offsetTop + "px";
+        count.style.marginTop = "10px";
         if (count !== "01") {
           console.log(1);
           setCount("01");
@@ -19,7 +18,7 @@ export default function services() {
       }
       if (isInView(divService2, true)) {
         var testDiv = document.getElementById("divService2");
-        count.style.marginTop = testDiv.offsetTop + "px";
+        count.style.marginTop = "1730px";
         if (count !== "02") {
           setCount("02");
           console.log(2);
@@ -27,7 +26,7 @@ export default function services() {
       }
       if (isInView(divService3, true)) {
         var testDiv = document.getElementById("divService3");
-        count.style.marginTop = testDiv.offsetTop + "px";
+        count.style.marginTop = "3150px";
         if (count !== "03") {
           setCount("03");
           console.log(3);
@@ -122,10 +121,10 @@ export default function services() {
           <Container className="">
             <Row className="">
               <Col lg={4}>
-                <div id="pNumber" style={{ transition: "all 0.3s" }}>
+                <div id="pNumber" style={{ transition: "all 0.2s" }}>
                   <TextTransition
                     text={count}
-                    springConfig={presets.stiff}
+                    springConfig={presets.wobbly}
                     noOverflow={true}
                     className="pCount"
                   />
@@ -136,9 +135,9 @@ export default function services() {
                   <div className="divService" id="divService1">
                     <Row>
                       <Col lg={4}>
-                        <p className="pHeader">
-                          Software Development and Design Services
-                        </p>
+                          <p className="pHeader" >
+                            Software Development and Design Services
+                          </p>
                       </Col>
                       <Col lg={8}>
                         <p className="pDesc">
@@ -182,90 +181,91 @@ export default function services() {
                     <Row className="rowIcon">
                       <Col lg={3}>
                         <img
-                          src="Image/react.png"
+                          src="../Image/react.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                       <Col lg={3}>
                         <img
-                          src="Image/bootstrap.png"
+                          src="../Image/bootstrap.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                       <Col lg={3}>
                         <img
-                          src="Image/asp.png"
+                          src="../Image/asp.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                       <Col lg={3}>
                         <img
-                          src="Image/django.png"
+                          src="../Image/django.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                       <Col lg={3}>
                         <img
-                          src="Image/flask.png"
+                          src="../Image/flask.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                       <Col lg={3}>
                         <img
-                          src="Image/ionic.png"
+                          src="../Image/ionic.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                       <Col lg={3}>
                         <img
-                          src="Image/java.png"
+                          src="../Image/java.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                       <Col lg={3}>
                         <img
-                          src="Image/javascript.png"
+                          src="../Image/javascript.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                       <Col lg={3}>
                         <img
-                          src="Image/kotlin.png"
+                          src="../Image/kotlin.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                       <Col lg={3}>
                         <img
-                          src="Image/next.png"
+                          src="../Image/next.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                       <Col lg={3}>
                         <img
-                          src="Image/php.png"
+                          src="../Image/php.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                       <Col lg={3}>
                         <img
-                          src="Image/python.png"
+                          src="../Image/python.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                       <Col lg={3}>
                         <img
-                          src="Image/swift.png"
+                          src="../Image/swift.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                       <Col lg={3}>
                         <img
-                          src="Image/typescript.png"
+                          src="../Image/typescript.png"
                           className="img-fluid mx-auto d-flex imgIcon"
                         ></img>
                       </Col>
                     </Row>
                   </div>
+                  
                   <div className="divService" id="divService2">
                     <Row>
                       <Col lg={4}>
@@ -386,6 +386,7 @@ export default function services() {
                       </Col>
                     </Row>
                   </div>
+
                   <div className="divService" id="divService3">
                     <Row>
                       <Col lg={4}>

@@ -10,7 +10,7 @@ export default function footer() {
         <Row>
           <Col lg={5}>
             <img
-              src="Image/logo_white.png"
+              src="../Image/logo_white.png"
               className="img-fluid imgLogoFooter"
               style={{ width: "150px" }}
             ></img>

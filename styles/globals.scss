@@ -1490,7 +1490,7 @@ canvas {
 }
 
 .conFounder {
-  background-color: #141414;
+  background-color: rgb(12, 23, 60);
   padding: 6rem 15px 10rem 15px;
   margin-top: 70px;
   .pStroke {
@@ -1849,7 +1849,7 @@ canvas {
       z-index: -1;
       width: 100%;
       height: 100%;
-      background-color: $button-color;
+      background-color: rgb(247, 186, 57);
       border: 1px solid rgba(255, 255, 255, 0.3);
       transition: background-color $effect-timing * 0.9 ease;
     }
@@ -2007,7 +2007,7 @@ canvas {
 .conVissionSection {
   .p1 {
     font-family: Poppins;
-    color: white;
+    color: rgb(255, 108, 60);
     font-weight: 700;
     font-size: 1.1rem;
   }
@@ -2026,7 +2026,7 @@ canvas {
 }
 
 .conWhy {
-  background-color: #141414;
+  background-color: rgb(12, 23, 60);
   padding: 170px 15px;
   .pStroke {
     font-family: Inter;
@@ -2061,7 +2061,7 @@ canvas {
     margin-top: 40px;
     .p1 {
       font-family: Inter;
-      color: white;
+      color: rgb(255, 108, 60);
       font-size: 1.3rem;
       margin-bottom: 20px;
       text-align: center;
@@ -2070,13 +2070,13 @@ canvas {
     }
     .pWork {
       font-family: Inter;
-      color: #bfbfbf;
+      color: rgb(0, 0, 0);
       text-align: center;
       margin-bottom: 5px;
       margin-left: 10px;
     }
     .cardChoose {
-      background-color: #242424;
+      background-color: rgb(247, 186, 57);
       padding: 15px;
       clip-path: polygon(
         3% 0,
@@ -2486,8 +2486,8 @@ $shellSpeed: 2s;
 .conBanner {
   background: #0C173C;
   position: relative;
-  // padding-top: 15px;
-  padding-bottom: 20px;
+  //padding-top: 25px;
+  //padding-bottom: 20px;
   .container {
     padding: 50px 15px;
     background: #d3cdbd;
@@ -4305,7 +4305,7 @@ section#animated-cta-bar {
     background-color: transparent;
     z-index: 1;
     p {
-      font-family: Restless;
+      font-family: Popins;
       color: #141414;
       font-size: 110px;
       text-align: center;
@@ -4341,7 +4341,7 @@ section#animated-cta-bar {
     &:hover {
       border-color: white;
       .pPosition {
-        color: white;
+        color: rgb(255, 108, 60);
         -webkit-text-stroke-width: 0px;
         -webkit-text-stroke-color: #fff;
         -ms-text-stroke-width: 0px;
@@ -4497,7 +4497,7 @@ section#animated-cta-bar {
         overflow: hidden;
         border-radius: 0px !important;
         border: 0px !important;
-        background-color: #f5f5f5 !important;
+        background-color: rgb(211, 205, 189) !important;
 
         clip-path: polygon(
           3% 0,
@@ -4804,7 +4804,7 @@ section#animated-cta-bar {
     width: 100%;
     padding: 25px 0px 50px 0px;
     margin-bottom: 70px;
-    min-height: 700px;
+    min-height: 430px;
     .pHeader {
       font-family: Poppins;
       color: #141414;
@@ -4952,7 +4952,7 @@ section#animated-cta-bar {
       width: 78%;
       float: right;
       position: relative;
-      margin-top: 11%;
+      margin-top: 15%;
       z-index: 1;
     }
   }
@@ -5888,7 +5888,7 @@ section#animated-cta-bar {
 }
 
 .conAbout1 {
-  background-color: #141414;
+  background-color: rgb(12, 23, 60);
   z-index: 2;
   .p1 {
     font-family: Poppins;

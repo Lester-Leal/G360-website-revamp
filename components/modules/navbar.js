@@ -16,10 +16,10 @@ export default function navbar(props) {
   const changeBackground = () => {
     if (window.scrollY >= 70) {
       setScrollnav(true);
-      // console.log(window.scrollY);
+      //console.log(window.scrollY);
     } else {
       setScrollnav(false);
-      // console.log(window.scrollY);
+      //console.log(window.scrollY);
     }
   };
 
@@ -34,7 +34,10 @@ export default function navbar(props) {
       props.unShow();
     }
   }, [full]);
-
+  async function handleRouteChange(route) {
+      await router.push(route);
+      router.reload();
+  }
   return (
     <>
       <div className={!full ? "d-none" : "wrapper"}>
@@ -60,7 +63,7 @@ export default function navbar(props) {
                 <p
                   className="pMenu Animation"
                   onClick={(e) => {
-                    router.push("/services");
+                    router.push("/menu/services");
                     setFull(false);
                     document
                       .querySelector(".navFull")
@@ -76,7 +79,7 @@ export default function navbar(props) {
                 <p
                   className="pMenu Animation"
                   onClick={(e) => {
-                    router.push("/project1");
+                    router.push("/menu/project1");
                     setFull(false);
                     document
                       .querySelector(".navFull")
@@ -93,7 +96,7 @@ export default function navbar(props) {
                   className="pMenu Animation"
                   onClick={(e) => {
                     setLoader(true);
-                    router.push("/about");
+                    router.push("/menu/about");
                     setFull(false);
                     document
                       .querySelector(".navFull")
@@ -110,7 +113,7 @@ export default function navbar(props) {
                   className="pMenu Animation"
                   onClick={(e) => {
                     setLoader(true);
-                    router.push("/careers");
+                    handleRouteChange('/menu/careers');
                     setFull(false);
                     document
                       .querySelector(".navFull")
@@ -126,7 +129,7 @@ export default function navbar(props) {
                 <p
                   className="pMenu Animation"
                   onClick={(e) => {
-                    router.push("/contact");
+                    router.push("/menu/contact");
                     setFull(false);
                     document
                       .querySelector(".navFull")
@@ -187,23 +190,24 @@ export default function navbar(props) {
         fluid
         className="divNavbar"
         style={{
-          background: full || urlPath === "/contact" ? "transparent" : "",
+          background: full || urlPath === "/menu/contact" ? "transparent" : "",
         }}
       >
+        
         <Row>
           <Col lg={6}>
             <img
-              src={!full ? "Image/logo_white.png" : ""}
+              src={!full ? "../Image/logo_white.png" : ""}
               className="img-fluid"
               style={{
                 width: "120px",
                 cursor: "pointer",
                 filter:
-                  full || router.pathname === "/careers" ? "brightness(0)" : "",
+                  full || router.pathname === "/menu/careers" ? "brightness(0)" : "",
               }}
               onClick={(e) => {
                 setLoader(false);
-                router.push("/");
+                handleRouteChange('/');
               }}
             />
           </Col>
@@ -227,13 +231,13 @@ export default function navbar(props) {
                     htmlFor="menu_checkbox"
                     id="menu_label"
                     className={
-                      router.pathname === "/careers" ? "menuLabel" : ""
+                      router.pathname === "/menu/careers" ? "menuLabel" : ""
                     }
                   >
                     <div
                       id="menu_text_bar"
                       className={
-                        router.pathname === "/careers" ? "menuBlack" : ""
+                        router.pathname === "/menu/careers" ? "menuBlack" : ""
                       }
                     />
                   </label>

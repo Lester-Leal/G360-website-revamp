@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
-import Banner from "../components/modules/banner";
+import Banner from "../../components/modules/banner";
 
 export default function contact() {
   const [active, setActive] = useState("");

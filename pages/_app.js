@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Layout from "../components/layouts/layout";
 import "../styles/globals.scss";
-import Scrollbar from "smooth-scrollbar";
 import Script from "next/script";
 import React, { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
@@ -44,7 +43,7 @@ function MyApp({ Component, pageProps }) {
         strategy="beforeInteractive"
       ></Script>
       <Script src="/script/3dGlobe.js" />
-      <Script src="/script/peeps.js" />
+      {/* <Script src="/script/peeps.js" /> */}
       <Script src="/script/script.js" />
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.1/ocanvas.min.js"

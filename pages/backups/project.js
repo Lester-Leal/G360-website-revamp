@@ -3,7 +3,6 @@ import Tilt from "react-parallax-tilt";
 import React, { useState, useEffect, useRef } from "react";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { useRouter } from "next/router";
 import Slider from "react-slick";
 
 export default function projects() {

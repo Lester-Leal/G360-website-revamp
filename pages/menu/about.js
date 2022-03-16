@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect, useRef } from "react";
-import Banner from "../components/modules/banner";
+import Banner from "../../components/modules/banner";
 import Tilt from "react-parallax-tilt";
 import Slider from "react-slick";
 import { HiOutlineArrowSmRight, HiOutlineArrowSmLeft } from "react-icons/hi";
@@ -66,7 +66,7 @@ export default function about() {
             <Col lg={6}>
               <div className="divSticky">
                 <p className="p1">
-                  Meet the people who help bring <span>our vision</span> to
+                  Meet the people who help bring <span>Our Vision</span> to
                   life.
                 </p>
                 <p className="p1Sub">
@@ -80,7 +80,7 @@ export default function about() {
               <div className="card">
                 <div
                   className="photo"
-                  style={{ background: "url('Image/Team/alfonblack.jpg')" }}
+                  style={{ background: "url('../Image/Team/alfonblack.jpg')" }}
                 ></div>
                 <div className="divDesc">
                   <p className="pName">Alfon Labadan</p>
@@ -90,7 +90,7 @@ export default function about() {
               <div className="card">
                 <div
                   className="photo"
-                  style={{ background: "url('Image/Team/eskyeblack.jpg')" }}
+                  style={{ background: "url('../Image/Team/eskyeblack.jpg')" }}
                 ></div>
                 <div className="divDesc">
                   <p className="pName">Eskye Custodio</p>
@@ -100,7 +100,7 @@ export default function about() {
               <div className="card">
                 <div
                   className="photo"
-                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                  style={{ background: "url('../Image/Team/marblack.jpg')" }}
                 ></div>
                 <div className="divDesc">
                   <p className="pName">Mark Seaglle</p>
@@ -110,7 +110,7 @@ export default function about() {
               <div className="card">
                 <div
                   className="photo"
-                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                  style={{ background: "url('../Image/Team/marblack.jpg')" }}
                 ></div>
                 <div className="divDesc">
                   <p className="pName">Mark Seaglle</p>
@@ -120,7 +120,7 @@ export default function about() {
               <div className="card">
                 <div
                   className="photo"
-                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                  style={{ background: "url('../Image/Team/marblack.jpg')" }}
                 ></div>
                 <div className="divDesc">
                   <p className="pName">Mark Seaglle</p>
@@ -132,7 +132,7 @@ export default function about() {
               <div className="card">
                 <div
                   className="photo"
-                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                  style={{ background: "url('../Image/Team/marblack.jpg')" }}
                 ></div>
                 <div className="divDesc">
                   <p className="pName">Mark Seaglle</p>
@@ -142,7 +142,7 @@ export default function about() {
               <div className="card">
                 <div
                   className="photo"
-                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                  style={{ background: "url('../Image/Team/marblack.jpg')" }}
                 ></div>
                 <div className="divDesc">
                   <p className="pName">Mark Seaglle</p>
@@ -152,7 +152,7 @@ export default function about() {
               <div className="card">
                 <div
                   className="photo"
-                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                  style={{ background: "url('../Image/Team/marblack.jpg')" }}
                 ></div>
                 <div className="divDesc">
                   <p className="pName">Mark Seaglle</p>
@@ -162,7 +162,7 @@ export default function about() {
               <div className="card">
                 <div
                   className="photo"
-                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                  style={{ background: "url('../Image/Team/marblack.jpg')" }}
                 ></div>
                 <div className="divDesc">
                   <p className="pName">Mark Seaglle</p>
@@ -172,7 +172,7 @@ export default function about() {
               <div className="card">
                 <div
                   className="photo"
-                  style={{ background: "url('Image/Team/marblack.jpg')" }}
+                  style={{ background: "url('../Image/Team/marblack.jpg')" }}
                 ></div>
                 <div className="divDesc">
                   <p className="pName">Mark Seaglle</p>
@@ -393,7 +393,7 @@ export default function about() {
             <Col lg={6}>
               <div className="divImageFounder">
                 <img
-                  src="Image/Team/randolph_new.jpg"
+                  src="../Image/Team/randolph_new.jpg"
                   className="img-fluid image2 mx-auto d-flex"
                 ></img>
               </div>
@@ -403,7 +403,7 @@ export default function about() {
             <Col lg={6}>
               <div className="divImageFounder">
                 <img
-                  src="Image/Team/randolph_new.jpg"
+                  src="../Image/Team/randolph_new.jpg"
                   className="img-fluid image2 mx-auto d-flex"
                 ></img>
               </div>
@@ -426,7 +426,10 @@ export default function about() {
           </Row>
         </Container>
       </Container>
+
+      {/* OUR CULTURE BANNER */}
       <Banner />
+      
     </>
   );
 }
