@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect, useRef } from "react";
 import TextTransition, { presets } from "react-text-transition";
+import Scrollbar from "react-smooth-scrollbar";
 
 export default function services() {
   const [count, setCount] = useState("01");
