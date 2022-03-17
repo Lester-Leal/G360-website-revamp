@@ -54,47 +54,47 @@ export default function services() {
   }, []);
   var project_list = [
     {
-      image: "Image/Projects/box1.png",
+      image: "../Image/Projects/box1.png",
       name: "Washwell",
       desc: "Clean clothes at your doorstep",
     },
     {
-      image: "Image/Projects/box2.png",
+      image: "../Image/Projects/box2.png",
       name: "Aquamundo",
       desc: "Enginneered for water",
     },
     {
-      image: "Image/Projects/box3.png",
+      image: "../Image/Projects/box3.png",
       name: "Natural Works",
       desc: "Natures power in a pill",
     },
     {
-      image: "Image/Projects/box4.png",
+      image: "../Image/Projects/box4.png",
       name: "Phoenix",
       desc: "Lorem ipsum dolor",
     },
     {
-      image: "Image/Projects/box5.png",
+      image: "../Image/Projects/box5.png",
       name: "Seedbox",
       desc: "Investing Simplified",
     },
     {
-      image: "Image/Projects/box6.png",
+      image: "../Image/Projects/box6.png",
       name: "Lifeline",
       desc: "Emergency Quick Response",
     },
     {
-      image: "Image/Projects/box7.png",
+      image: "../Image/Projects/box7.png",
       name: "Paymaya X Seedbox",
       desc: "Lorem ipsum dolor",
     },
     {
-      image: "Image/Projects/box8.png",
+      image: "../Image/Projects/box8.png",
       name: "FindCargo",
       desc: "The fastest growing transport platform in Europe",
     },
     {
-      image: "Image/Projects/box9.png",
+      image: "../Image/Projects/box9.png",
       name: "Lifeline",
       desc: "Emergency Quick Response",
     },
@@ -117,7 +117,7 @@ export default function services() {
                   className="arrow left"
                   onClick={(e) => {
                     const slider = document.querySelector(".wrapperCard");
-                    slider.scrollLeft += 180;
+                    slider.scrollLeft -= 180;
                   }}
                 >
                   <i />
@@ -130,7 +130,7 @@ export default function services() {
                   className="arrow"
                   onClick={(e) => {
                     const slider = document.querySelector(".wrapperCard");
-                    slider.scrollLeft -= 180;
+                    slider.scrollLeft += 180;
                   }}
                 >
                   <i />

@@ -79,7 +79,7 @@ export default function navbar(props) {
                 <p
                   className="pMenu Animation"
                   onClick={(e) => {
-                    router.push("/menu/project1");
+                    router.push("/menu/portfolio");
                     setFull(false);
                     document
                       .querySelector(".navFull")

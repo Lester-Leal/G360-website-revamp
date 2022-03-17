@@ -5,26 +5,6 @@ import Banner from "../../components/modules/banner";
 export default function contact() {
   const [active, setActive] = useState("");
 
-  useEffect((e) => {
-    var map = L.map("map", {
-      // Set latitude and longitude of the map center (required)
-      center: [12.99766, -84.90838],
-      // Set the initial zoom level, values 0-18, where 0 is most zoomed-out (required)
-      zoom: 5,
-    });
-
-    // Create a Tile Layer and add it to the map
-
-    var Stadia_AlidadeSmoothDark = L.tileLayer(
-      "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png",
-      {
-        maxZoom: 20,
-        attribution:
-          '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-      }
-    ).addTo(map);
-  }, []);
-
   return (
     <>
       <Container fluid className="conContact">
@@ -246,24 +226,6 @@ export default function contact() {
                   </div>
                 </Col>
               </div>
-            </Col>
-          </Row>
-        </Container>
-      </Container>
-      <Container fluid className="conMap">
-        <Container>
-          <Row className="align-items-center">
-            <Col lg={12}>
-              <p className="pMap">
-                Pay us a <span>visit.</span>
-              </p>
-              <p className="pMapSub">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </Col>
-            <Col lg={12}>
-              <div id="map"></div>
             </Col>
           </Row>
         </Container>
