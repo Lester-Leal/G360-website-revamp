@@ -9,6 +9,8 @@ import ClientHandler from "../components/modules/ClientHandler";
 import TestimonialHandler from "../components/modules/TestimonialHandler";
 import GlobeCanvas from "../components/elements/globe";
 
+//BAGO TO
+
 export default function index() {
   return (
     <>
