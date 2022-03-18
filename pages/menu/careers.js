@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
-import Banner from "../../components/modules/banner";
+import Banner from "../components/modules/BannerHandler";
 import Script from "next/script";
 
 export default function careers() {

@@ -1,11 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
 import { useRouter } from "next/router";
 import { useLoaderStore } from "../../store/store";
 
-export default function navbar(props) {
+export default function NavBarHandler(props) {
   const setLoader = useLoaderStore((state) => state.addReset);
   const router = useRouter();
   const [scrollNav, setScrollnav] = useState(false);

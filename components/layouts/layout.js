@@ -3,9 +3,9 @@ import dynamic from "next/dynamic";
 import React, { useState, useEffect } from "react";
 
 import Head from "next/head";
-const Navbar = dynamic(() => import("../modules/navbar"));
-const Footer = dynamic(() => import("../modules/footer"));
-const Loader = dynamic(() => import("../modules/loader"));
+const Navbar = dynamic(() => import("../modules/NavBarHandler"));
+const Footer = dynamic(() => import("../modules/FooterHandler"));
+const Loader = dynamic(() => import("../modules/LoaderHandler"));
 
 const Layout = ({ children }) => {
 

@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect, useRef } from "react";
-import Banner from "../../components/modules/banner";
+import Banner from "../components/modules/BannerHandler";
 import Tilt from "react-parallax-tilt";
 import Slider from "react-slick";
 import { HiOutlineArrowSmRight, HiOutlineArrowSmLeft } from "react-icons/hi";

@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect, useRef } from "react";
 
-export default function banner() {
+export default function BannerHandler() {
   return (
     <>
       <Container fluid className="conBanner">

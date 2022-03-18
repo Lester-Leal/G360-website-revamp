@@ -5,6 +5,7 @@ import Script from "next/script";
 import React, { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     var $circle = $(".mouse");
