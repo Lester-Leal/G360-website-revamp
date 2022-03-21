@@ -45,7 +45,9 @@ function MyApp({ Component, pageProps }) {
       ></Script>
       <Script src="/script/3dGlobe.js" />
       {/* <Script src="/script/peeps.js" /> */}
+      <Script src="/script/ParallaxCity.js" />
       <Script src="/script/script.js" />
+
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.1/ocanvas.min.js"
         strategy="beforeInteractive"

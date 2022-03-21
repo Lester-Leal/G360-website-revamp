@@ -14,6 +14,20 @@ export default function index() {
     <>
       <Container fluid className="conIndex">
         <Container fluid className="bg"></Container>
+        <div class="area" >
+              <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div >
         <Container className="h-100" style={{ position: "relative" }}>
           <Row className="h-100 align-items-center">
             <Col lg={6}>
@@ -32,6 +46,9 @@ export default function index() {
             </Col>
           </Row>
         </Container>
+          <div id="wrapper_">
+            <div id="box-1" class="box"></div>
+          </div>
       </Container>
       <Container fluid className="conHow1">
         <Container>
