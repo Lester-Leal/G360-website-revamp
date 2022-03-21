@@ -5119,6 +5119,7 @@ section#animated-cta-bar {
 
 /* CSS */
 .button-53 {
+  border-radius: 24px;
   background-color: #fd6b3b;
   border: 0 solid #e5e7eb;
   box-sizing: border-box;
@@ -5153,9 +5154,11 @@ section#animated-cta-bar {
 }
 
 .button-index::after {
+  border-radius: 24px;
   border: 1px solid white !important;
 }
 .button-53:after {
+  border-radius: 24px;
   content: "";
   position: absolute;
   border: 1px solid #000000;

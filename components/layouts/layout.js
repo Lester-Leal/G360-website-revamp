@@ -8,11 +8,8 @@ const Footer = dynamic(() => import("../modules/FooterHandler"));
 const Loader = dynamic(() => import("../modules/LoaderHandler"));
 
 const Layout = ({ children }) => {
-
   const router = useRouter();
   const [show, setShow] = useState(false);
-
-
   return (
     <>
       <Head>
