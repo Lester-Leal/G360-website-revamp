@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     var $circle = $(".mouse");
     function moveCircle(e) {
@@ -23,6 +23,12 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Layout>
+        <div className="mouse">
+          <p>DRAG</p>
+        </div>
+        <Component {...pageProps} />
+      </Layout>
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"
         strategy="beforeInteractive"
@@ -44,8 +50,6 @@ function MyApp({ Component, pageProps }) {
         strategy="beforeInteractive"
       ></Script>
       <Script src="/script/3dGlobe.js" />
-      {/* <Script src="/script/peeps.js" /> */}
-      <Script src="/script/ParallaxCity.js" />
       <Script src="/script/script.js" />
 
       <Script
@@ -84,13 +88,7 @@ function MyApp({ Component, pageProps }) {
         strategy="beforeInteractive"
       ></Script>
 
-      <Layout>
-        <div className="mouse">
-          <p>DRAG</p>
-        </div>
-        <Component {...pageProps} />
-      </Layout>
+
     </>
   );
 }
-export default MyApp;

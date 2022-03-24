@@ -11,6 +11,7 @@ export default function NavBarHandler(props) {
   const [pathUrl, setPathUrl] = useState("");
   const [checked, setChecked] = useState(false);
   const urlPath = router.pathname;
+  
   const changeBackground = () => {
     if (window.scrollY >= 70) {
       setScrollnav(true);
@@ -32,6 +33,7 @@ export default function NavBarHandler(props) {
       props.unShow();
     }
   }, [full]);
+  
   async function handleRouteChange(route) {
       await router.push(route);
       router.reload();

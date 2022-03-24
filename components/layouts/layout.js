@@ -10,6 +10,7 @@ const Loader = dynamic(() => import("../modules/LoaderHandler"));
 const Layout = ({ children }) => {
   const router = useRouter();
   const [show, setShow] = useState(false);
+  
   return (
     <>
       <Head>
@@ -54,7 +55,7 @@ const Layout = ({ children }) => {
         {<Loader />}
         <div className={show ? "d-none" : "h-100"}>
           {children}
-          <div className={router.pathname === "/project" ? "d-none" : ""}>
+          <div className={router.pathname === "/menu/portfolio" ? "d-none" : ""}>
             {<Footer />}
           </div>
         </div>

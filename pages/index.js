@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect, useRef } from "react";
 import Marquee from "react-fast-marquee";
-
+import Layout from "../components/layouts/layout";
 import { SiPaloaltosoftware } from "react-icons/si";
 
 import Banner from "../components/modules/BannerHandler";
@@ -46,9 +46,6 @@ export default function index() {
             </Col>
           </Row>
         </Container>
-          <div id="wrapper_">
-            <div id="box-1" class="box"></div>
-          </div>
       </Container>
       <Container fluid className="conHow1">
         <Container>
@@ -76,6 +73,7 @@ export default function index() {
                 process of your project and provide you with comprehensive
                 analysis on the best ways to execute it.
               </p>
+
               <svg>
                 <g className="loader-10 center-3-of-3">
                   <circle />
@@ -86,6 +84,7 @@ export default function index() {
                   <circle />
                 </g>
               </svg>
+              
               <div className="form-inline">
                 <p className="pNumber">02</p>
                 <p className="pHeader">Arrange</p>
@@ -100,6 +99,7 @@ export default function index() {
               </p>
               <svg>
                 <g className="loader-20 center-1-of-3">
+                  {/* <circle />
                   <circle />
                   <circle />
                   <circle />
@@ -118,8 +118,7 @@ export default function index() {
                   <circle />
                   <circle />
                   <circle />
-                  <circle />
-                  <circle />
+                  <circle /> */}
                 </g>
               </svg>
               <div className="form-inline">

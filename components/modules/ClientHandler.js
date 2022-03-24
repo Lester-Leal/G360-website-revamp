@@ -169,7 +169,7 @@ export default function ClientHandler() {
                           <a className="link">
                             <div className="link__text">
                               <img
-                                src="Image/client_10_plain.png"
+                                src="Image/client_10.png"
                                 className="img-fluid d-flex"
                               ></img>
                             </div>
@@ -228,11 +228,11 @@ export default function ClientHandler() {
                 <hr></hr>
                 <div style={{ marginTop: "-5px" }}>
                   <div className="demo">
-                    <a href className="arrow left" onClick={handlePrevSlideClient} >
+                    <a className="arrow left" onClick={handlePrevSlideClient} >
                       <i/>
                       <svg> <use xlinkHref="#circle"></use> </svg>
                     </a>
-                    <a href className="arrow" onClick={handleNextSlideClient} style={{ marginLeft: "85px" }} >
+                    <a className="arrow" onClick={handleNextSlideClient} style={{ marginLeft: "85px" }} >
                       <i/>
                       <svg>
                         <use xlinkHref="#circle"></use>
