@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect, useRef } from "react";
 import Tilt from "react-parallax-tilt";
 
-export default function services() {
+export default function portfolio() {
   useEffect(() => {
     const slider = document.querySelector(".wrapperCard");
     let isDown = false;
