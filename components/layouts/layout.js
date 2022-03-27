@@ -1,19 +1,16 @@
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import React, { useState, useEffect } from "react";
-import Head from "next/head";
-import NavBarHandler from "../modules/NavBarHandler";
-import FooterHandler from "../modules/FooterHandler";
-import LoaderHandler from "../modules/LoaderHandler";
 
-const Navbar = dynamic(() => NavBarHandler);
-const Footer = dynamic(() => FooterHandler);
-const Loader = dynamic(() => LoaderHandler);
+import Head from "next/head";
+const Navbar = dynamic(() => import("../modules/NavBarHandler"));
+const Footer = dynamic(() => import("../modules/FooterHandler"));
+const Loader = dynamic(() => import("../modules/LoaderHandler"));
 
 const Layout = ({ children }) => {
   const router = useRouter();
   const [show, setShow] = useState(false);
-
+  
   return (
     <>
       <Head>
@@ -58,7 +55,7 @@ const Layout = ({ children }) => {
         {<Loader />}
         <div className={show ? "d-none" : "h-100"}>
           {children}
-          <div className={router.pathname === "../../pages/menu/portfolio" ? "d-none" : ""}>
+          <div className={router.pathname === "/menu/portfolio" ? "d-none" : ""}>
             {<Footer />}
           </div>
         </div>
