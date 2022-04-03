@@ -42,16 +42,16 @@ export default function NavBarHandler(props) {
     <>
       <div className={!full ? "d-none" : "wrapper"}>
         <ul className="background-shapes">
-          <li className="shape square" />
+        <li className="shape circle" />
           <li className="shape triangle" />
           <li className="shape circle" />
           <li className="shape circle" />
-          <li className="shape triangle" />
-          <li className="shape square" />
-          <li className="shape square" />
           <li className="shape circle" />
-          <li className="shape triangle" />
-          <li className="shape square" />
+          <li className="shape circle" />
+          <li className="shape circle" />
+          <li className="shape circle" />
+          <li className="shape circle" />
+          <li className="shape circle" />
         </ul>
       </div>
       <Container fluid className="navFull">
@@ -186,6 +186,7 @@ export default function NavBarHandler(props) {
           </Row>
         </Container>
       </Container>
+      
       <Container
         fluid
         className="divNavbar"
@@ -197,7 +198,7 @@ export default function NavBarHandler(props) {
         <Row>
           <Col lg={6}>
             <img
-              src={!full ? "../Image/logo_white.png" : ""}
+              src={!full ? "../Image/logo_dark.png" : ""}
               className="img-fluid"
               style={{
                 width: "120px",
@@ -207,7 +208,7 @@ export default function NavBarHandler(props) {
               }}
               onClick={(e) => {
                 setLoader(false);
-                handleRouteChange('/');
+                router.push("/");
               }}
             />
           </Col>

@@ -1,48 +1,29 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect, useRef } from "react";
-import Marquee from "react-fast-marquee";
-import Layout from "../components/layouts/layout";
 import { SiPaloaltosoftware } from "react-icons/si";
-
-import Banner from "../components/modules/BannerHandler";
 import ClientHandler from "../components/modules/ClientHandler";
 import TestimonialHandler from "../components/modules/TestimonialHandler";
-import GlobeCanvas from "../components/elements/globe";
 
 export default function index() {
   return (
     <>
       <Container fluid className="conIndex">
         <Container fluid className="bg"></Container>
-        <div class="area" >
-              <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div >
+
         <Container className="h-100" style={{ position: "relative" }}>
           <Row className="h-100 align-items-center">
-            <Col lg={6}>
-              <h1>We’ve always done things a bit </h1>
+
+            <Col wg={6} className="align-items-center">
+              {/* <h1>We provide</h1> */}
+              <p className="p_qs">We Provide Connecting Quality Services</p>
               <p className="pHeaderSub">
                 GUERILLA 360 is a global business solutions company, focused on
                 providing integrated business solutions in the areas of Software
                 Solutions and Personnel Outsourcing.
               </p>
-              <div className="divButton">
-                <button className="button-53 button-index">Get started!</button>
+              <div className="w-250 d-flex justify-content-center">
+                <button className="divButton button-53 button-index">Build your team today</button>
               </div>
-            </Col>
-            <Col lg={6}>
-              <GlobeCanvas />
             </Col>
           </Row>
         </Container>
@@ -99,7 +80,6 @@ export default function index() {
               </p>
               <svg>
                 <g className="loader-20 center-1-of-3">
-                  {/* <circle />
                   <circle />
                   <circle />
                   <circle />
@@ -118,7 +98,8 @@ export default function index() {
                   <circle />
                   <circle />
                   <circle />
-                  <circle /> */}
+                  <circle />
+                  <circle />
                 </g>
               </svg>
               <div className="form-inline">
@@ -207,40 +188,7 @@ export default function index() {
           </Row>
         </Container>
       </Container>
-      <Container fluid className="conDesc">
-        <Row>
-          <Col lg={12}>
-            <Marquee
-              gradientColor={[255, 255, 255]}
-              pauseOnHover={true}
-              speed={80}
-            >
-              <p className="pText">
-                Design Website Mobile Business Outsource Solutions{" "}
-              </p>
-            </Marquee>
-            <Marquee
-              gradientColor={[255, 255, 255]}
-              pauseOnHover={true}
-              direction="right"
-              speed={80}
-            >
-              <p className="pText">
-                UI/UX Staffing Branding Firmware Business Android{" "}
-              </p>
-            </Marquee>
-            <Marquee
-              gradientColor={[255, 255, 255]}
-              pauseOnHover={true}
-              speed={80}
-            >
-              <p className="pText">
-                Programs Development BPO Animation Application{" "}
-              </p>
-            </Marquee>
-          </Col>
-        </Row>
-      </Container>
+
       <Container fluid className="d-none" style={{ padding: "70px 15px" }}>
         <Container className="conServices" style={{ position: "relative" }}>
           <p className="pVertical">Passionate people helping clients win</p>
@@ -358,8 +306,8 @@ export default function index() {
       <ClientHandler />
       {/* CLIENT TESTIMONIALS */}
       <TestimonialHandler />
-      {/* OUR CULTURE BANNER */}
-      <Banner />
+
+      
     </>
   );
 }

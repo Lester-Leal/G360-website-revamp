@@ -1,6 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
-import Banner from '../../components/modules/BannerHandler';
 import Script from "next/script";
 
 export default function careers() {
@@ -231,8 +230,6 @@ export default function careers() {
           </Row>
         </Container>
       </Container>
-      {/* OUR CULTURE BANNER */}
-      <Banner />
     </>
   );
 }

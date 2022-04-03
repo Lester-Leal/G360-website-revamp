@@ -5,6 +5,7 @@
   font-family: "Restless";
   src: url("/Font/Restless-Regular.otf");
 }
+
 $highlight: #5bc0eb;
 $darkhighlight: #fde74c;
 $prime: #ff6e48;
@@ -18,7 +19,7 @@ $second: #1b2431;
 
 html,
 body {
-  background-color: #0C173C;
+  background-color: #000515;
   position: relative;
   height: 100%;
   padding: 0px;
@@ -325,7 +326,7 @@ canvas {
       margin-bottom: 5px;
     }
     .pDesc {
-      font-family: Inter;
+      font-family: Poppins;
       color: #141414;
       font-size: 14px;
       font-weight: 500;
@@ -424,6 +425,17 @@ canvas {
   position: relative;
   overflow: hidden;
   border: 0px;
+  background-image: url('../public/Image/Globe3.png');
+  background-position-y: 100px;
+  background-repeat: no-repeat;
+  background-size: 1400px 1400px;
+  background-size: cover;
+  -moz-box-shadow: inset 0 -50px 50px -2px #000515,
+                  inset 0 50px 50px -2px #000515; 
+  -webkit-box-shadow: inset 0 -50px 50px -2px #000515,
+                      inset 0 50px 50px -2px #000515;
+  box-shadow: inset 0 -50px 50px -2px #000515,
+              inset 0 90px 50px -2px #000515;
   .bg {
     position: absolute;
     display: none;
@@ -433,20 +445,41 @@ canvas {
     bottom: -50%;
     width: 200%;
     height: 200vh;
-    background: #0C173C
-      url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
-    background-repeat: repeat;
     animation: bg-animation 0.5s infinite;
     opacity: 1;
     visibility: visible;
   }
-  h1 {
+  .p_align{
+    display: flex;
+    justify-content: center;
+  }
+  .p_qs{
     font-family: Poppins;
-    color: white;
-    font-size: 4em;
+    color: #fff;
+    font-size: 5em;
     line-height: 1.3;
     font-weight: 700;
     word-spacing: 3px;
+    text-align: center;
+    //margin-left: 10px;
+  }
+  h1 {
+    font-family: Poppins;
+    color: #000515;
+    font-size: 5em;
+    line-height: 1.3;
+    font-weight: 700;
+    word-spacing: 3px;
+    margin-right: 10px;
+    min-width: fit-content;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    -ms-text-stroke-width: 2px;
+    -ms-text-stroke-color: #fff;
+    -moz-text-stroke-width: 2px;
+    -moz-text-stroke-color: #fff;
+    text-rendering: geometricPrecision;
+    margin-bottom: -15px;
   }
   .divBorder {
     transform: rotate(-1deg);
@@ -497,14 +530,29 @@ canvas {
     font-size: 1rem;
     margin-top: 25px;
     font-weight: 600;
-    max-width: 550px;
+    max-width: 950px;
+    text-align: center;
     line-height: 28px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .divButton {
-    width: 350px;
+    width: 330px;
   }
 }
-
+.conIndex::before {    
+  content: "";
+  background-image: url('../public/Image/space_background_31.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #000515;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
 .Animation {
   text-decoration: none;
   background-image: linear-gradient(to right, transparent 50%, #fd6b3b 50%);
@@ -667,10 +715,10 @@ canvas {
 
 .divNavbar {
   position: fixed;
-  top: 0;
+  top: 0px;
   background-color: transparent;
   z-index: 20;
-  padding: 50px 50px;
+  padding: 25px 25px;
   .toggle-icon {
     display: block;
     position: absolute;
@@ -821,7 +869,7 @@ canvas {
     line-height: 28px;
   }
   .pHeaderCount {
-    font-family: Inter;
+    font-family: Poppins;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.3);
     font-size: 10.5rem;
@@ -841,7 +889,7 @@ canvas {
       margin-bottom: -5px;
     }
     .pMethodDesc {
-      font-family: Inter;
+      font-family: Poppins;
       color: #bfbfbf;
       font-size: 1.1rem;
       line-height: 28px;
@@ -1028,7 +1076,20 @@ button {
     transform: rotate(180deg);
   }
 }
+.ScrollTop{
+  transform: rotate(90deg);
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1rem;
 
+}
+.ScrollTop_Icon{
+  fill: #fff;
+  margin-right: 15px;
+  transform: rotate(-90deg);
+  width: 2.5rem;
+  height: 2.5rem;
+}
 .conServices {
   .pVertical {
     display: none;
@@ -1382,14 +1443,63 @@ canvas {
 }
 
 .conFooter {
-  background-color: #0C173C;
-  padding: 5.5rem 15px 5.5rem 15px;
+  background-color: #000515;
+  padding: 20.5rem 15px 5.5rem 15px;
+  position: relative; 
+  //height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  -moz-box-shadow: inset 0 -50px 50px #000515,
+                  inset 0 50px 50px #000515; 
+  -webkit-box-shadow: inset 0 -50px 50px #000515,
+                      inset 0 50px 50px #000515;
+  box-shadow: inset 0 -50px 50px #000515,
+              inset 0 100px 50px #000515;
   .pCopy {
     font-family: Inter;
     color: #bfbfbf;
     font-size: 1.1rem;
     font-weight: 400;
-    margin-top: 25px;
+  }
+  .pBoxFlex{
+    display: flex;
+    width: 70vw;
+    height: 20vh;
+  }
+  .pLetBTN{
+    margin-left: 60%;
+    //overflow: hidden;
+    //position: relative;
+    width: 200px;
+    padding: 5px;
+    height: 50px;
+  }
+  .pTxtCon{
+    margin-left: 10%;
+    top: 40%;
+    position: absolute;
+  }
+  .pTitle2{
+    font-family: Poppins;
+    color: #fff;
+    font-size: 3em;
+    line-height: 1.3;
+    font-weight: 700;
+    word-spacing: 3px;
+  }
+  .pDesc2{
+    font-family: Poppins;
+    max-width: 50%;
+    //padding-left: 20px;
+    color: #fff;
+    font-size: 1em;
+    position: absolute;
+  }
+  .pRow{
+    margin-bottom: -4rem;
   }
   .pTitle {
     font-family: Inter;
@@ -1397,27 +1507,30 @@ canvas {
     font-size: 15px;
     margin-bottom: 4px;
   }
-  .pAddress {
-    font-family: Inter;
-    color: #bfbfbf;
-    font-family: 17px;
-    margin-top: 10px;
-    margin-bottom: 35px;
+  .p_router{
+    display:flex;
+    justify-content: center;
+    padding-top: 40%;
+  }
+  .pLogo{
+    align-self: flex-end;
+    padding-top: 34%;
+    position: relative;
   }
   .divSocials {
+    padding-top: 38%;
     ul {
       display: flex;
       margin-top: 20px;
       margin-left: 0px;
       margin-right: 0px;
       padding: 0px;
-
+      justify-content: flex-end;
       li {
         list-style: none;
-
         a {
-          width: 50px;
-          height: 50px;
+          width: 40px;
+          height: 40px;
           background-color: #fff;
           text-align: center;
           line-height: 44px;
@@ -1432,6 +1545,7 @@ canvas {
 
           .icon {
             position: relative;
+            bottom: 5px;
             color: #262626;
             transition: 0.5s;
             z-index: 3;
@@ -1479,18 +1593,32 @@ canvas {
   }
   .pFooter {
     font-family: Inter;
-    margin-bottom: 18px;
+    margin: 25px;
     color: #bfbfbf;
     font-size: 1.1rem;
+    z-index: 2;
+
     cursor: pointer;
     &:hover {
       color: #fd6b3b;
     }
   }
 }
-
+.conFooter::before{
+  content: "";
+  background-color: #000515;
+  background-image: url('../public/Image/Globe2.png');
+  background-size: cover;
+  background-position-y: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
 .conFounder {
-  background-color: rgb(12, 23, 60);
+  background-color: #000515;
   padding: 6rem 15px 10rem 15px;
   margin-top: 70px;
   .pStroke {
@@ -1587,7 +1715,7 @@ canvas {
 }
 
 .conTest {
-  background: #0C173C;
+  background: #000515;
   padding: 70px 0px;
   .pQuote {
     animation: lights 5s 750ms linear infinite;
@@ -1614,13 +1742,13 @@ canvas {
     width: 850px;
     margin: 0 auto;
     .pHeader {
-      font-family: Inter;
+      font-family: Poppins;
       color: #bfbfbf;
       font-size: 1.2rem;
       font-weight: 500;
     }
     .pMessage {
-      font-family: Vollkorn;
+      font-family: Poppins;
       color: white;
       font-size: 2.2rem;
       font-weight: 500;
@@ -1633,12 +1761,12 @@ canvas {
     margin-right: 15px;
   }
   .pName {
-    font-family: Inter;
+    font-family: Poppins;
     color: white;
     margin-bottom: 2px;
   }
   .pPosition {
-    font-family: Inter;
+    font-family: Poppins;
     color: #bfbfbf;
   }
   i {
@@ -1684,14 +1812,14 @@ canvas {
     }
   }
   .p1 {
-    font-family: Inter;
+    font-family: Poppins;
     font-weight: 700;
     font-size: 16px;
     color: #fd6b3b;
     margin-bottom: 5px;
   }
   .p2 {
-    font-family: Inter;
+    font-family: Poppins;
     color: #212121;
     font-size: 45px;
     font-weight: 800;
@@ -1751,16 +1879,16 @@ canvas {
 
 .conClients {
   padding: 100px 15px;
-  background: #0C173C;
+  background: #000515;
   .pHeader {
-    font-family: Vollkorn;
+    font-family: Poppins;
     font-weight: 800;
     color: #fd6b3b;
     font-size: 5rem;
     margin-left: 10px;
   }
   .pCount {
-    font-family: Inter;
+    font-family: Poppins;
     color: white;
     font-weight: 500;
     font-size: 14px;
@@ -1773,7 +1901,7 @@ canvas {
   .btnLeft {
     transition: all 0.2s;
     margin-left: -5px;
-    font-family: Inter;
+    font-family: Poppins;
     color: white;
     font-size: 14px;
     i {
@@ -1787,7 +1915,7 @@ canvas {
   .btnRight {
     transition: all 0.2s;
     float: right;
-    font-family: Inter;
+    font-family: Poppins;
     color: white;
     font-size: 14px;
     margin-right: -8px;
@@ -2026,7 +2154,7 @@ canvas {
 }
 
 .conWhy {
-  background-color: rgb(12, 23, 60);
+  background-color: #000515;
   padding: 170px 15px;
   .pStroke {
     font-family: Inter;
@@ -2076,119 +2204,9 @@ canvas {
       margin-left: 10px;
     }
     .cardChoose {
-      background-color: rgb(247, 186, 57);
+      background-color: #D3CDBD;
       padding: 15px;
-      clip-path: polygon(
-        3% 0,
-        7% 1%,
-        11% 0%,
-        16% 2%,
-        20% 0,
-        23% 2%,
-        28% 2%,
-        32% 1%,
-        35% 1%,
-        39% 3%,
-        41% 1%,
-        45% 0%,
-        47% 2%,
-        50% 2%,
-        53% 0,
-        58% 2%,
-        60% 2%,
-        63% 1%,
-        65% 0%,
-        67% 2%,
-        69% 2%,
-        73% 1%,
-        76% 1%,
-        79% 0,
-        82% 1%,
-        85% 0,
-        87% 1%,
-        89% 0,
-        92% 1%,
-        96% 0,
-        98% 3%,
-        99% 3%,
-        99% 6%,
-        100% 11%,
-        98% 15%,
-        100% 21%,
-        99% 28%,
-        100% 32%,
-        99% 35%,
-        99% 40%,
-        100% 43%,
-        99% 48%,
-        100% 53%,
-        100% 57%,
-        99% 60%,
-        100% 64%,
-        100% 68%,
-        99% 72%,
-        100% 75%,
-        100% 79%,
-        99% 83%,
-        100% 86%,
-        100% 90%,
-        99% 94%,
-        99% 98%,
-        95% 99%,
-        92% 99%,
-        89% 100%,
-        86% 99%,
-        83% 100%,
-        77% 99%,
-        72% 100%,
-        66% 98%,
-        62% 100%,
-        59% 99%,
-        54% 99%,
-        49% 100%,
-        46% 98%,
-        43% 100%,
-        40% 98%,
-        38% 100%,
-        35% 99%,
-        31% 100%,
-        28% 99%,
-        25% 99%,
-        22% 100%,
-        19% 99%,
-        16% 100%,
-        13% 99%,
-        10% 99%,
-        7% 100%,
-        4% 99%,
-        2% 97%,
-        1% 97%,
-        0% 94%,
-        1% 89%,
-        0% 84%,
-        1% 81%,
-        0 76%,
-        0 71%,
-        1% 66%,
-        0% 64%,
-        0% 61%,
-        0% 59%,
-        1% 54%,
-        0% 49%,
-        1% 45%,
-        0% 40%,
-        1% 37%,
-        0% 34%,
-        1% 29%,
-        0% 23%,
-        2% 20%,
-        1% 17%,
-        1% 13%,
-        0 10%,
-        1% 6%,
-        1% 3%
-      );
-      border-radius: 5px;
+      border-radius: 10%;
       min-height: 300px;
     }
   }
@@ -2484,7 +2502,7 @@ $shellSpeed: 2s;
 }
 
 .conBanner {
-  background: #0C173C;
+  background: #000515;
   position: relative;
   //padding-top: 25px;
   //padding-bottom: 20px;
@@ -4151,7 +4169,7 @@ section#animated-cta-bar {
   left: 0;
   width: 0;
   height: 20%;
-  background-color: #0C173C;
+  background-color: #000515;
   transition: width 0.7s ease;
   z-index: 1;
 }
@@ -4665,10 +4683,9 @@ section#animated-cta-bar {
     text-align: center;
   }
 }
-
 .conProject1 {
   padding: 100px 15px;
-  background-color: rgb(12, 23, 60);
+  background-color: #000515;
   position: relative;
   margin-bottom: 40px;
   .conInner {
@@ -5107,6 +5124,7 @@ section#animated-cta-bar {
   -webkit-transform: rotate(45deg) !important;
   transform: rotate(45deg) !important;
   background-color: black !important;
+  border-radius: 50px;
   outline: 10px solid white !important;
   display: block !important;
   margin: 0.5em 0.5em 0.5em -0.5em !important;
@@ -5116,63 +5134,50 @@ section#animated-cta-bar {
   width: 1em !important;
   height: 1em !important;
 }
-
 /* CSS */
+.button-53 {background-image: linear-gradient(to right, #FF6C3C 0%, #eea849  51%, #f46b45  100%)}
 .button-53 {
-  border-radius: 24px;
-  background-color: #fd6b3b;
-  border: 0 solid #e5e7eb;
-  box-sizing: border-box;
-  color: white;
-  display: flex;
-  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1.75rem;
-  margin-top: 30px;
-  padding: 0.75rem 1.65rem;
-  position: relative;
+  margin: 10px;
+  padding: 15px 45px;
   text-align: center;
-  text-decoration: none #000000 solid;
-  text-decoration-thickness: auto;
-  width: 100%;
-  max-width: 460px;
-  position: relative;
-  transition: all 0.2s;
-  cursor: pointer;
-  transform: rotate(-2deg);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 6px #eee;
+  border-radius: 30px;
+  display: block;
 }
-
+.button-53:hover{
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
 .button-53:focus {
   outline: 0;
 }
 
-.button-index::after {
-  border-radius: 24px;
-  border: 1px solid white !important;
-}
-.button-53:after {
-  border-radius: 24px;
-  content: "";
-  position: absolute;
-  border: 1px solid #000000;
-  bottom: 4px;
-  left: 4px;
-  transition: all 0.2s;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
-}
 
-.button-53:hover:after {
-  bottom: 2px;
-  left: 2px;
-}
+// .button-index::after {
+//   border-radius: 24px;
+//   border: 1px solid white !important;
+// // }
+// .button-53:after {
+//   border-radius: 24px;
+//   content: "";
+//   position: absolute;
+//   border: 1px solid #000000;
+//   bottom: 4px;
+//   left: 4px;
+//   transition: all 0.2s;
+//   width: calc(100% - 1px);
+//   height: calc(100% - 1px);
+// }
+
+// .button-53:hover:after {
+//   bottom: 2px;
+//   left: 2px;
+// }
 
 @media (min-width: 768px) {
   .button-53 {
@@ -5892,7 +5897,7 @@ section#animated-cta-bar {
 }
 
 .conAbout1 {
-  background-color: rgb(12, 23, 60);
+  background-color: #000515;
   z-index: 2;
   .p1 {
     font-family: Poppins;
@@ -5905,6 +5910,7 @@ section#animated-cta-bar {
     top: 0;
     padding-top: 38vh;
     padding-bottom: 38vh;
+    text-align: center;
     span {
       background-color: #ff6e48;
       color: #141414;
@@ -6001,107 +6007,9 @@ section#animated-cta-bar {
 }
 
 .area{
-  background: rgb(12, 23, 60);  
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
   //width: 100%;
   //height:100vh;
-}
-
-.circles{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.circles li{
-  position: absolute;
-  display: block;
-  list-style: none;
-  width: 20px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.2);
-  animation: animate 25s linear infinite;
-  bottom: -150px;
-  
-}
-
-.circles li:nth-child(1){
-  left: 25%;
-  width: 80px;
-  height: 80px;
-  animation-delay: 0s;
-}
-
-
-.circles li:nth-child(2){
-  left: 10%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 2s;
-  animation-duration: 12s;
-}
-
-.circles li:nth-child(3){
-  left: 70%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 4s;
-}
-
-.circles li:nth-child(4){
-  left: 40%;
-  width: 60px;
-  height: 60px;
-  animation-delay: 0s;
-  animation-duration: 18s;
-}
-
-.circles li:nth-child(5){
-  left: 65%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
-}
-
-.circles li:nth-child(6){
-  left: 75%;
-  width: 110px;
-  height: 110px;
-  animation-delay: 3s;
-}
-
-.circles li:nth-child(7){
-  left: 35%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 7s;
-}
-
-.circles li:nth-child(8){
-  left: 50%;
-  width: 25px;
-  height: 25px;
-  animation-delay: 15s;
-  animation-duration: 45s;
-}
-
-.circles li:nth-child(9){
-  left: 20%;
-  width: 15px;
-  height: 15px;
-  animation-delay: 2s;
-  animation-duration: 35s;
-}
-
-.circles li:nth-child(10){
-  left: 85%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 0s;
-  animation-duration: 11s;
 }
 
 @keyframes animate {
@@ -6117,4 +6025,105 @@ section#animated-cta-bar {
       opacity: 0;
       border-radius: 50%;
   }
+}
+@keyframes move-twink-back{
+  from{background-position: 0 0;}
+  to{background-position: -10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back{
+  from{background-position: 0 0;}
+  to{background-position: -10000px 5000px;}
+}
+@-moz-keyframes move-twink-back{
+  from{background-position: 0 0;}
+  to{background-position: -10000px 5000px;}
+}
+@-ms-keyframes move-twink-back{
+  from{background-position: 0 0;}
+  to{background-position: -10000px 5000px;}
+}
+
+$spin-time: 5.5s;
+$circle-size: 40vmin;
+$circle-stroke: 2.5vmin;
+$displacement: 0%;
+
+.StrokeMain {
+    height: $circle-size;
+    width: $circle-size;
+    position: absolute;
+    margin: 0 auto;
+    top: 45%;
+    left: 20%;
+    transform: translate3D(-50%, -50%, 0);
+}
+
+.Strokecircle {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: $circle-stroke solid transparent;
+    border-radius: 115% 140% 145% 110%/125% 140% 110% 125%;
+    mix-blend-mode: screen;
+    &:nth-child(1) {
+        border-color: #DB4437;
+        transform-origin: 50%-$displacement 50%;
+        animation: spin1 $spin-time linear infinite;
+        opacity: 0.5;
+    }
+    &:nth-child(2) {
+        border-color: #F4B400;
+        transform-origin: 50% 50%+$displacement;
+        animation: spin2 $spin-time linear infinite;
+        opacity: 0.5;
+    }
+    &:nth-child(3) {
+        border-color: #4285F4;
+        transform-origin: 50%+$displacement 50%;
+        animation: spin3 $spin-time linear infinite;
+        opacity: 0.5;
+    }
+    &:nth-child(4) {
+        border-color: #0F9D58;
+        transform-origin: 50% 50%-$displacement;
+        animation: spin4 $spin-time linear infinite;
+        opacity: 0.5;
+    }
+}
+
+@keyframes spin1 {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotate(72deg);
+    }
+    100% {
+        transform: rotate(-288deg);
+    }
+}
+
+@keyframes spin3 {
+    0% {
+        transform: rotate(-144deg);
+    }
+    100% {
+        transform: rotate(216deg);
+    }
+}
+
+@keyframes spin4 {
+    0% {
+        transform: rotate(216deg);
+    }
+    100% {
+        transform: rotate(-144deg);
+    }
 }

@@ -1,12 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Layout from "../components/layouts/layout";
 import "../styles/globals.scss";
+import Scrollbar from "smooth-scrollbar";
 import Script from "next/script";
 import React, { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+function MyApp({ Component, pageProps }) {
 
-export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     var $circle = $(".mouse");
     function moveCircle(e) {
@@ -23,12 +24,6 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Layout>
-        <div className="mouse">
-          <p>DRAG</p>
-        </div>
-        <Component {...pageProps} />
-      </Layout>
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"
         strategy="beforeInteractive"
@@ -49,9 +44,9 @@ export default function MyApp({ Component, pageProps }) {
         src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"
         strategy="beforeInteractive"
       ></Script>
-      <Script src="/script/3dGlobe.js" />
-      <Script src="/script/script.js" />
-
+      <Script src="/script/ScrollUp.js"></Script>
+      {/* <Script src="/script/3dGlobe.js" /> */}
+      {/* <Script src="/script/peeps.js" /> */}
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.1/ocanvas.min.js"
         strategy="beforeInteractive"
@@ -65,7 +60,7 @@ export default function MyApp({ Component, pageProps }) {
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-        crossOrigin="anonymous"
+        crossorigin="anonymous"
       ></link>
       <link
         rel="stylesheet"
@@ -79,16 +74,22 @@ export default function MyApp({ Component, pageProps }) {
         rel="stylesheet"
         href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-        crossOrigin=""
+        crossorigin=""
       />
       <Script
         src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossOrigin=""
+        crossorigin=""
         strategy="beforeInteractive"
       ></Script>
 
-
+      <Layout>
+        <div className="mouse">
+          <p>DRAG</p>
+        </div>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
+export default MyApp;

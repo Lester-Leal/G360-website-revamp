@@ -5,22 +5,38 @@ export default function FooterHandler() {
   return (
     <Container fluid className="conFooter">
       <Container>
+        <div className="pRow">
+        <Col wg={6} className="pTxtCon">
+          <p className="pTitle2">Have a Project in Mind?</p>
+          <div className="pBoxFlex">
+          <p className="pDesc2">
+            Our core purposes is to provide companies extensive expertise and 
+            service at cost expertise and services at cose effective price points,
+            while upholding standard for quality service.
+          </p>
+          <button className="pLetBTN button-53 button-index">Let's have a Talk</button>
+          </div>
+        </Col>
         <Row>
-          <Col lg={5}>
+          <Col lg={4}>
+            <div className="pLogo">
             <img
               src="../Image/logo_white.png"
-              className="img-fluid imgLogoFooter"
-              style={{ width: "150px" }}
+              className="img-fluid"
+              style={{ width: "150px"}}
             ></img>
             <p className="pCopy">© Guerilla360 2021. All rights reserved.</p>
+            </div>
           </Col>
           <Col lg={4}>
-            <p className="pTitle">Location</p>
-            <p className="pAddress">
-              290 Aguire Ave, Paranaque <br />
-              1720 Metro Manila
-            </p>
-            <p className="pTitle">Socials</p>
+            <div className="p_router">
+              <p className="pFooter">Home</p>
+              <p className="pFooter">About</p>
+              <p className="pFooter">Services</p>
+              <p className="pFooter">Careers</p>
+            </div>
+          </Col>
+          <Col lg={4}>
             <div className="divSocials">
               <ul>
                 <li>
@@ -46,13 +62,8 @@ export default function FooterHandler() {
               </ul>
             </div>
           </Col>
-          <Col lg={3}>
-            <p className="pFooter">Home</p>
-            <p className="pFooter">About</p>
-            <p className="pFooter">Services</p>
-            <p className="pFooter">Careers</p>
-          </Col>
         </Row>
+        </div>  
       </Container>
     </Container>
   );

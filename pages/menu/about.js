@@ -50,13 +50,12 @@ export default function about() {
       <Container fluid className="conAbout1 h-100">
         <Container clasName="h-100">
           <Row className="h-100 align-items-center">
-            <Col lg={6}>
+            <Col wg={6}>
               <p className="p1">
                 {" "}
                 Behind every <span>great business</span> lies an epiphany.
               </p>
             </Col>
-            <Col lg={6}></Col>
           </Row>
         </Container>
       </Container>
@@ -195,74 +194,7 @@ export default function about() {
           </Row>
         </Container>
       </Container>
-      <Container fluid className="conWhy">
-        <Container>
-          <Row>
-            <Col lg={6}>
-              <p className="pStroke">Why</p>
-              <p className="pNoStroke">
-                Choose Us<span style={{ color: "#fd6b3b" }}>?</span>
-              </p>
-            </Col>
-            <Col lg={6}>
-              <div style={{ width: "0 auto" }}>
-                <p className="pOver">An overview of what we do</p>
-                <p className="pDesc">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam"
-                </p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-        <Container className="conChoose">
-          <Row>
-            <Col lg={4}>
-              <div className="cardChoose text-center">
-                <lord-icon
-                  src="https://cdn.lordicon.com/fgkmrslx.json"
-                  trigger="loop"
-                  colors="primary:#ffffff,secondary:#fd6b3b"
-                  style={{ width: "80px", height: "80px" }}
-                ></lord-icon>
-                <p className="p1">User Interface</p>
-                <p className="pWork">Graphic Design</p>
-                <p className="pWork">UI/UX Design</p>
-                <p className="pWork">Web Design</p>
-              </div>
-            </Col>
-            <Col lg={4}>
-              <div className="cardChoose text-center">
-                <lord-icon
-                  src="https://cdn.lordicon.com/jvucoldz.json"
-                  trigger="loop"
-                  colors="primary:#ffffff,secondary:#fd6b3b"
-                  style={{ width: "80px", height: "80px" }}
-                ></lord-icon>
-                <p className="p1">Web Development</p>
-                <p className="pWork">Frontend & Backend</p>
-                <p className="pWork">Wordpress</p>
-                <p className="pWork">Server</p>
-              </div>
-            </Col>
-            <Col lg={4}>
-              <div className="cardChoose text-center">
-                <lord-icon
-                  src="https://cdn.lordicon.com/zpxybbhl.json"
-                  trigger="loop"
-                  colors="primary:#ffffff,secondary:#fd6b3b"
-                  style={{ width: "80px", height: "80px" }}
-                ></lord-icon>
-                <p className="p1">Digital Marketting</p>
-                <p className="pWork">Social Media Merketting</p>
-                <p className="pWork">Search Engine Optimization</p>
-                <p className="pWork">Blogging</p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </Container>
+
       <Container fluid className="conThings">
         <Container>
           <Row>
@@ -403,7 +335,7 @@ export default function about() {
             <Col lg={6}>
               <div className="divImageFounder">
                 <img
-                  src="../Image/Team/randolph_new.jpg"
+                  src="../Image/Nathan Nakar.png"
                   className="img-fluid image2 mx-auto d-flex"
                 ></img>
               </div>
@@ -426,10 +358,6 @@ export default function about() {
           </Row>
         </Container>
       </Container>
-
-      {/* OUR CULTURE BANNER */}
-      <Banner />
-      
     </>
   );
 }
