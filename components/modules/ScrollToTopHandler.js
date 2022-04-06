@@ -8,7 +8,6 @@ const ScrollToTopHandler = (props) => {
 					position: 'fixed',
 					bottom: 100,
 					right: 1,
-
 				}}>
 				<button className='ScrollTop' onClick={onScroll} style={{ display: visible ? 'inline-block' : 'none'}}>
 					<svg id="ScrollTop_Icon" className="ScrollTop_Icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" 
