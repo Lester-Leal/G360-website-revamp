@@ -112,7 +112,6 @@ export default function services() {
         <Container fluid className="conServicesPage">
           <Row className="h-100 align-items-center justify-content-center d-flex">
             <Col lg={12}>
-            <div class="area" >
               <p className="pNoStroke">Our</p>
               <p className="pNoStroke">
                 Creative <span>Solutions</span>
@@ -121,7 +120,6 @@ export default function services() {
                 Focused on functionality, fueled by connection, designed with
                 purpose.
               </p>
-            </div >
             </Col>
           </Row>
         </Container>

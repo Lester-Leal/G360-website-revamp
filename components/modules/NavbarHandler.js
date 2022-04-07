@@ -194,9 +194,8 @@ export default function NavBarHandler(props) {
           background: full || urlPath === "/menu/contact" ? "transparent" : "",
         }}
       >
-        
         <Row>
-          <Col lg={6}>
+          <Col lg={6} className="d-flex">
             <img
               src={!full ? "../Image/logo_dark.png" : ""}
               className="img-fluid"
@@ -211,10 +210,8 @@ export default function NavBarHandler(props) {
                 router.push("/");
               }}
             />
-          </Col>
-          <Col lg={6}>
-            <div style={{ postiion: "relative" }}>
-              <div id="webapp_cover">
+
+            <div id="webapp_cover">
                 <div id="menu_button">
                   <input
                     type="checkbox"
@@ -244,9 +241,9 @@ export default function NavBarHandler(props) {
                   </label>
                 </div>
               </div>
-            </div>
           </Col>
         </Row>
+        
       </Container>
     </>
   );

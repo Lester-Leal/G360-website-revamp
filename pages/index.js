@@ -7,27 +7,25 @@ import TestimonialHandler from "../components/modules/TestimonialHandler";
 export default function index() {
   return (
     <>
-      <Container fluid className="conIndex">
-        <Container fluid className="bg"></Container>
-
-        <Container className="h-100" style={{ position: "relative" }}>
-          <Row className="h-100 align-items-center">
-
-            <Col wg={6} className="align-items-center">
-              {/* <h1>We provide</h1> */}
-              <p className="p_qs">We Provide Connecting Quality Services</p>
-              <p className="pHeaderSub">
+      <Container className="conIndex" fluid>
+        <Row className="p_align">
+          <Col wg={6}>
+            <div className="Globe-center">
+              <img src="../Image/Globe3.png" className="Globe-align"/>
+            </div>
+            <p className="p_qs">We Provide Connecting Quality Services</p>
+            <p className="pHeaderSub">
                 GUERILLA 360 is a global business solutions company, focused on
                 providing integrated business solutions in the areas of Software
                 Solutions and Personnel Outsourcing.
-              </p>
+            </p>
               <div className="w-250 d-flex justify-content-center">
                 <button className="divButton button-53 button-index">Build your team today</button>
               </div>
-            </Col>
-          </Row>
-        </Container>
+          </Col>
+        </Row>
       </Container>
+     
       <Container fluid className="conHow1">
         <Container>
           <Row>
@@ -303,9 +301,9 @@ export default function index() {
       </Container>
       
       {/* CLIENT SHOW */}
-      <ClientHandler />
+      {/* <ClientHandler /> */}
       {/* CLIENT TESTIMONIALS */}
-      <TestimonialHandler />
+      {/* <TestimonialHandler /> */}
 
       
     </>
