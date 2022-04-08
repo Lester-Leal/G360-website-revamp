@@ -59,7 +59,7 @@ const Layout = ({ children }) => {
         <div className={show ? "d-none" : "h-100"}>
           {children}
           <div className={router.pathname === "/project" ? "d-none" : ""}>
-            {/* {<Footer />} */}
+            {<Footer />}
             {<ScrollTop />}
           </div>
         </div>

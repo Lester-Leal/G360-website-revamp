@@ -1,5 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
+import { BsFacebook, BsInstagram } from "react-icons/bs";
+import { AiFillLinkedin } from "react-icons/ai";
 
 export default function FooterHandler() {
   return (

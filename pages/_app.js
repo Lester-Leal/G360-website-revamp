@@ -8,43 +8,43 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 function MyApp({ Component, pageProps }) {
 
-  // useEffect(() => {
-  //   var $circle = $(".mouse");
-  //   function moveCircle(e) {
-  //     TweenLite.to($circle, 0.1, {
-  //       css: {
-  //         left: e.pageX - 50,
-  //         top: e.pageY - 50,
-  //       },
-  //     });
-  //   }
+  useEffect(() => {
+    var $circle = $(".mouse");
+    function moveCircle(e) {
+      TweenLite.to($circle, 0.1, {
+        css: {
+          left: e.pageX - 50,
+          top: e.pageY - 50,
+        },
+      });
+    }
 
-  //   $(window).on("mousemove", moveCircle);
-  // }, []);
+    $(window).on("mousemove", moveCircle);
+  }, []);
 
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Guerilla360 Integrated Solutions Co.</title>
-      {/* <link
+      <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossOrigin="anonymous" 
-      /> */}
+      />
       </Head>
 
-      {/* <Script
+      <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossOrigin="anonymous"
-      /> */}
+      />
       <Script src="/script/ScrollUp.js"></Script>
-      {/* <Script
+      <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"
         strategy="beforeInteractive"
-      /> */}
-      {/* <Script
+      />
+      <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"
         strategy="beforeInteractive"
       ></Script>
@@ -69,8 +69,8 @@ function MyApp({ Component, pageProps }) {
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"
         strategy="beforeInteractive"
-      ></Script> */}
-      {/* <link
+      ></Script>
+      <link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
@@ -95,7 +95,7 @@ function MyApp({ Component, pageProps }) {
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossOrigin=""
         strategy="beforeInteractive"
-      ></Script> */}
+      ></Script>
 
       <Layout>
         <div className="mouse">
@@ -106,4 +106,4 @@ function MyApp({ Component, pageProps }) {
     </>
   );
 }
-export default MyApp;
+export default MyApp; 

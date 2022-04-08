@@ -11,7 +11,15 @@ export default function NavBarHandler(props) {
   const [pathUrl, setPathUrl] = useState("");
   const [checked, setChecked] = useState(false);
   const urlPath = router.pathname;
-  
+  const [headerColor, setHeaderColor] = useState("white");
+
+  const listenScrollEvent = () => {
+    window.scrollY > 10
+      ? setHeaderColor("white") : setHeaderColor("transparent");
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent)
+  })
   const changeBackground = () => {
     if (window.scrollY >= 70) {
       setScrollnav(true);
@@ -21,7 +29,6 @@ export default function NavBarHandler(props) {
       //console.log(window.scrollY);
     }
   };
-
   useEffect(() => {
     changeBackground();
     window.addEventListener("scroll", changeBackground, true);
@@ -191,7 +198,7 @@ export default function NavBarHandler(props) {
         fluid
         className="divNavbar"
         style={{
-          background: full || urlPath === "/menu/contact" ? "transparent" : "",
+          // background: headerColor,
         }}
       >
         <Row>

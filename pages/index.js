@@ -301,9 +301,9 @@ export default function index() {
       </Container>
       
       {/* CLIENT SHOW */}
-      {/* <ClientHandler /> */}
+      <ClientHandler />
       {/* CLIENT TESTIMONIALS */}
-      {/* <TestimonialHandler /> */}
+      <TestimonialHandler />
 
       
     </>
