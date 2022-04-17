@@ -2110,7 +2110,12 @@ canvas {
       color: white;
       font-size: 2.2rem;
       font-weight: 500;
+      max-width: 60rem;
       margin-top: 15px;
+      @include media('<=phone'){
+        max-width: 25rem;
+        font-size: 1.2rem;
+      }
     }
   }
   img {

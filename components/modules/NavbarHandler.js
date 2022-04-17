@@ -198,7 +198,7 @@ export default function NavBarHandler(props) {
         fluid
         className="divNavbar"
         style={{
-          // background: headerColor,
+          background: headerColor,
         }}
       >
         <Row>
